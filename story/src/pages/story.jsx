@@ -12,12 +12,17 @@ export default function Story(){
    
   
     return (
-          <div className="relative">
+          <div className="relative flex flex-col items-center justify-center sm:justify-center">
              
-            
-             <div id="first" className="flex flex-col gap-3 mt-10 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ml-5 sm:ml-10 md:ml-20 lg:ml-32">
+             {/* <div id="first" className="flex flex-col gap-3  mt-44 w-[500px] ml-32">
+                <span>Our Story</span>
+                <h1 className="text-3xl font-semibold">Reimagine Financial Management</h1>
+                <p className="max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
+
+             </div> */}
+             <div id="first" className="flex flex-col gap-3 mt-20 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ">
         <span className="text-lg sm:text-xl">Our Story</span>
-        <h1 className="text-2xl sm:text-3xl font-semibold">Reimagine Financial Management</h1>
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-700"><i className="font-normal">Reimagine</i><br /> Financial Management</h1>
         <p className="max-w-full sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
             </div>
 
@@ -26,28 +31,60 @@ export default function Story(){
              {/* dabbes */}
 
 
-           
-             <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-32 mt-20 lg:mt-52 gap-10 lg:gap-10">
+             {/* <div className="flex ml-32 mt-52 gap-10">
+                <div className="h-[150px] w-[150px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
+                    <span className="text-2xl">+15</span>
+                    <p className="text-center">years of combined experience in finance and technology</p>
+                </div>
+                <div className="h-[150px] w-[150px] text-xs rounded-lg  text-white flex flex-col items-center justify-center" style={{backgroundColor:' #77C043'}}>
+                    <span className="text-2xl">15x</span>
+                    <p className="text-center">faster transaction processing with our AI algorithms</p>
+                </div>
+                <div className="h-[150px] w-[150px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center" style={{backgroundColor:' #829392'}}>
+                    <span className="text-2xl">50%</span>
+                    <p className="text-center">reduction in time spent on manual financial processes</p>
+                </div>
+
+                <div className="h-[320px] w-[450px] flex justify-center items-end rounded-lg  -translate-y-40"
+               style={{backgroundColor:'#DAEEBD'}} 
+                >
+                    <img 
+                    className="h-[280px] w-[360px]"
+                    src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="" />
+                </div>
+             </div> */}
+             <div className="flex flex-col lg:flex-row lg:justify-center  items-center lg:items-center lg:ml-32 mt-20 lg:mt-52 gap-10 sm:gap-8 lg:gap-10">
   {/* <!-- Experience Box --> */}
-  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
     <span className="text-xl lg:text-2xl">+15</span>
-    <p className="text-center text-[10px] lg:text-xs">years of combined experience in finance and technology</p>
+    <p className="text-center text-[10px] lg:text-xs">
+      years of combined experience in finance and technology
+    </p>
   </div>
+
   {/* <!-- AI Processing Box --> */}
-  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#77C043' }}>
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#77C043' }}>
     <span className="text-xl lg:text-2xl">15x</span>
-    <p className="text-center text-[10px] lg:text-xs">faster transaction processing with our AI algorithms</p>
+    <p className="text-center text-[10px] lg:text-xs">
+      faster transaction processing with our AI algorithms
+    </p>
   </div>
+
   {/* <!-- Time Reduction Box --> */}
-  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#829392' }}>
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#829392' }}>
     <span className="text-xl lg:text-2xl">50%</span>
-    <p className="text-center text-[10px] lg:text-xs">reduction in time spent on manual financial processes</p>
+    <p className="text-center text-[10px] lg:text-xs">
+      reduction in time spent on manual financial processes
+    </p>
   </div>
+
   {/* <!-- Image Box --> */}
-  <div className="h-[250px] lg:h-[320px] w-full lg:w-[450px] flex justify-center items-end rounded-lg -translate-y-20 lg:-translate-y-40" style={{ backgroundColor: '#DAEEBD' }}>
-    <img className="h-[220px] w-[320px] lg:h-[280px] lg:w-[360px]" src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="Image" />
+  <div className="h-[250px] sm:h-[300px] lg:h-[320px] w-[400px] lg:w-[450px] mt-20 flex justify-center items-end rounded-lg -translate-y-16 sm:-translate-y-24 lg:-translate-y-28" style={{ backgroundColor: '#DAEEBD' }}>
+    <img className="h-[200px] sm:h-[260px] lg:h-[280px] w-[280px] sm:w-[340px] lg:w-[360px]" src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="Image" />
   </div>
 </div>
+
+
 
 {/* Catalyst */}
 
@@ -168,7 +205,7 @@ export default function Story(){
 </div>
 
 
-       <div className="flex justify-center text-4xl mt-32">
+       <div className="flex justify-center  text-4xl mt-32">
         <h1>Your Questions , <i>Answered</i></h1>
        </div>
 
@@ -293,18 +330,22 @@ export default function Story(){
       </div>
 
 {/* above footer */}
-      <div className="mx-48 h-[200px] mt-32 ">
-        <img 
-        className="h-full w-full relative rounded-lg"
-        src="https://s3-alpha-sig.figma.com/img/6368/a7c2/7c714d533a66059ce71ed7f63cde0d90?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q0Emo9bWoutyx8TfxrXbopDaaI~YibtTXGbnRCO62sSGtJMEHavikoFm80jO8igvrsWH5uKPNOX-4rtrdoFSPqHP0-bz7nWBv1jc7WnGGXDOpkNTpcO-YonwaW8dyTI501R49xv0z57PNuK9zbO3aozlSOs5B0bhDPyEIFz955Ha1p1eRuS6E8t3ihLDcCluaQpRN-lXDm~2T4xkcJM8QOqHKW0lnmtCyQWwC81GWDL~2MxUZ5IPSq4QHGngqcfPKJlgCR-12AvXTyPXY4fPSJulD4wvrX7z-o-oMDcWKkBNs5zXpKKqPAYn3wNz5fflODEKxIkcqDNNYjc1DC5-Tg__" />
+<div className="mx-4 sm:mx-8 lg:mx-24 xl:mx-48 h-[200px] sm:h-[300px] lg:h-[400px] mt-16 sm:mt-20 lg:mt-32 relative">
+  <img 
+    className="h-full w-full rounded-lg object-cover"
+    src="https://s3-alpha-sig.figma.com/img/6368/a7c2/7c714d533a66059ce71ed7f63cde0d90?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q0Emo9bWoutyx8TfxrXbopDaaI~YibtTXGbnRCO62sSGtJMEHavikoFm80jO8igvrsWH5uKPNOX-4rtrdoFSPqHP0-bz7nWBv1jc7WnGGXDOpkNTpcO-YonwaW8dyTI501R49xv0z57PNuK9zbO3aozlSOs5B0bhDPyEIFz955Ha1p1eRuS6E8t3ihLDcCluaQpRN-lXDm~2T4xkcJM8QOqHKW0lnmtCyQWwC81GWDL~2MxUZ5IPSq4QHGngqcfPKJlgCR-12AvXTyPXY4fPSJulD4wvrX7z-o-oMDcWKkBNs5zXpKKqPAYn3wNz5fflODEKxIkcqDNNYjc1DC5-Tg__" 
+    alt="Financial Transformation"
+  />
 
-        <p className="absolute bottom-[630px] left-[300px] w-[200px]">Transform Your Financial
-        Processes with Neo CFO</p>
-        <button className="flex justify-center items-center py-2 px-3 bg-white absolute 
-        bottom-[570px] left-[300px] rounded-full
-        ">SCHEDULE A DEMO <GoArrowUpRight /></button>
-             
-      </div>
+  <p className="absolute bottom-[50px] left-[20px] sm:left-[40px] sm:bottom-[60px] lg:bottom-[80px] lg:left-[60px] w-[200px] sm:w-[250px] lg:w-[300px] text-sm sm:text-lg lg:text-xl font-semibold text-white">
+    Transform Your Financial Processes with Neo CFO
+  </p>
+
+  <button className="flex justify-center items-center py-2 px-3 bg-white text-sm sm:text-md lg:text-lg font-semibold absolute bottom-[10px] left-[20px] sm:left-[40px] sm:bottom-[20px] lg:bottom-[40px] lg:left-[60px] rounded-full">
+    SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
+  </button>
+</div>
+
 
       <Footer/>
        
