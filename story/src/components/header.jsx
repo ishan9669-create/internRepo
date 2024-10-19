@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
-
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -47,20 +49,33 @@ const Navbar = () => {
 
       {/* Dropdown Menu for small screens */}
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-red-200 flex flex-col items-center shadow-xl md:hidden">
-          <a href="#" className="p-4 border-b border-gray-300 w-full text-center">
+        <div className="absolute top-16 h-[500px] left-0 w-full bg-red-200 flex flex-col justify-between shadow-xl md:hidden">
+         <div>
+         <a href="#" className="p-4 items-center flex  border-b border-gray-300 w-full text-center">
             Our Story
           </a>
-          <a href="#" className="p-4 border-b border-gray-300 w-full text-center">
+          <a href="#" className="p-4 border-b flex border-gray-300 w-full text-center">
             Features
           </a>
-          <a href="#" className="p-4 border-b border-gray-300 w-full text-center">
+          <a href="#" className="p-4 border-b flex border-gray-300 w-full text-center">
             Blogs
           </a>
-          <a href="#" className="p-4 w-full text-center underline flex justify-center items-center">
+         </div>
+
+         <div className='flex flex-col gap-5 ml-5 mr-5 p-5 border-b border-gray-400'>
+          <p className='w-[200px] rounded-lg  font-semibold'>Transform Your Financial Processes with Neo CFO</p>
+         <button  className="py-3 rounded-lg text-white bg-black px-2 w-[180px] text-center underline flex justify-center items-center">
             Schedule a Demo
             <GoArrowUpRight />
-          </a>
+          </button>
+         </div>
+
+         <div className='flex gap-8 ml-9 text-3xl mb-5 '>
+         <IoLogoLinkedin />
+         <FaInstagram />
+         <FaSquareXTwitter />
+         </div>
+         
         </div>
       )}
     </div>
