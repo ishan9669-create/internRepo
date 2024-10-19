@@ -14,39 +14,41 @@ export default function Story(){
     return (
           <div className="relative">
              
-             <div id="first" className="flex flex-col gap-3  mt-32 w-[500px] ml-32">
-                <span>Our Story</span>
-                <h1 className="text-3xl font-semibold">Reimagine Financial Management</h1>
-                <p className="max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
+            
+             <div id="first" className="flex flex-col gap-3 mt-10 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ml-5 sm:ml-10 md:ml-20 lg:ml-32">
+        <span className="text-lg sm:text-xl">Our Story</span>
+        <h1 className="text-2xl sm:text-3xl font-semibold">Reimagine Financial Management</h1>
+        <p className="max-w-full sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
+            </div>
 
-             </div>
 
 
              {/* dabbes */}
 
 
-             <div className="flex ml-32 mt-40 gap-10">
-                <div className="h-[150px] w-[150px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
-                    <span className="text-2xl">+15</span>
-                    <p className="text-center">years of combined experience in finance and technology</p>
-                </div>
-                <div className="h-[150px] w-[150px] text-xs rounded-lg  text-white flex flex-col items-center justify-center" style={{backgroundColor:' #77C043'}}>
-                    <span className="text-2xl">15x</span>
-                    <p className="text-center">faster transaction processing with our AI algorithms</p>
-                </div>
-                <div className="h-[150px] w-[150px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center" style={{backgroundColor:' #829392'}}>
-                    <span className="text-2xl">50%</span>
-                    <p className="text-center">reduction in time spent on manual financial processes</p>
-                </div>
+           
+             <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-32 mt-20 lg:mt-52 gap-10 lg:gap-10">
+  {/* <!-- Experience Box --> */}
+  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
+    <span className="text-xl lg:text-2xl">+15</span>
+    <p className="text-center text-[10px] lg:text-xs">years of combined experience in finance and technology</p>
+  </div>
+  {/* <!-- AI Processing Box --> */}
+  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#77C043' }}>
+    <span className="text-xl lg:text-2xl">15x</span>
+    <p className="text-center text-[10px] lg:text-xs">faster transaction processing with our AI algorithms</p>
+  </div>
+  {/* <!-- Time Reduction Box --> */}
+  <div className="h-[150px] w-[150px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#829392' }}>
+    <span className="text-xl lg:text-2xl">50%</span>
+    <p className="text-center text-[10px] lg:text-xs">reduction in time spent on manual financial processes</p>
+  </div>
+  {/* <!-- Image Box --> */}
+  <div className="h-[250px] lg:h-[320px] w-full lg:w-[450px] flex justify-center items-end rounded-lg -translate-y-20 lg:-translate-y-40" style={{ backgroundColor: '#DAEEBD' }}>
+    <img className="h-[220px] w-[320px] lg:h-[280px] lg:w-[360px]" src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="Image" />
+  </div>
+</div>
 
-                <div className="h-[320px] w-[450px] flex justify-center items-end rounded-lg  -translate-y-40"
-               style={{backgroundColor:'#DAEEBD'}} 
-                >
-                    <img 
-                    className="h-[280px] w-[360px]"
-                    src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="" />
-                </div>
-             </div>
 {/* Catalyst */}
 
         <div className="flex justify-center text-4xl text-center">
@@ -56,120 +58,123 @@ export default function Story(){
 
 {/* problems div 1. */}
 
-        <div className="flex justify-center  h-[400px] gap-10  mt-32">
-             <div className="max-w-[600px] ">
-                <img className="h-[400px] rounded-lg"  src="https://s3-alpha-sig.figma.com/img/2e63/6abc/c8fb6514e1f34f5fb6180ee3d0a4e7f9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUNDY8hbi8zi2eSiUMkmKREDfZsdPvsFf0Igs6Xnhe5saIYHviuW9ZgkUeQNLu~fAk~zo8WzG9z3aLkPrE1U7rhrj1gcyUBG3cNhF2ombA3txMuhcH19t0KW01SM9oo7CSKwNlXftLZb1nTFjycrxEc4ZVhjQP1u65twQvK3R9uzy4zXYagFuFOteyQ77xT2T0eA3FpM0UjLcR~vgf7~QP8h~Rv1v9Lpat1NhChtpTDt1dt~JhowbcmrPJVIpWo4rjHVpvb4a6Sh~k~PowYSh43ztUqYiHFR6XW6XtdUaPLlmjM8TIgW71NjrMbXGNbo8qGAsns7e2ZCQDrXe2t0AQ__" alt="" />
-             </div>
+        
+        <div className="flex flex-col lg:flex-row justify-center lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-32 px-4">
+    {/* <!-- Image Section --> */}
+    <div className="max-w-full lg:max-w-[600px]">
+        <img className="w-full h-auto lg:h-[400px] rounded-lg" src="https://s3-alpha-sig.figma.com/img/2e63/6abc/c8fb6514e1f34f5fb6180ee3d0a4e7f9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUNDY8hbi8zi2eSiUMkmKREDfZsdPvsFf0Igs6Xnhe5saIYHviuW9ZgkUeQNLu~fAk~zo8WzG9z3aLkPrE1U7rhrj1gcyUBG3cNhF2ombA3txMuhcH19t0KW01SM9oo7CSKwNlXftLZb1nTFjycrxEc4ZVhjQP1u65twQvK3R9uzy4zXYagFuFOteyQ77xT2T0eA3FpM0UjLcR~vgf7~QP8h~Rv1v9Lpat1NhChtpTDt1dt~JhowbcmrPJVIpWo4rjHVpvb4a6Sh~k~PowYSh43ztUqYiHFR6XW6XtdUaPLlmjM8TIgW71NjrMbXGNbo8qGAsns7e2ZCQDrXe2t0AQ__" alt="Problem Image" />
+    </div>
 
-
-             <div className="w-[500px] flex flex-col gap-10">
-                <div className="border-b-2 h-[200px] flex  items-center gap-4 mt-4" id="borderwala">
-                    <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center">01</span>
-                    <span>The Problem</span>
-                </div>
-                
-                <div className="flex h-[300px]  rounded-md text-white justify-center items-center  flex-col bg-green-800">
-                    <span>Overburdened Teams</span>
-                    <p className="text-slate-300 text-center text-sm">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
-                </div>
-                <div className="flex h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span>Time-Consuming Tasks</span>
-                    <p className="text-slate-300 text-center text-sm">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
-                </div>
-                <div className="flex h-[300px] rounded-md  text-white justify-center items-center flex-col     bg-green-800">
-                    <span>Knowledge Gaps</span>
-                    <p className="text-slate-300 text-center text-sm">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
-                </div>
-             </div>
+    {/* <!-- Text Section --> */}
+    <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-10">
+        {/* <!-- Problem Header --> */}
+        <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-4 mt-4" id="borderwala">
+            <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center text-sm lg:text-base">01</span>
+            <span className="text-sm lg:text-lg">The Problem</span>
         </div>
 
+        {/* <!-- Overburdened Teams --> */}
+        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+            <span className="text-sm lg:text-lg">Overburdened Teams</span>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
+        </div>
+
+        {/* <!-- Time-Consuming Tasks --> */}
+        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+            <span className="text-sm lg:text-lg">Time-Consuming Tasks</span>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
+        </div>
+
+        {/* <!-- Knowledge Gaps --> */}
+        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+            <span className="text-sm lg:text-lg">Knowledge Gaps</span>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
+        </div>
+    </div>
+</div>
+
+
 {/* problems div 2. */}
-<div className="flex justify-center  h-[400px] gap-10  mt-48">
+<div className="flex flex-col lg:flex-row justify-center lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-32 px-4">
             
-       <div className="w-[500px] flex flex-col gap-10">
-                <div className="border-b-2 h-[200px] flex  items-center gap-4 mt-4" id="borderwala">
-                    <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center">02</span>
-                    <span>The Problem</span>
+       <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-10">
+                <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-4 mt-4" id="borderwala">
+                    <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center text-sm lg:text-base">02</span>
+                    <span className="text-sm lg:text-lg">The Problem</span>
                 </div>
                 
-                <div className="flex h-[300px]  rounded-md text-white justify-center items-center  flex-col bg-green-800">
-                    <span>Stremline Processes</span>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+                    <span className="text-sm lg:text-lg">Stremline Processes</span>
                     <p className="text-slate-300 text-center text-sm">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
                 </div>
-                <div className="flex h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span>Provide Instant Access</span>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+                    <span className="text-sm lg:text-lg">Provide Instant Access</span>
                     <p className="text-slate-300 text-center text-sm">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
                 </div>
-                <div className="flex h-[300px] rounded-md  text-white justify-center items-center flex-col     bg-green-800">
-                    <span>Ensure Compliance</span>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
+                    <span className="text-sm lg:text-lg">Ensure Compliance</span>
                     <p className="text-slate-300 text-center text-sm">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
                 </div>
              </div>
 
-             <div className="max-w-[600px] ">
-                <img className="h-[400px] w-[400px] rounded-lg"  src="https://s3-alpha-sig.figma.com/img/e6ab/1596/c513460f07e66c632e79b045e660020e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ln0iKVZVouq2hpQuDynS2vDOE818xulY4u8r0hOfIgqXOQOuu4~6KorAAf3tNO9GlNqbS7zJ2zz0qSEbqHzkgGmN3fduAdJEckFzQrzmyXmF1OCjI~3eVgicJ5zOyLRFFA0ua67oixqsokBsdKfxAkgoBJYfCO3b5I90n4KNjjU1AaR5VANa0relOWK7WjtfYNWNvqYoHSzSn0wLKwd-zaHU0OzkQER3jjFAyXUsXwozs1CvMdFtf8fAixC~uz17pM3S6l4eosyIPmWCYESKgK0VcNiKADz61L6yo8yqXCv~tei6V0gJVKA1R7jbnS~CvsT--8Ah0cdTYJwbzGykbA__" alt="" />
+             <div className="max-w-full lg:max-w-[600px] ">
+                <img className="w-full h-auto lg:h-[400px] rounded-lg"  src="https://s3-alpha-sig.figma.com/img/e6ab/1596/c513460f07e66c632e79b045e660020e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ln0iKVZVouq2hpQuDynS2vDOE818xulY4u8r0hOfIgqXOQOuu4~6KorAAf3tNO9GlNqbS7zJ2zz0qSEbqHzkgGmN3fduAdJEckFzQrzmyXmF1OCjI~3eVgicJ5zOyLRFFA0ua67oixqsokBsdKfxAkgoBJYfCO3b5I90n4KNjjU1AaR5VANa0relOWK7WjtfYNWNvqYoHSzSn0wLKwd-zaHU0OzkQER3jjFAyXUsXwozs1CvMdFtf8fAixC~uz17pM3S6l4eosyIPmWCYESKgK0VcNiKADz61L6yo8yqXCv~tei6V0gJVKA1R7jbnS~CvsT--8Ah0cdTYJwbzGykbA__" alt="" />
              </div>
         </div>
 
 
 
       {/* sliding window */}
+      <div className="flex flex-col justify-center mt-52 text-center text-2xl md:text-4xl">
+  <h1>
+    <i className="text-slate-600">Smart Finance</i>, Secure Data
+  </h1>
+</div>
 
-      <div className="flex justify-center mt-52 text-4xl">
-        <h1> <i className="text-slate-600">Smart Finance</i>,Secure Data</h1>
-      </div>
+<div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
+  
+  <div className="h-[350px] w-[250px] flex flex-col gap-5">
+    <img className="h-[150px] w-full object-cover rounded-md" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg" alt="Data-Driven Insights" />
+    <div className="flex flex-col gap-2">
+      <h3 className="text-center">Data-Driven Insights</h3>
+      <p className="text-center text-slate-400 text-sm md:text-base">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
+    </div>
+  </div>
+  
+  <div className="h-[350px] w-[250px] flex flex-col gap-5">
+    <img className="h-[150px] w-full object-cover rounded-md" src="https://automationedge.com/es/wp-content/uploads/2020/08/AI-Powered-Automation-For-Managed-Service-Providers.jpg" alt="AI-Powered Automation" />
+    <div className="flex flex-col gap-2">
+      <h3 className="text-center">AI-Powered Automation</h3>
+      <p className="text-center text-slate-400 text-sm md:text-base">Intelligent algorithms automate repetitive tasks, improving efficiency and accuracy.</p>
+    </div>
+  </div>
+  
+  <div className="h-[350px] w-[250px] flex flex-col gap-5">
+    <img className="h-[150px] w-full object-cover rounded-md" src="https://codup.co/wp-content/uploads/2024/02/Benefits-of-Dynamic-Access-Control.png" alt="Rigid Access Control" />
+    <div className="flex flex-col gap-2">
+      <h3 className="text-center">Rigid Access Control</h3>
+      <p className="text-center text-slate-400 text-sm md:text-base">Our platform strictly adheres to permissions set in the source application. Our results are updated in real time when it is fetched.</p>
+    </div>
+  </div>
+  
+  <div className="h-[350px] w-[250px] flex flex-col gap-5">
+    <img className="h-[150px] w-full object-cover rounded-md" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg" alt="Data-Driven Insights" />
+    <div className="flex flex-col gap-2">
+      <h3 className="text-center">Data-Driven Insights</h3>
+      <p className="text-center text-slate-400 text-sm md:text-base">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
+    </div>
+  </div>
 
-       <div className="flex gap-10 mx-24 p-10 overflow-x-auto scroll-smooth" >
-         
-     
+</div>
 
-           <div className="h-[300px] w-[300px] flex flex-col gap-5" > 
-               <img className="h-[150px]" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg
-               " alt="" />
-
-               <div className="flex flex-col gap-2">
-                <h3 className="flex justify-center">Data-Driven Insights</h3>
-                <p className="text-center text-slate-400">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
-               </div>
-           </div>
-           <div className="h-[300px] w-[300px] flex flex-col gap-5" > 
-               <img className="h-[150px]" src="https://automationedge.com/es/wp-content/uploads/2020/08/AI-Powered-Automation-For-Managed-Service-Providers.jpg
-               " alt="" />
-
-               <div className="flex flex-col gap-4">
-                <h3 className="flex justify-center">AI-Powered Automation</h3>
-                <p className="text-center text-slate-400">Intelligent algorithms automate repetitive tasks, improving efficiency and accuracy.</p>
-               </div>
-           </div>
-           <div className="h-[300px] w-[300px] flex flex-col gap-5" > 
-               <img className="h-[150px]" src="https://codup.co/wp-content/uploads/2024/02/Benefits-of-Dynamic-Access-Control.png
-               " alt="" />
-
-               <div className="flex flex-col gap-4">
-                <h3 className="flex justify-center">Rigid Access Control</h3>
-                <p className="text-center text-slate-400">Our platform strictly adheres to permissions set in the source application. Our results are updated in real time when it is fetched.</p>
-               </div>
-           </div>
-           <div className="h-[300px] w-[300px] flex flex-col gap-5" > 
-               <img className="h-[150px]" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg
-               " alt="" />
-
-               <div className="flex flex-col gap-4">
-                <h3 className="flex justify-center">Data-Driven Insights</h3>
-                <p className="text-center text-slate-400">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
-               </div>
-           </div>
-           {/* Right Arrow */}
-      
-       </div> 
 
        <div className="flex justify-center text-4xl mt-32">
         <h1>Your Questions , <i>Answered</i></h1>
        </div>
 
 
-      <div className="flex gap-8 h-[500px] mx-48 justify-center items-center mt-20" >
-       <div className=" mt-5 max-w-[500px] h-[400px] "
+      <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-10 lg:mt-20" >
+       <div className=" mt-5 w-full lg:max-w-[500px] h-auto lg:h-[400px] "
           
           >
               <div
@@ -278,9 +283,13 @@ export default function Story(){
                   </div>
               </div>
        </div> 
-       <div className="h-[500px]">
-        <img className="h-[500px] rounded-2xl" src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__" />
-       </div>
+       <div className="w-full lg:w-[500px]">
+    <img
+      className="w-full h-auto lg:h-[500px] rounded-2xl"
+      src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__"
+      alt="Drone"
+    />
+  </div>
       </div>
 
 {/* above footer */}
