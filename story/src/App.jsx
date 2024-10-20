@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './components/footer'
 import Header from './components/header'
 import Story from './pages/story'
+import Feature from './pages/feature'
 
 
 
@@ -15,6 +16,7 @@ function App() {
      <BrowserRouter>
      <Routes>
       <Route path='/story' element={<Story/>} />
+      <Route path='/feature' element={<Feature/>} />
      </Routes>
      </BrowserRouter>
      
