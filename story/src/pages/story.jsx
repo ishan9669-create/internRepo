@@ -1,5 +1,6 @@
 import React,{ useRef, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import '../css/style.css'
 import Footer from "../components/footer";
 export default function Story(){
     const [q1,setQ1] = useState(false);
@@ -12,7 +13,7 @@ export default function Story(){
    
   
     return (
-          <div className="relative flex flex-col items-center justify-center sm:justify-center">
+          <div className="relative flex flex-col items-center justify-center sm:justify-center overflow-hidden">
              
              {/* <div id="first" className="flex flex-col gap-3  mt-44 w-[500px] ml-32">
                 <span>Our Story</span>
@@ -20,7 +21,7 @@ export default function Story(){
                 <p className="max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
 
              </div> */}
-             <div id="first" className="flex flex-col gap-3 mt-20 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ">
+             <div id="first" className="flex flex-col gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ">
         <span className="text-lg sm:text-xl">Our Story</span>
         <h1 className="text-2xl sm:text-3xl font-semibold text-slate-700"><i className="font-normal">Reimagine</i><br /> Financial Management</h1>
         <p className="max-w-full sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
@@ -103,7 +104,7 @@ export default function Story(){
     </div>
 
     {/* <!-- Text Section --> */}
-    <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-10">
+    <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-3">
         {/* <!-- Problem Header --> */}
         <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-4 mt-4" id="borderwala">
             <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center text-sm lg:text-base">01</span>
@@ -112,45 +113,45 @@ export default function Story(){
 
         {/* <!-- Overburdened Teams --> */}
         <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-            <span className="text-sm lg:text-lg">Overburdened Teams</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
+            <span className="text-sm lg:text-lg mt-3">Overburdened Teams</span>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
         </div>
 
         {/* <!-- Time-Consuming Tasks --> */}
         <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-            <span className="text-sm lg:text-lg">Time-Consuming Tasks</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
+            <span className="text-sm lg:text-lg mt-2">Time-Consuming Tasks</span>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
         </div>
 
         {/* <!-- Knowledge Gaps --> */}
         <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
             <span className="text-sm lg:text-lg">Knowledge Gaps</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
+            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
         </div>
     </div>
 </div>
 
 
 {/* problems div 2. */}
-<div className="flex flex-col lg:flex-row justify-center lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-32 px-4">
+<div className="flex flex-col lg:flex-row justify-center lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-40 px-4">
             
-       <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-10">
+       <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-2">
                 <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-4 mt-4" id="borderwala">
                     <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center text-sm lg:text-base">02</span>
                     <span className="text-sm lg:text-lg">The Problem</span>
                 </div>
                 
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span className="text-sm lg:text-lg">Stremline Processes</span>
-                    <p className="text-slate-300 text-center text-sm">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
+                    <span className="text-sm lg:text-lg mt-2">Stremline Processes</span>
+                    <p className="text-slate-300 text-center text-sm p-4">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
                 </div>
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
                     <span className="text-sm lg:text-lg">Provide Instant Access</span>
-                    <p className="text-slate-300 text-center text-sm">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
+                    <p className="text-slate-300 text-center text-sm p-4">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
                 </div>
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span className="text-sm lg:text-lg">Ensure Compliance</span>
-                    <p className="text-slate-300 text-center text-sm">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
+                    <span className="text-sm lg:text-lg mt-2">Ensure Compliance</span>
+                    <p className="text-slate-300 text-center text-sm p-4">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
                 </div>
              </div>
 
@@ -210,7 +211,7 @@ export default function Story(){
        </div>
 
 
-      <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-10 lg:mt-20" >
+      <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
        <div className=" mt-5 w-full lg:max-w-[500px] h-auto lg:h-[400px] "
           
           >
@@ -330,7 +331,7 @@ export default function Story(){
       </div>
 
 {/* above footer */}
-<div className="mx-4 sm:mx-8 lg:mx-24 xl:mx-48 h-[200px] sm:h-[300px] lg:h-[400px] mt-16 sm:mt-20 lg:mt-32 relative">
+{/* <div className="mx-4 sm:mx-8 lg:mx-24 xl:mx-48 h-[200px] sm:h-[300px] lg:h-[400px] mt-16 sm:mt-20 lg:mt-32 relative">
   <img 
     className="h-full w-full rounded-lg object-cover"
     src="https://s3-alpha-sig.figma.com/img/6368/a7c2/7c714d533a66059ce71ed7f63cde0d90?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q0Emo9bWoutyx8TfxrXbopDaaI~YibtTXGbnRCO62sSGtJMEHavikoFm80jO8igvrsWH5uKPNOX-4rtrdoFSPqHP0-bz7nWBv1jc7WnGGXDOpkNTpcO-YonwaW8dyTI501R49xv0z57PNuK9zbO3aozlSOs5B0bhDPyEIFz955Ha1p1eRuS6E8t3ihLDcCluaQpRN-lXDm~2T4xkcJM8QOqHKW0lnmtCyQWwC81GWDL~2MxUZ5IPSq4QHGngqcfPKJlgCR-12AvXTyPXY4fPSJulD4wvrX7z-o-oMDcWKkBNs5zXpKKqPAYn3wNz5fflODEKxIkcqDNNYjc1DC5-Tg__" 
@@ -344,7 +345,11 @@ export default function Story(){
   <button className="flex justify-center items-center py-2 px-3 bg-white text-sm sm:text-md lg:text-lg font-semibold absolute bottom-[10px] left-[20px] sm:left-[40px] sm:bottom-[20px] lg:bottom-[40px] lg:left-[60px] rounded-full">
     SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
   </button>
-</div>
+</div> */}
+ <div id="schedule-section">
+            <h2>Transform Your Financial <br />Processes with Neo CFO</h2>
+            <button id="schedule-btn" className="flex items-center">Schedule a Demo <GoArrowUpRight/></button>
+  </div>
 
 
       <Footer/>
