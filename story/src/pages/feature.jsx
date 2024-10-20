@@ -21,6 +21,9 @@ const ImageSlider = () => {
     {
       url:'./blur5.png'
     },
+    {
+      url:'./blur2.png'
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
