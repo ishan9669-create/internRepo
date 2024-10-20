@@ -13,11 +13,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-red-200 shadow-xl flex fixed z-20 top-0 w-full justify-between items-center p-5">
+    <div className="bg-green-700 text-white shadow-2xl flex fixed z-20 top-0 w-full justify-between items-center p-8">
       {/* Logo Section */}
       <div>
         <img
-          src="http://127.0.0.1:5500/future%20intern%20website/images/Horizontal%20_Neo%20CFO_%20Logo%20_%20coloured@2x%201.png"
+          src="./Horizontal _Neo CFO_ Logo _ coloured@2x 1.png"
           alt="Logo"
           className="w-32"
         />
@@ -40,7 +40,9 @@ const Navbar = () => {
       <div className="md:hidden flex items-center">
         <button onClick={toggleMenu}>
           {isMenuOpen ? (
-            <AiOutlineClose size={24} />
+            <AiOutlineClose onClick={()=>{
+
+            }} size={24} />
           ) : (
             <GiHamburgerMenu size={24} />
           )}
@@ -48,16 +50,16 @@ const Navbar = () => {
       </div>
 
       {/* Dropdown Menu for small screens */}
-      {isMenuOpen && (
-        <div className="absolute top-16 h-[500px] left-0 w-full bg-red-200 flex flex-col justify-between shadow-xl md:hidden">
-         <div>
-         <a href="#" className="p-4 items-center flex  border-b border-gray-300 w-full text-center">
+      {(
+        <div className={`absolute top-16 h-[500px] left-0 w-full bg-green-700 flex  mt-10 flex-col justify-between shadow-xl md:hidden ${isMenuOpen ? "animate-rightlao":'animate-leftlao'}`}>
+         <div className='ml-7'>
+         <a href="#" className="p-4 items-center flex    w-full text-center">
             Our Story
           </a>
-          <a href="#" className="p-4 border-b flex border-gray-300 w-full text-center">
+          <a href="#" className="p-4  flex w-full text-center">
             Features
           </a>
-          <a href="#" className="p-4 border-b flex border-gray-300 w-full text-center">
+          <a href="#" className="p-4 flex  w-full text-center">
             Blogs
           </a>
          </div>
@@ -71,9 +73,9 @@ const Navbar = () => {
          </div>
 
          <div className='flex gap-8 ml-9 text-3xl mb-5 '>
-         <IoLogoLinkedin />
-         <FaInstagram />
-         <FaSquareXTwitter />
+         <IoLogoLinkedin className='cursor-pointer'/>
+         <FaInstagram className='cursor-pointer'/>
+         <FaSquareXTwitter className='cursor-pointer'/>
          </div>
          
         </div>
