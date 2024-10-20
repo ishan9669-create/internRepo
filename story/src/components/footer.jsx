@@ -1,16 +1,19 @@
 import '../css/style.css'
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 export default function Footer(){
     return (
         
-              <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-up">
-                <div class="footer-up-left">
-                    <img src="http://127.0.0.1:5500/future%20intern%20website/images/Horizontal%20_Neo%20CFO_%20Logo%20_%20White@2x%201%20(1).png" alt="logo"/>
+        <footer id="footer">
+        <div id="footer-container">
+            <div id="footer-up">
+                <div id="footer-up-left">
+                    <img src="./Horizontal _Neo CFO_ Logo _ White@2x 1 (1).png" alt="logo"/>
                     <p>Empowering India's Businesses,One Click at a Time.</p>
-                    <img src="http://127.0.0.1:5500/future%20intern%20website/images/Property%201=Default.png" alt="email"/>
+                    <img src="./Property 1=Default.png" alt="email"/>
                 </div>
-                <div class="footer-up-right">
+                <div id="footer-up-right">
                     <ul>
                         <li>Products</li>
                         <li><a href="#">Features</a></li>
@@ -23,24 +26,26 @@ export default function Footer(){
                     </ul>
                 </div>
             </div>
-            <div class="footer-social-media">
-                <li class="footer-mobile-list">Social</li>
-                <img src="http://127.0.0.1:5500/future%20intern%20website/images/Linkedin.png" alt="linkedin"/>
-                <img src="http://127.0.0.1:5500/future%20intern%20website/images/Twitter.png" alt="twitter"/>
-                <img src="http://127.0.0.1:5500/future%20intern%20website/images/Instagram.png" alt="instagram"/>
+            <div id="footer-social-media" className='text-2xl'>
+                <li id="footer-mobile-list">Social</li>
+               <FaInstagram/>
+               <FaSquareXTwitter/>
+               <FaLinkedin/>
+              
             </div>
-                        
-                        <div class="footer-down">
-                <div class="footer-down-left">
+            
+            <div id="footer-down">
+                <div id="footer-down-left">
                     <p>All Rights Reserved</p>
                 </div>
-                <div class="footer-down-right">
+                <div id="footer-down-right">
                     <p>Privacy Policy</p>
                     <p>Terms & Conditions</p>
                 </div>
             </div>
         </div>
     </footer>
+
     
 )
         
