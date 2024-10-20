@@ -244,24 +244,26 @@
     width: 20%;
 }
 
-.schedule-section{
+#schedule-section{
     margin: auto;
     width: 83%;
     /* padding-bottom: 100px; */
-    background-image: url(images/gradient1\ 1.png);
+    
+background-image: url('../../public//gradient1 1.png');
     padding: 80px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 380px
 }
 
-.schedule-section h2{
+#schedule-section h2{
     font-weight: 500;
     margin-bottom: 15px;
     color: #154a44;
 }
 
-.schedule-btn{
+#schedule-btn{
     padding: 8px 16px;
     background-color: white;
     border: none;
@@ -272,58 +274,59 @@
     border-radius: 5px;
 }
 
-.footer{
+#footer{
     background-color: #154a44;
     margin-top: 130px;
+    width: 100vw;
 }
 
-.footer-container{
+#footer-container{
     width: 83%;
     margin: auto;
 }
 
-.footer-up{
+#footer-up{
     padding: 70px 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.footer-up-left img{
+#footer-up-left img{
     width: 160px;
 }
 
-.footer-up-left p{
+#footer-up-left p{
     font-size: 13px;
     color: white;
     margin-bottom: 10px;
 }
 
-.footer-up-right{
+#footer-up-right{
     display: flex;
     gap: 40px;
 }
 
-.footer-up-right ul{
+#footer-up-right ul{
     list-style: none;
 }
 
-.footer-up-right ul li:first-child{
+#footer-up-right ul li:first-child{
     margin-bottom: 18px;
 }
 
-.footer-up-right ul li{
+#footer-up-right ul li{
     color: white;
     font-size: 13px;
     margin-bottom: 10px;
 }
 
-.footer-up-right ul li a{
+#footer-up-right ul li a{
     text-decoration: none;
     color: white;
     font-size: 14px;
 }
 
-.footer-social-media{
+#footer-social-media{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -331,11 +334,11 @@
     margin: 20px 0px;
 }
 
-.footer-social-media img{
+#footer-social-media img{
     width: 20px;
 }
 
-.footer-down{
+#footer-down{
     padding: 15px 0px 25px 0px;
     font-size: 13px;
     color: white;
@@ -343,12 +346,12 @@
     justify-content: space-between;
 }
 
-.footer-down-right{
+#footer-down-right{
     display: flex;
     gap: 40px;
 }
 
-.footer-mobile-list{
+#footer-mobile-list{
     display: none;
 }
 
@@ -387,37 +390,37 @@
 }
 
 @media(max-width: 600px){
-    .main-section{
+    #main-section{
         padding-top: 8vh;
         margin-bottom: 25px;
     }
 
-    .main-section p{
+    #main-section p{
         font-size: 16px;
     }
 
-    .main-section h2{
+    #main-section h2{
         font-size: 35px;
     }
 
-    .list-names ul {
+    #list-names ul {
         gap: 15px;
     }
-    .list-names ul li a{
+    #list-names ul li a{
         font-size: 14px;
         font-weight: 500;
     }
 
-    .list-names-style{
+    #list-names-style{
         padding: 9px 25px;
     }
 
-    .grid-lists{
+    #grid-lists{
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    .page-number{
+    #page-number{
         padding: 40px 0px 120px 0px;
     }
 
