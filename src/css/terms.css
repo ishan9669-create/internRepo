@@ -106,36 +106,36 @@ main p{
     }
 }
 /* ----------------------------------------------------- */
-.demo{
+#demo{
     width: 100%;
     height: 200px;
     /* margin-left: 100px; */
     margin: auto;
-    background: url("./gradient1 1.png");
+    background: url("./backGroud2 copy.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     border-radius: 10px;
 }
-.demo h1{
+#demo h1{
     position: absolute;
     top: 30%;
     left: 10%;
     font-size: 25px;
 }
-.demo button{
+#demo button{
     position: absolute;
     top: 70%;
     left: 10%;
 }
 @media (max-width: 740px) {
-    .demo{
+    #demo{
         margin: auto;
         width: 76vw;
 
     }
-    .demo h1{
+    #demo h1{
         font-size: 20px;
     }
 }
