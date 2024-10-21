@@ -2,6 +2,8 @@ import React,{ useRef, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import '../css/style.css'
 import Footer from "../components/footer";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 export default function Story(){
     const [q1,setQ1] = useState(false);
         const [q2,setQ2] = useState(false);
@@ -164,14 +166,19 @@ export default function Story(){
 
       {/* sliding window */}
       <div className="flex flex-col justify-center mt-52 text-center text-2xl md:text-4xl">
-  <h1>
-    <i className="text-slate-600">Smart Finance</i>, Secure Data
+  <h1 className="flex  items-center gap-32">
+  <span className="text-2xl"><i>Smart Finance</i>, Secure Data</span>
+    
+    <div className="flex gap-10">
+       <FaArrowLeft className="bg-slate-500 cursor-pointer hover:bg-slate-600 text-white w-[50px] h-[30px] rounded-full"/>
+       <FaArrowRight className="bg-slate-500 cursor-pointer hover:bg-slate-600 text-white w-[50px] h-[30px] rounded-full"/>
+    </div>
   </h1>
 </div>
 
-<div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
+{/* <div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
   
-  <div className="h-[350px] w-[250px] flex flex-col gap-5">
+  <div className="h-[350px] w-[250px] flex flex-col gap-5 bg-red-500">
     <img className="h-[150px] w-full object-cover rounded-md" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg" alt="Data-Driven Insights" />
     <div className="flex flex-col gap-2">
       <h3 className="text-center">Data-Driven Insights</h3>
@@ -203,7 +210,37 @@ export default function Story(){
     </div>
   </div>
 
-</div>
+</div> */}
+<div id="story-container">
+                <div id="story-track" className="flex gap-10">
+                    <div id="stories">
+                        <img src="./image1.png" alt="Person 1"/>
+                        {/* <h3>Fathima Sheika</h3>
+                        <p>Founder, Lorem Ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
+                    </div>
+                    <div id="stories">
+                        <img src="./image2.png" alt="Person 2"/>
+                        {/* <h3>Harry Williams</h3>
+                        <p>Founder, Lorem Ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
+                    </div>
+                    <div id="stories">
+                        <img src="./image3.png" alt="Person3"/>
+                        {/* <h3>Lary</h3>
+                        <p>Founder, Lorem Ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
+                    </div>
+
+                    <div id="stories">
+                        <img src="./image4.png" alt="Person3"/>
+                        {/* <h3>Lary</h3>
+                        <p>Founder, Lorem Ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
+                    </div>
+                    
+                </div>
+            </div>
 
 
        <div className="flex justify-center  text-4xl mt-32">
