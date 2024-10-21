@@ -4,7 +4,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Import basic calendar styling
 import Footer from '../components/footer';
 
-const ScheduleDemo = () => {
+const ScheduleDemo = ({visible,setVisible}) => {
     const [date, setDate] = useState(new Date());
   
     const onChange = (newDate) => {
@@ -144,15 +144,54 @@ const ScheduleDemo = () => {
             }
           }
         `}</style>
+        <button
+        onClick={()=>{
+          if(visible) setVisible(false)
+            else setVisible(true)
+        }}
+        className='mt-2 bg-white px-5 rounded-lg hover:bg-red-400 hover:text-white py-1'>Next</button>
       </div>
     );
   };
 
 
+  // demo 2
+function Demo2({setVisible,visible}){
+  return (
+    <div className="schedule">
+    <h3>Schedule a Demo</h3>
+    <p>We know your time is valuable. Select a date and time that works <br/>
+         best for you, and our team will tailor the demo to your specific needs.</p>
+    <p id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
+    <p id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
+    <p id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+
+    <div className="registrationForm">
+        <h4>Enter Details</h4>
+        <form action="" className="regform">
+            <label htmlFor="name">Name *</label><br/>
+            <input type="text" name="name"  placeholder="Enter Your Name"/><br/>
+            <label htmlFor="Email">Email *</label><br/>
+            <input type="email" name="email" placeholder="Enter Your Email"/><br/>
+            <label htmlFor="Guest">Add Guests</label><br/>
+            <textarea style={{height:'90%'}} name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" ></textarea><br/>
+        </form>
+        <div className="regBtns">
+            <button id="regbtn1" onClick={()=>{
+              if(visible) setVisible(false)
+                else setVisible(true)
+            }} className='px-3 py-1  '>Back</button>
+            <button className='px-3 py-1 bg-white hover:bg-yellow-400 '>Schedule</button>
+        </div>
+       
+    </div>
+</div>
+  )
+}
 
 export default function Schedule(){
 
-   
+   const [visible,setVisible] = useState(false)
    
     return (    
         <div>
@@ -195,7 +234,9 @@ export default function Schedule(){
                             <button>Submit</button>
                         </form>
                     </div>
-                    <ScheduleDemo/>
+
+
+                   {visible == false ?  <ScheduleDemo setVisible={setVisible} visible={visible}/>:<Demo2 setVisible={setVisible} visible={visible}/>}
             </div>
 
            
