@@ -271,6 +271,7 @@
     background-color: #1449441a;
     width: Hug (140px) px;
     height: Fixed (48px) px;
+    color: green;
     top: 1673px;
     left: 170px;
     padding: 8px 9px 8px 16px;
@@ -595,8 +596,8 @@
   
   /* Add some styling for images */
   #testimonial img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-bottom: 15px;
   }
@@ -696,6 +697,12 @@
   #blog:hover {
     transform: scale(1.1);
   }
+  #blog img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
   #blog h4 {
     font-size: 15px;
     margin-left: 20px;
@@ -739,6 +746,12 @@
       gap: 20px;
       justify-content: center;
       align-items: center;
+    }
+    
+  }
+  @media (max-width:768px) {
+    #blog img{
+      transform: translateX(-11px);
     }
   }
   /* --------------------------------------------------------------------------------- */
