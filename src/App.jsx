@@ -7,7 +7,7 @@ import Feature from './pages/feature'
 import Home from './pages/home'
 import Blogpage from './pages/blogpage'
 import Schedule from './pages/schedule1'
-
+import Privacy from './pages/privacy'
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/blogpage' element={<Blogpage/>} />
       <Route path='/schedule' element={<Schedule/>} />
-      <Route path='/terms' element={<Terms/>} />      
+      <Route path='/terms' element={<Terms/>} /> 
+       <Route path='/privacy' element={<Privacy/>} /> 
      </Routes>
      </BrowserRouter>
      
