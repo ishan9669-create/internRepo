@@ -5,6 +5,8 @@ import Header from './components/header'
 import Story from './pages/story'
 import Feature from './pages/feature'
 import Home from './pages/home'
+import Blogpage from './pages/blogpage'
+import Schedule from './pages/schedule1'
 
 
 
@@ -18,7 +20,9 @@ function App() {
      <Routes>
       <Route path='/story' element={<Story/>} />
       <Route path='/feature' element={<Feature/>} />
-      <Route path='/home' element={<Home/>} />
+      <Route path='/' element={<Home/>} />
+      <Route path='/blogpage' element={<Blogpage/>} />
+      <Route path='/schedule' element={<Schedule/>} />
       
      </Routes>
      </BrowserRouter>
