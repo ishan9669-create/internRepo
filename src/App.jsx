@@ -23,7 +23,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/blogpage' element={<Blogpage/>} />
       <Route path='/schedule' element={<Schedule/>} />
-      
+      <Route path='/terms' element={<Terms/>} />      
      </Routes>
      </BrowserRouter>
      
