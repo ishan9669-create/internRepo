@@ -42,7 +42,9 @@ export default function Footer(){
                 </div>
                 <div id="footer-down-right">
                     <p>Privacy Policy</p>
-                    <p>Terms & Conditions</p>
+                    <p className='cursor-pointer' onClick={()=>{
+                        window.location.href = '/terms'
+                    }}>Terms & Conditions</p>
                 </div>
             </div>
         </div>
