@@ -376,6 +376,62 @@ background-image: url('../../public//gradient1 1.png');
     }
 }
 
+#story-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  #story-track {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Animation for smooth scrolling */
+  }
+  
+  #stories {
+    flex: 0 0 300px; /* Each testimonial card takes a fixed width */
+    margin: 0 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Smooth resize for responsiveness */
+  }
+  
+  /* Add some styling for images */
+  #stories img {
+    width: 100%;
+    height: 100%;
+    
+    margin-bottom: 15px;
+  }
+  @media (max-width: 768px) {
+    #stories {
+      flex: 0 0 250px; /* Reduce the width of each testimonial card on smaller screens */
+
+    }
+   
+  
+   
+  }
+  
+  @media (max-width: 480px) {
+    #story-container {
+      padding: 10px;
+    }
+    #stories {
+      flex: 0 0 200px; /* Further reduce width on small devices */
+      margin: 0 5px; /* Decrease space between the cards */
+    }
+    #stories img {
+      width: 100%;
+      height: 100%; /* Adjust image size for smaller screens */
+    }
+    
+  }
 @media (max-width: 480px) {
     .list-names ul {
         gap: 4px; 
