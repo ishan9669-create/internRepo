@@ -631,6 +631,91 @@ input::placeholder {
       padding-top: 20px;
       font-size: 12px;
     } */
+     /* ////////// */
+    /* Schedule */
+    .schedule{
+        width: 30vw;
+        height: auto;
+        background-color:rgba(255, 255, 255, 0.3);
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .schedule p{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .schedule i{
+        font-size: 15px;
+        margin-right: 4px;
+    }
+    #scheP2{
+        font-size: 12px;
+    }
+    .schedule h6{
+        margin-top: 5px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .registrationForm h4{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    .regform{
+        width: 95%;
+        height: auto;
+        border: none;
+        padding: 10px;
+        margin-top: 5px;
+        
+    
+    }
+    .regform label{
+        font-size: 15px;
+    }
+    .regform input{
+        font-size: 12px;
+        width: 90%;
+        height: 15px;
+        padding: 20px;
+        border-radius: 5px;
+    
+    }
+    .regform textarea{
+        width: 90%;
+        height: 40px;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .regBtns{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+     .regBtns button{
+        margin: 0;
+        font-size: 15px;
+        border-radius: 5px;
+        
+    }
+    #regbtn1{
+        background-color:rgba(11, 61, 51,0.3);
+        
+    }
+    #regbtn1:hover{
+        background-color:crimson;
+        color:white
+        
+    }
+    @media(max-width:740px){
+        
+    
+        .schedule{
+            width: 70vw;
+        }
+    }
     
     .footer-bottom{
       margin-left:110px;
