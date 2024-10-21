@@ -16,13 +16,22 @@ export default function Footer(){
                 <div id="footer-up-right">
                     <ul>
                         <li>Products</li>
-                        <li><a href="#">Features</a></li>
+                        <li><a href="#" className='cursor-pointer' onClick={(e)=>{
+                            e.preventDefault();
+                            window.location.href = '/feature'
+                        }}>Features</a></li>
                     </ul>
                     <ul>
                         <li>Company</li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a  className='cursor-pointer' onClick={(e)=>{
+                            e.preventDefault();
+                            window.location.href = '/story'
+                        }} href="#">Our Story</a></li>
+                        <li><a  className='cursor-pointer' onClick={(e)=>{
+                            e.preventDefault();
+                            window.location.href = '/blogpage'
+                        }} href="#">Blogs</a></li>
+                        <li><a  href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
