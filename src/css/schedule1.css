@@ -210,10 +210,12 @@ input::placeholder {
 }
 
 /* Media Queries for responsiveness */
+
 @media (max-width: 768px) {
     #infoScheduleForms {
         flex-direction: column;
         align-items: center;
+        margin-right: 30px;
     }
 
     #infoForm {
@@ -238,7 +240,7 @@ input::placeholder {
 @media (max-width: 480px) {
     #schedule {
         width: 95%; /* Full width for mobile view */
-        padding: 15px;
+        
     }
 
    
@@ -267,8 +269,13 @@ input::placeholder {
     height: auto;
     background-color:rgba(255, 255, 255, 0.3);
     margin-top: 10px;
-    padding: 15px;
+    
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   padding: 30px;
+    
 }
 #schedule p{
     font-size: 10px;
@@ -371,17 +378,26 @@ input::placeholder {
     color: antiquewhite;
  } 
 
-
- @media(max-width:740px){
-    /* #infoScheduleForms{
+@media (max-width:480px) {
+    #infoScheduleForms{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
 
-    }
-    #infoForm{
+    } 
+}
+ @media(max-width:740px){
+      #infoScheduleForms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    } 
+    /* #infoForm{
         width: 70vw;
     }
     #infoForm input ,#infoForm textarea{
@@ -390,7 +406,7 @@ input::placeholder {
 
     #infoForm button{
         float: right;
-    } */
+    } */ *
 
     #schedule{
         width: 76%;
