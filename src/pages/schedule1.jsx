@@ -13,15 +13,15 @@ const ScheduleDemo = ({visible,setVisible}) => {
     };
   
     return (
-      <div className="schedule-demo">
-        <h2>Schedule a Demo</h2>
+      <div className="schedule-demo "  style={{color:'#2C766F'}}>
+        <h2 style={{color:'#2C766F'}} >Schedule a Demo</h2>
         <p>We know your time is valuable. Select a date and time that works best for you.</p>
         <p>🕒 30 min</p>
         <p>🖥️ Web conferencing details provided upon confirmation</p>
         
-        <h3>Select Date & Time</h3>
+        <h3 style={{color:'#2C766F'}}>Select Date & Time</h3>
         
-        <div className="calendar-container">
+        <div className="calendar-container ">
           <button className="prev-btn">❮</button>
   
           <Calendar
@@ -44,8 +44,8 @@ const ScheduleDemo = ({visible,setVisible}) => {
             background: rgba(255, 255, 255, 0.3);
             padding: 20px;
             border-radius: 12px;
-            max-width: 100%;
-            margin: 0 auto;
+            max-width: 500px;
+            
             box-sizing: border-box;
           }
   
@@ -56,9 +56,11 @@ const ScheduleDemo = ({visible,setVisible}) => {
           .calendar-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             margin-top: 20px;
             width: 100%;
+            
+            
           }
   
           .custom-calendar {
@@ -102,6 +104,9 @@ const ScheduleDemo = ({visible,setVisible}) => {
               flex-direction: column;
               
             }
+              .schedule-demo{
+              width:90%
+              }
   
             .prev-btn, .next-btn {
               margin-bottom: 10px;
@@ -119,7 +124,9 @@ const ScheduleDemo = ({visible,setVisible}) => {
             h2, h3 {
               font-size: 1.5rem;
             }
-  
+            .schedule-demo{
+              width:95%
+              }
             .prev-btn, .next-btn {
               font-size: 16px;
               padding: 6px 12px;
@@ -133,7 +140,7 @@ const ScheduleDemo = ({visible,setVisible}) => {
   
           @media (min-width: 1200px) {
             .schedule-demo {
-              max-width: 1200px;
+              max-width: 500px;
             }
   
             .calendar-container {
@@ -141,7 +148,7 @@ const ScheduleDemo = ({visible,setVisible}) => {
             }
   
             .custom-calendar {
-              max-width: 600px;
+              max-width: 500px;
             }
           }
         `}</style>
@@ -159,15 +166,15 @@ const ScheduleDemo = ({visible,setVisible}) => {
   // demo 2
 function Demo2({setVisible,visible}){
   return (
-    <div className="schedule">
-    <h3>Schedule a Demo</h3>
-    <p>We know your time is valuable. Select a date and time that works <br/>
+    <div id="schedule">
+    <h3 style={{color:'#2C766F'}}>Schedule a Demo</h3>
+    <p  style={{color:'#2C766F'}}>We know your time is valuable. Select a date and time that works <br/>
          best for you, and our team will tailor the demo to your specific needs.</p>
-    <p id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
-    <p id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
-    <p id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+    <p  style={{color:'#2C766F'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
+    <p style={{color:'#2C766F'}} id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
+    <p style={{color:'#2C766F'}} id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
 
-    <div className="registrationForm">
+    <div className="registrationForm "  style={{color:'#2C766F'}}>
         <h4>Enter Details</h4>
         <form action="" className="regform">
             <label htmlFor="name">Name *</label><br/>
@@ -203,15 +210,15 @@ export default function Schedule(){
 
                 <div id="main-section" >
             <div id="main-text" >
-                <div>
+                <div style={{color:'#144944'}}>
                 <h1  >Discover How Neo CFO Can <br/>
                     <i style={{fontFamily: 'Playfair Display, serif'}}>Revolutionize </i> Your Business</h1>
-                <p>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
+                <p style={{color:"#2C766F"}}>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
                 </div>
 
-                <div id="infoScheduleForms">
+                <div id="infoScheduleForms" >
                     <div id="infoForm">
-                        <h3>Get in Touch</h3>
+                        <h3 className='text-white'>Get in Touch</h3>
                         <p>Simply fill out the form below for your demo. <br/>
                             Our team will be in touch shortly to confirm the details.</p>
                         <form action="">
@@ -233,7 +240,9 @@ export default function Schedule(){
                                 </datalist> <br/>
                             <label htmlFor="Message">Message</label> <br/>
                             <textarea name="Message" id="Message"></textarea><br/>
-                            <button>Submit</button>
+                            <div className='flex justify-end mt-10'>
+                            <button className='bg-white text-green-700 px-4 py-2 rounded-sm text-xs'>Submit</button>
+                            </div>
                         </form>
                     </div>
 
@@ -261,7 +270,7 @@ export default function Schedule(){
                     <img src="./benefit1.1.png" alt="" id="img1"/><br/> 
                     <img src="./benefit1.2.png" alt="" id="img2"/>
                     <br/>
-                    <div className="benefit-text">
+                    <div className="benefit-text ">
                         <h1>Explore Powerful Features</h1>
                         <p>Get a first-hand look at how NEO CFO can streamline your financial processes with its advanced automation tools.</p>
                     </div>
