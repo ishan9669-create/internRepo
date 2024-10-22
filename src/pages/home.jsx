@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/home.css'
 import Footer from '../components/footer';
 import { GoArrowUpRight } from "react-icons/go";
+import Navbar from '../components/header';
 export default function Home(){
     const nav = useNavigate()
 
@@ -14,10 +15,12 @@ export default function Home(){
     }
     return (
         <div>
-            <div id="home" className='mt-10'>
-        <div id="hero">
-            <div id="heroText" className='mt-10'>
-                <h1>Revolutionize Your <br/> Financial Processes </h1>
+            
+            <div id="home"  >
+            <Navbar bg={'#FFFFFF33'}/>
+        <div id="hero"  >
+            <div id="heroText"  >
+                <h1 style={{marginTop:'4.5rem'}}>Revolutionize Your <br/> Financial Processes </h1>
                 <h2>With NEO CFO</h2>
                 <p>Streamline Accounting, Finance and Taxation with our cutting edge automation platform with our best
                     in class Integrations</p>
@@ -106,11 +109,11 @@ export default function Home(){
 
                         <div className='flex flex-col text-[14px] justify-center'>
                         <h3 className='text-green-950'>Fathima Sheika</h3>
-                        <p className='text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
+                        <p className=' text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
                         </div>
                         
                         </div>
-                        <p className='text-[12px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px]   text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
                     </div>
                     <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
                         <div className='flex items-center'>
@@ -121,7 +124,7 @@ export default function Home(){
                         <p className='text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
                         </div>
                         </div>
-                        <p className='text-[12px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
                     </div>
                     <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
                         <div className='flex items-center'>
@@ -132,7 +135,7 @@ export default function Home(){
                         </div>
                         </div>
                         
-                        <p className='text-[12px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
                     </div>
                     
                 </div>
@@ -156,12 +159,19 @@ export default function Home(){
         <div id="blog-text">
 
             <p>Blogs</p>
+            <div>
+                
+            </div>
+            <div className='flex items-end justify-between'>
             <h2>Insights & Innovations: <br/>
                 Let’s Explore the <i style={{fontFamily: "Playfair Display, serif "}}>Future of Finance</i></h2>
-            <button onClick={()=>{
+            <button className='flex mr-24    items-center  text-green-700' style={{backgroundColor:'#FFFFFF1A',
+                borderRadius:"20px",fontSize:"14px"
+            }} onClick={()=>{
                 window.location.href = '/blogpage'
-            }}>Read More <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            }}>Read More <GoArrowUpRight/></button>
+            </div>
+            
         </div>
         <div id="Blogs">
             <div id="blog">
@@ -188,7 +198,7 @@ export default function Home(){
     <div id="demo">
         <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button id="demobtn">Schedule a Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
     <br/>
