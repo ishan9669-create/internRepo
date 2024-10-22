@@ -5,6 +5,117 @@ import 'react-calendar/dist/Calendar.css'; // Import basic calendar styling
 import Footer from '../components/footer';
 import Navbar from '../components/header';
 
+import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, parse } from 'date-fns';
+
+const CalendarPro = ({setVisible,visible}) => {
+  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const renderHeader = () => {
+    return (
+      <div className="flex justify-between items-center my-4" style={{backgroundColor:'#FFFFFF33'}}>
+        <button onClick={prevMonth} className="text-lg font-bold text-gray-700">&lt;</button>
+        <h2 className="text-lg font-semibold">{format(currentMonth, 'MMMM yyyy')}</h2>
+        <button onClick={nextMonth} className="text-lg font-bold text-gray-700">&gt;</button>
+      </div>
+    );
+  };
+
+  const renderDays = () => {
+    const days = [];
+    const dateFormat = "EEEEEE"; // Short day names (e.g., M, T, W)
+
+    let startDate = startOfWeek(currentMonth);
+
+    for (let i = 0; i < 7; i++) {
+      days.push(
+        <div key={i} className="text-xs text-center font-bold text-gray-700">
+          {format(addDays(startDate, i), dateFormat)}
+        </div>
+      );
+    }
+
+    return <div className="grid grid-cols-7 gap-2">{days}</div>;
+  };
+
+  const renderCells = () => {
+    const monthStart = startOfMonth(currentMonth);
+    const monthEnd = endOfMonth(monthStart);
+    const startDate = startOfWeek(monthStart);
+    const endDate = endOfWeek(monthEnd);
+
+    const rows = [];
+    let days = [];
+    let day = startDate;
+    let formattedDate = '';
+
+    while (day <= endDate) {
+      for (let i = 0; i < 7; i++) {
+        formattedDate = format(day, "d");
+        const cloneDay = day;
+
+        days.push(
+          <div
+            className={`p-2 text-center cursor-pointer ${!isSameMonth(day, monthStart)
+              ? "text-gray-400"
+              : isSameDay(day, selectedDate)
+              ? "bg-green-500 text-white rounded-full"
+              : "text-gray-700 hover:bg-gray-200 rounded-full"
+            }`}
+            key={day}
+            onClick={() => onDateClick(parse(cloneDay))}
+          >
+            <span>{formattedDate}</span>
+          </div>
+        );
+        day = addDays(day, 1);
+      }
+
+      rows.push(<div className="grid grid-cols-7 gap-2" key={day}>{days}</div>);
+      days = [];
+    }
+
+    return <div className="mt-2">{rows}</div>;
+  };
+
+  const onDateClick = (day) => {
+    setSelectedDate(day);
+  };
+
+  const nextMonth = () => {
+    setCurrentMonth(addMonths(currentMonth, 1));
+  };
+
+  const prevMonth = () => {
+    setCurrentMonth(subMonths(currentMonth, 1));
+  };
+
+  return (
+    <div className="max-w-sm sm:w-[500px] rounded-lg shadow-lg p-4" style={{backgroundColor:'#FFFFFF33'}}>
+      <div className="calendar">
+      <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
+        <p className='mt-2'>We know your time is valuable. Select a date and time that works best for you.</p>
+        <p className='mt-5'>🕒 30 min</p>
+        <p className='mt-2'>🖥️ Web conferencing details provided upon confirmation</p>
+        
+        <h3 style={{color:'#2C766F'}}>Select Date & Time</h3>
+        
+        {renderHeader()}
+        {renderDays()}
+        {renderCells()}
+        <button
+        onClick={()=>{
+          if(visible) setVisible(false)
+            else setVisible(true)
+        }}
+        className='mt-2 bg-white px-5 rounded-lg hover:bg-red-400 hover:text-white py-1'>Next</button>
+      </div>
+      <div className="mt-4 text-center">
+        <p className="text-gray-600 font-bold">Selected Date: {format(selectedDate, "MMMM d, yyyy")}</p>
+      </div>
+    </div>
+  );
+};
 const ScheduleDemo = ({visible,setVisible}) => {
     const [date, setDate] = useState(new Date());
   
@@ -14,10 +125,10 @@ const ScheduleDemo = ({visible,setVisible}) => {
   
     return (
       <div className="schedule-demo "  style={{color:'#2C766F'}}>
-        <h2 style={{color:'#2C766F'}} >Schedule a Demo</h2>
-        <p>We know your time is valuable. Select a date and time that works best for you.</p>
-        <p>🕒 30 min</p>
-        <p>🖥️ Web conferencing details provided upon confirmation</p>
+        <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
+        <p className='mt-2'>We know your time is valuable. Select a date and time that works best for you.</p>
+        <p className='mt-5'>🕒 30 min</p>
+        <p className='mt-2'>🖥️ Web conferencing details provided upon confirmation</p>
         
         <h3 style={{color:'#2C766F'}}>Select Date & Time</h3>
         
@@ -40,8 +151,9 @@ const ScheduleDemo = ({visible,setVisible}) => {
         <style jsx>{`
           /* General Styles */
           .schedule-demo {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.3);
+            
+             background-color: #FFFFFF4D;
+            backdrop-filter:blur(35px);
             padding: 20px;
             border-radius: 12px;
             max-width: 500px;
@@ -52,7 +164,9 @@ const ScheduleDemo = ({visible,setVisible}) => {
           h2, h3 {
             color: #333;
           }
-  
+  .custom-calendar{
+      background-color: inherit;
+  }
           .calendar-container {
             display: flex;
             align-items: center;
@@ -64,34 +178,42 @@ const ScheduleDemo = ({visible,setVisible}) => {
           }
   
           .custom-calendar {
-            background-color: rgba(255, 255, 255, 0.3); /* Background color for the calendar */
+             /* Background color for the calendar */
             border-radius: 12px;
             padding: 20px;
             width: 100%;
             max-width: 500px;
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           
+            
           }
   
           .custom-calendar .react-calendar__tile {
-            background-color: #fff; /* Default background for dates */
-            border-radius: 6px;
+            /* Default background for dates */
+            border-radius: 50%;
+            width:20px;
+            height:50px;
             margin: 5px;
-            padding: 10px;
+            
+            
+            background-color:#14494433
+            
           }
   
           .custom-calendar .react-calendar__tile:enabled:hover {
-            background-color: #f0e68c; /* Highlight color on hover */
+            /* Highlight color on hover */
+            border-radius:50%;
+            
           }
   
           .custom-calendar .react-calendar__tile--active {
-            background-color: #98fb98; /* Active date background */
-            color: #fff;
+            background-color: white; /* Active date background */
+            color: #144944;
           }
   
           .prev-btn, .next-btn {
             font-size: 24px;
-            background-color: white;
+            
             border: none;
             cursor: pointer;
             padding: 5px 10px;
@@ -163,26 +285,27 @@ const ScheduleDemo = ({visible,setVisible}) => {
   };
 
 
+
   // demo 2
 function Demo2({setVisible,visible}){
   return (
-    <div id="schedule">
-    <h3 style={{color:'#2C766F'}}>Schedule a Demo</h3>
+    <div id="schedule"  >
+    <h3 style={{color:'#144944',marginBottom:'5px'}}>Schedule a Demo</h3>
     <p  style={{color:'#2C766F'}}>We know your time is valuable. Select a date and time that works <br/>
          best for you, and our team will tailor the demo to your specific needs.</p>
-    <p  style={{color:'#2C766F'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
-    <p style={{color:'#2C766F'}} id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
-    <p style={{color:'#2C766F'}} id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+    <p  style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
+    <p style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
+    <p style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
 
     <div className="registrationForm "  style={{color:'#2C766F'}}>
         <h4>Enter Details</h4>
         <form action="" className="regform">
             <label htmlFor="name">Name *</label><br/>
-            <input type="text" name="name"  placeholder="Enter Your Name"/><br/>
-            <label htmlFor="Email">Email *</label><br/>
-            <input type="email" name="email" placeholder="Enter Your Email"/><br/>
+            <input type="text" className='mb-3' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
+            <label htmlFor="Email" >Email *</label><br/>
+            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='mb-3' placeholder="Enter Your Email"/><br/>
             <label htmlFor="Guest">Add Guests</label><br/>
-            <textarea style={{height:'90%'}} name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" ></textarea><br/>
+            <textarea style={{height:'90%',backgroundColor:"inherit",border:'1px solid green'}}  name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" ></textarea><br/>
         </form>
         <div className="regBtns">
             <button id="regbtn1" onClick={()=>{
@@ -202,8 +325,8 @@ export default function Schedule(){
    const [visible,setVisible] = useState(false)
    
     return (    
-        <div>
-            <div id="home" >
+        <div className='flex flex-col sm:items-center justify-center'>
+            <div id="home"  >
                  
                  <Navbar bg={'#FFFFFF33'} />
 
@@ -216,7 +339,7 @@ export default function Schedule(){
                 <p style={{color:"#2C766F"}}>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
                 </div>
 
-                <div id="infoScheduleForms" >
+                <div id="infoScheduleForms" className=''>
                     <div id="infoForm">
                         <h3 className='text-white'>Get in Touch</h3>
                         <p>Simply fill out the form below for your demo. <br/>
@@ -247,7 +370,7 @@ export default function Schedule(){
                     </div>
 
 
-                   {visible == false ?  <ScheduleDemo setVisible={setVisible} visible={visible}/>:<Demo2 setVisible={setVisible} visible={visible}/>}
+                   {visible == false ?  <CalendarPro setVisible={setVisible} visible={visible}/>:<Demo2 setVisible={setVisible} visible={visible}/>}
             </div>
 
            
