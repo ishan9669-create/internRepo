@@ -64,7 +64,7 @@ const Navbar = ({bg,bgI}) => {
 
       {/* Dropdown Menu for small screens */}
       {(
-       <div style={{background:'linear-gradient( rgba(100, 100, 100, 1),rgba(50, 50, 50, 1) ',backdropFilter:'blur(55px)'}} className={`absolute top-16 h-[700px] left-0 w-full text-white  bg-opacity-90 flex flex-col justify-between shadow-xl md:hidden ${isMenuOpen ? "animate-rightlao":'animate-leftlao'}`}>
+       <div style={{background:'linear-gradient( rgba(100, 100, 100, 1),rgba(50, 50, 50, 1) ',backdropFilter:'blur(55px)'}} className={`absolute top-10 h-[700px] left-0 w-full text-white  bg-opacity-90 flex flex-col justify-between shadow-xl md:hidden ${isMenuOpen ? "animate-rightlao":'animate-leftlao'}`}>
         <div className='ml-7 text-green-800'>
           <a href="#"
           onClick={(e)=>{
