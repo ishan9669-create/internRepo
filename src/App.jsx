@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Footer from './components/footer'
 import Header from './components/header'
 import Story from './pages/story'
@@ -10,17 +10,23 @@ import Schedule from './pages/schedule1'
 import Terms from './pages/terms'
 import Privacy from './pages/privacy'
 import Read from './pages/readblog'
+import Navbar from './components/header'
 
 
 
 
 function App() {
+  const location = useLocation();
+
+  // Specify routes where you want the Header to appear
+  const routesWithHeader = ['/story', '/feature','/blogpage','/schedule','/privacy','/read'];
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Header/>
-     <BrowserRouter>
+    <div>
+    {/* Conditionally render the Header only on specific routes */}
+    {routesWithHeader.includes(location.pathname) && <Navbar />}
+     
      <Routes>
       <Route path='/story' element={<Story/>} />
       <Route path='/feature' element={<Feature/>} />
@@ -33,9 +39,9 @@ function App() {
       
       
      </Routes>
-     </BrowserRouter>
      
-    </>
+     
+    </div>
   )
 }
 
