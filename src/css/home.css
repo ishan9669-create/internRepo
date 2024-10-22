@@ -56,6 +56,7 @@
     width: 100%;
     height: calc(100vh-60px);
     display: grid;
+    height: 600px;
     grid-template-columns: 800px 840px;
     overflow: hidden;
   }
@@ -87,7 +88,7 @@
   }
   #heroImage img {
     padding-top: 70px;
-    height: 400px;
+    height: 450px;
     width: 600px;
     object-fit: cover;
   }
@@ -583,7 +584,7 @@
   }
   
   #testimonial {
-    flex: 0 0 300px; /* Each testimonial card takes a fixed width */
+    flex: 0 0 340px; /* Each testimonial card takes a fixed width */
     margin: 0 10px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -615,7 +616,7 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     #testimonial {
-      flex: 0 0 250px; /* Reduce the width of each testimonial card on smaller screens */
+      flex: 0 0 350px; /* Reduce the width of each testimonial card on smaller screens */
     }
   
     #Reviews h1 {
@@ -629,7 +630,7 @@
       padding: 10px;
     }
     #testimonial {
-      flex: 0 0 200px; /* Further reduce width on small devices */
+      flex: 0 0 480px; /* Further reduce width on small devices */
       margin: 0 5px; /* Decrease space between the cards */
     }
     #testimonial img {
