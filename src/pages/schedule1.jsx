@@ -3,6 +3,7 @@ import '../css/schedule1.css'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Import basic calendar styling
 import Footer from '../components/footer';
+import Navbar from '../components/header';
 
 const ScheduleDemo = ({visible,setVisible}) => {
     const [date, setDate] = useState(new Date());
@@ -195,8 +196,9 @@ export default function Schedule(){
    
     return (    
         <div>
-            <div id="home" className='mb-3'>
-
+            <div id="home" >
+                 
+                 <Navbar bg={'#FFFFFF33'} />
 
 
                 <div id="main-section" >
