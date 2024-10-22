@@ -13,7 +13,9 @@ const Navbar = ({bg,bgI}) => {
   };
 
   return (
-    <div style={{backgroundColor:bg || 'white',zIndex:'1',position:'relative'}} className="bg-white   shadow-2xl flex fixed z-20 top-0 w-full justify-between items-center p-3">
+    <div style={{backgroundColor:bg || 'white',zIndex:'1',position:'relative',
+      background:`${isMenuOpen ? 'linear-gradient(rgba(100, 100, 100, 1),rgba(100, 100, 100, 1))':''}`
+    }} className={`   shadow-2xl flex fixed z-20 top-0 w-full justify-between  items-center p-3`}>
       {/* Logo Section */}
       <div>
         <img
@@ -40,30 +42,30 @@ const Navbar = ({bg,bgI}) => {
 
       {/* Schedule a Demo for large screens */}
       <div className="hidden md:flex justify-center items-center underline">
-        <a className='cursor-pointer' onClick={(e)=>{
+        <a className='cursor-pointer px-2 flex items-center bg-white py-1 rounded-lg text-green-700' onClick={(e)=>{
           e.preventDefault();
           window.location.href = '/schedule'
-        }}>Schedule a Demo </a>
-        <GoArrowUpRight />
+        }}>Schedule a Demo  <GoArrowUpRight className='text-green-700'/></a>
+        
       </div>
 
       {/* Hamburger Menu Icon for small screens */}
       <div className="md:hidden flex items-center">
         <button onClick={toggleMenu}>
           {isMenuOpen ? (
-            <AiOutlineClose onClick={()=>{
+            <AiOutlineClose className='text-green-900' onClick={()=>{
 
             }} size={24} />
           ) : (
             <GiHamburgerMenu size={24} />
-          )}
+          )} 
         </button>
       </div>
 
       {/* Dropdown Menu for small screens */}
       {(
-        <div className={`absolute top-16 h-[550px] left-0 w-full text-white bg-black bg-opacity-90 flex flex-col justify-between shadow-xl md:hidden ${isMenuOpen ? "animate-rightlao":'animate-leftlao'}`}>
-        <div className='ml-7'>
+       <div style={{background:'linear-gradient( rgba(100, 100, 100, 1),rgba(50, 50, 50, 1) ',backdropFilter:'blur(55px)'}} className={`absolute top-16 h-[700px] left-0 w-full text-white  bg-opacity-90 flex flex-col justify-between shadow-xl md:hidden ${isMenuOpen ? "animate-rightlao":'animate-leftlao'}`}>
+        <div className='ml-7 text-green-800'>
           <a href="#"
           onClick={(e)=>{
             e.preventDefault()
@@ -86,21 +88,21 @@ const Navbar = ({bg,bgI}) => {
         </div>
       
         <div className='flex flex-col gap-5 ml-5 mr-5 p-5 border-b border-gray-400'>
-          <p className='w-[200px] rounded-lg font-semibold'>
+          <p className='w-[200px] rounded-lg text-green-900 font-semibold'>
             Transform Your Financial Processes with Neo CFO
           </p>
           <button onClick={()=>{
             window.location.href = '/schedule'
-          }} className="py-3 rounded-lg text-white bg-black px-2 w-[180px] text-center underline flex justify-center items-center">
+          }} className="py-3 rounded-md text-white bg-green-900 px-2 text-xs w-[180px] text-center underline flex justify-center items-center">
             Schedule a Demo
             <GoArrowUpRight />
           </button>
         </div>
       
-        <div className='flex gap-8 ml-9 text-3xl mb-2'>
-          <IoLogoLinkedin className='cursor-pointer'/>
-          <FaInstagram className='cursor-pointer'/>
-          <FaSquareXTwitter className='cursor-pointer'/>
+        <div className='flex gap-8 ml-5  mb-20  mr-10'>
+          <IoLogoLinkedin className='cursor-pointer text-2xl text-green-800'/>
+          <FaInstagram className='cursor-pointer text-2xl text-green-800'/>
+          <FaSquareXTwitter className='cursor-pointer text-2xl text-green-800'/>
         </div>
       </div>
       
