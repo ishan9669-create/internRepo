@@ -46,14 +46,14 @@ export default function Footer(){
             </div>
             
             <div id="footer-down">
-                <div id="footer-down-left">
-                    <p>All Rights Reserved</p>
+                <div   id="footer-down-left">
+                    <p style={{fontSize:'14px'}}>All Rights Reserved</p>
                 </div>
-                <div id="footer-down-right">
-                    <p className='cursor-pointer' onClick={()=>{
+                <div id="footer-down-right" >
+                    <p className='cursor-pointer' style={{fontSize:'14px'}} onClick={()=>{
                         window.location.href = '/privacy'
                     }}>Privacy Policy</p>
-                    <p className='cursor-pointer' onClick={()=>{
+                    <p className='cursor-pointer' style={{fontSize:'14px'}} onClick={()=>{
                         window.location.href = '/terms'
                     }}>Terms & Conditions</p>
                 </div>
