@@ -4,6 +4,8 @@ import '../css/style.css'
 import Footer from "../components/footer";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { GrAdd } from "react-icons/gr";
+import { FaMinus } from "react-icons/fa";
 export default function Story(){
     const [q1,setQ1] = useState(false);
         const [q2,setQ2] = useState(false);
@@ -23,10 +25,10 @@ export default function Story(){
                 <p className="max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
 
              </div> */}
-             <div id="first" className="flex flex-col gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[400px] md:w-[450px] lg:w-[500px] ">
-        <span className="text-lg sm:text-xl">Our Story</span>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-700"><i className="font-normal">Reimagine</i><br /> Financial Management</h1>
-        <p className="max-w-full sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
+             <div id="first" className="flex flex-col gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full    ml-20">
+        <span className="text-lg sm:text-sm">Our Story</span>
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-700"><i className="font-normal sm:text-3xl">Reimagine</i> Financial Management</h1>
+        <p className="max-w-full text-sm sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
             </div>
 
 
@@ -91,44 +93,44 @@ export default function Story(){
 
 {/* Catalyst */}
 
-        <div className="flex justify-center text-4xl text-center">
+        <div className="flex justify-center text-2xl text-center">
              <h1 className="max-w-[600px]">A 
-                <i> Catalyst</i> for transformation in the world of finance.</h1>
+                <i className="text-2xl"> Catalyst</i> for transformation in the world of finance.</h1>
         </div>
 
 {/* problems div 1. */}
 
         
-        <div className="flex flex-col lg:flex-row justify-center lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-32 px-4">
+        <div className="flex flex-col lg:flex-row justify-center  lg:h-[400px] gap-5 lg:gap-10 mt-10 lg:mt-32 px-4">
     {/* <!-- Image Section --> */}
-    <div className="max-w-full lg:max-w-[600px]">
-        <img className="w-full h-auto lg:h-[400px] rounded-lg" src="https://s3-alpha-sig.figma.com/img/2e63/6abc/c8fb6514e1f34f5fb6180ee3d0a4e7f9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUNDY8hbi8zi2eSiUMkmKREDfZsdPvsFf0Igs6Xnhe5saIYHviuW9ZgkUeQNLu~fAk~zo8WzG9z3aLkPrE1U7rhrj1gcyUBG3cNhF2ombA3txMuhcH19t0KW01SM9oo7CSKwNlXftLZb1nTFjycrxEc4ZVhjQP1u65twQvK3R9uzy4zXYagFuFOteyQ77xT2T0eA3FpM0UjLcR~vgf7~QP8h~Rv1v9Lpat1NhChtpTDt1dt~JhowbcmrPJVIpWo4rjHVpvb4a6Sh~k~PowYSh43ztUqYiHFR6XW6XtdUaPLlmjM8TIgW71NjrMbXGNbo8qGAsns7e2ZCQDrXe2t0AQ__" alt="Problem Image" />
+    <div className="max-w-full lg:max-w-[600px] h-full ">
+        <img className="w-full h-auto lg:h-full  rounded-lg" src="https://s3-alpha-sig.figma.com/img/2e63/6abc/c8fb6514e1f34f5fb6180ee3d0a4e7f9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUNDY8hbi8zi2eSiUMkmKREDfZsdPvsFf0Igs6Xnhe5saIYHviuW9ZgkUeQNLu~fAk~zo8WzG9z3aLkPrE1U7rhrj1gcyUBG3cNhF2ombA3txMuhcH19t0KW01SM9oo7CSKwNlXftLZb1nTFjycrxEc4ZVhjQP1u65twQvK3R9uzy4zXYagFuFOteyQ77xT2T0eA3FpM0UjLcR~vgf7~QP8h~Rv1v9Lpat1NhChtpTDt1dt~JhowbcmrPJVIpWo4rjHVpvb4a6Sh~k~PowYSh43ztUqYiHFR6XW6XtdUaPLlmjM8TIgW71NjrMbXGNbo8qGAsns7e2ZCQDrXe2t0AQ__" alt="Problem Image" />
     </div>
 
     {/* <!-- Text Section --> */}
     <div className="w-full lg:w-[500px] flex flex-col gap-6 lg:gap-3">
         {/* <!-- Problem Header --> */}
-        <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-4 mt-4" id="borderwala">
+        <div className="border-b-2 h-[100px] lg:h-[200px] flex items-center gap-1 mt-4" id="borderwala">
             <span className="w-[30px] h-[30px] rounded-full flex border-black border-2 justify-center items-center text-sm lg:text-base">01</span>
             <span className="text-sm lg:text-lg">The Problem</span>
         </div>
 
-        {/* <!-- Overburdened Teams --> */}
-        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-            <span className="text-sm lg:text-lg mt-3">Overburdened Teams</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
+        {/* <!-- Overburdened Teams --> */} 
+        <div className="flex h-[200px] lg:h-[200px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+            <span className="text-sm  mt-1">Overburdened Teams</span>
+            <p className="text-slate-300 text-center text-xs  px-2 p-1">The increasing volume of transactions, regulatory compliance, and stakeholder demands have left finance teams stretched thin.</p>
         </div>
 
         {/* <!-- Time-Consuming Tasks --> */}
-        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-            <span className="text-sm lg:text-lg mt-2">Time-Consuming Tasks</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
+        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+            <span className="text-sm mt-1">Time-Consuming Tasks</span>
+            <p className="text-slate-300 text-center text-xs  px-2 p-1">Manual processes, data retrieval, and report generation consume valuable time that could be better spent on strategic initiatives.</p>
         </div>
 
         {/* <!-- Knowledge Gaps --> */}
-        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-            <span className="text-sm lg:text-lg">Knowledge Gaps</span>
-            <p className="text-slate-300 text-center text-xs lg:text-sm px-2 p-4">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
+        <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+            <span className="text-sm ">Knowledge Gaps</span>
+            <p className="text-slate-300 text-center text-xs  px-2 p-1">Staying up-to-date with financial regulations, industry trends, and company-specific information is a daunting task.</p>
         </div>
     </div>
 </div>
@@ -143,17 +145,17 @@ export default function Story(){
                     <span className="text-sm lg:text-lg">The Problem</span>
                 </div>
                 
-                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span className="text-sm lg:text-lg mt-2">Stremline Processes</span>
-                    <p className="text-slate-300 text-center text-sm p-4">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+                    <span className="text-sm mt-2">Stremline Processes</span>
+                    <p className="text-slate-300 text-center text-sm p-1">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
                 </div>
-                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span className="text-sm lg:text-lg">Provide Instant Access</span>
-                    <p className="text-slate-300 text-center text-sm p-4">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+                    <span className="text-sm ">Provide Instant Access</span>
+                    <p className="text-slate-300 text-center text-sm p-1">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
                 </div>
-                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-800">
-                    <span className="text-sm lg:text-lg mt-2">Ensure Compliance</span>
-                    <p className="text-slate-300 text-center text-sm p-4">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
+                <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
+                    <span className="text-sm  mt-2">Ensure Compliance</span>
+                    <p className="text-slate-300 text-center text-sm p-1">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
                 </div>
              </div>
 
@@ -165,16 +167,23 @@ export default function Story(){
 
 
       {/* sliding window */}
-      <div className="flex flex-col justify-center mt-52 text-center text-2xl md:text-4xl">
-  <h1 className="flex  items-center gap-32">
-  <span className="text-2xl"><i>Smart Finance</i>, Secure Data</span>
+      <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
+  <h1 className="flex flex-col md:flex-row items-center gap-5 md:gap-32 text-lg md:text-2xl lg:text-4xl">
+    <span className="text-xl md:text-2xl"><i>Smart Finance</i>, Secure Data</span>
     
-    <div className="flex gap-10">
-       <FaArrowLeft className="bg-slate-500 cursor-pointer hover:bg-slate-600 text-white w-[50px] h-[30px] rounded-full"/>
-       <FaArrowRight className="bg-slate-500 cursor-pointer hover:bg-slate-600 text-white w-[50px] h-[30px] rounded-full"/>
+    <div className="flex gap-5 md:gap-10 mt-4 md:mt-0">
+      <FaArrowLeft 
+        style={{ backgroundColor: '#14494433' }} 
+        className="text-green-800 cursor-pointer w-[40px] h-[25px] md:w-[50px] md:h-[30px] rounded-full" 
+      />
+      <FaArrowRight 
+        style={{ backgroundColor: '#14494433' }} 
+        className="text-green-800 cursor-pointer w-[40px] h-[25px] md:w-[50px] md:h-[30px] rounded-full" 
+      />
     </div>
   </h1>
 </div>
+
 
 {/* <div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
   
@@ -214,19 +223,19 @@ export default function Story(){
 <div id="story-container">
                 <div id="story-track" className="flex gap-10">
                     <div id="stories">
-                        <img src="./image1.png" alt="Person 1"/>
+                        <img src="./s1.png" alt="Person 1"/>
                         {/* <h3>Fathima Sheika</h3>
                         <p>Founder, Lorem Ipsum</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
                     </div>
                     <div id="stories">
-                        <img src="./image2.png" alt="Person 2"/>
+                        <img src="./s2.png" alt="Person 2"/>
                         {/* <h3>Harry Williams</h3>
                         <p>Founder, Lorem Ipsum</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
                     </div>
                     <div id="stories">
-                        <img src="./image3.png" alt="Person3"/>
+                        <img src="./s3.png" alt="Person3"/>
                         {/* <h3>Lary</h3>
                         <p>Founder, Lorem Ipsum</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
@@ -243,30 +252,30 @@ export default function Story(){
             </div>
 
 
-       <div className="flex justify-center  text-4xl mt-32">
-        <h1>Your Questions , <i>Answered</i></h1>
+       <div className="flex justify-center  text-3xl mt-32">
+        <h1>Your Questions , <i className="text-3xl">Answered</i></h1>
        </div>
 
 
-      <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
-       <div className=" mt-5 w-full lg:max-w-[500px] h-auto lg:h-[400px] "
-          
+      <div className="flex flex-col  lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
+       <div className="  w-full lg:max-w-[500px]  flex flex-col gap-7 h-full lg:full "
+           
           >
               <div
                 onClick={()=>{
                   if(q1==false) setQ1(true);
                   else setQ1(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10  cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>Why drone survey?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100  cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q1 ? '#F1FFE6':''}`}}>
+                  <span className="text-xs flex justify-between items-center">Why drone survey? {!q1 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-green-800 text-sm"/>}</span>
                   
-                  <div style={{display:`${q1==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                  <div>
+                  <div style={{display:`${q1==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                  <div className="text-xs max-w-[500px]" >
                   Drone Surveys allow you to collect detailed and accurate information from areas that are inaccessible to you. High-resolution orthomosaics & detailed Three Dimensional (3D) representations are provided by drones. Drone Surveys add vital essential data to facilitate well-informed decision-making during the preliminary stages of construction site mapping, surveying, or inspection of infrastructure.
 
                   </div>
                   <br />
-                 <div>
+                 <div  className="text-xs max-w-[500px]" >
                  It ensures that users sustain control and avoid failure to secure maximum goodwill of their assets. Wind Turbine Blades, highways, and transmission lines are frequently inspected through drone technology. When compared to traditional ‘at-height’ working, it decreases the major risk for the workers during an inspection.
                  </div>
                   </div>
@@ -276,13 +285,13 @@ export default function Story(){
                   if(q2==false) setQ2(true);
                   else setQ2(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>How accurate Drone Survey results are?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q2 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">How accurate Drone Survey results are? {!q2 ? <GrAdd className="text-green-800 text-sm"/>:<FaMinus className="text-sm text-green-800"/>}</span>
 
-                  <div style={{display:`${q2==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>Drone surveys are quicker, more accurate, and also less cost-expensive approach to the study. Drones include high-resolution cameras and sensors that provides interactive three Dimensional (3D) representations of the earth surface</div>
+                  <div style={{display:`${q2==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">Drone surveys are quicker, more accurate, and also less cost-expensive approach to the study. Drones include high-resolution cameras and sensors that provides interactive three Dimensional (3D) representations of the earth surface</div>
                       <br />
-                      <div>Drone Surveys provide vital information that empowers competent arrangements from building site mapping, surveying, and inspection to infrastructure design and maintenance. Drone surveys offer a consistent approach to transmission tower surveying and powerline surveying. They dramatically reduce risk and maximize safety results by eliminating regular 'at-height' function.</div>
+                      <div  className="text-xs">Drone Surveys provide vital information that empowers competent arrangements from building site mapping, surveying, and inspection to infrastructure design and maintenance. Drone surveys offer a consistent approach to transmission tower surveying and powerline surveying. They dramatically reduce risk and maximize safety results by eliminating regular 'at-height' function.</div>
                   </div>
               </div>
               <div
@@ -290,11 +299,11 @@ export default function Story(){
                   if(q3==false) setQ3(true);
                   else setQ3(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>Which Drone technology do we use?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q3 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">Which Drone technology do we use? {!q3 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
 
-                  <div style={{display:`${q3==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>
+                  <div style={{display:`${q3==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">
                       Since drones have distinct uses, they have become an integral part of numerous private and governmental organizations. We have made our position in a number of industries through fast, reliable and secure deliveries. Catering to Government projects and mapping agricultural land surveys, our technology can do it all. Using advanced survey drones, artificial intelligence, and a variety of advanced sensors such as thermal, RGB, Lidar, etc. we have broaden our drone technology to several.
                       </div>
                   </div>
@@ -304,11 +313,11 @@ export default function Story(){
                   if(q4==false) setQ4(true);
                   else setQ4(false)
               }}
-              className="p-4 hover:bg-slate-400  hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>What does "Drone photography" mean?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg  bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q4 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">What does "Drone photography" mean? {!q4 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
 
-                  <div style={{display:`${q4==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>
+                  <div style={{display:`${q4==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">
                       Drone photography is a technique that involves photographing/mapping the surface of the Earth. They are photographed by cameras mounted on the Drone. Aerial photography is a widespread technique used by advertising agencies. Aerial photography use film variations, focal lengths, overlaps, and other features to create many types of images at different heights.
                       </div>
                   </div>
@@ -318,11 +327,11 @@ export default function Story(){
                   if(q5==false) setQ5(true);
                   else setQ5(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>What weather is suitable for flying Drones?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q5 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">What weather is suitable for flying Drones? {!q5 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
 
-              <div style={{display:`${q5==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>
+              <div style={{display:`${q5==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">
                       Drones can easily capture high-quality photographs and videos at varying heights and in different climates. Most flying drones can operate in winds of up to 22 MPH. Few drones can chart the drizzle, the fog, and even the snow. Weather may make or break the quality of the aerial photograph taken. The climate in India is rarely a hindrance to our ventures. Drones can fly even in the cold; however, flying time also decreases. The motors supplied to most drones will work in light rain as long as the flight controller does not come into contact with the rain.
                       </div>
                   </div>
@@ -332,11 +341,11 @@ export default function Story(){
                   if(q6==false) setQ6(true);
                   else setQ6(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>What type of data do we capture?</span>
+              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q6 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">What type of data do we capture? {!q6 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
 
-                  <div style={{display:`${q6==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>
+                  <div style={{display:`${q6==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">
                       We provide quick, reliable and accurate drone data for various kinds of industry. Our company specializes in the capture of data from drone surveying/mapping, aerial inspection and analysis, creative atmospheric data and UAV data processing. Drone data collected through our materials can be reproduced in various forms such as orthomosaic maps, 3D Point Cloud, DEM, DTM, DSM, Contour maps etc.
                       </div>
                   </div>
@@ -346,19 +355,19 @@ export default function Story(){
                   if(q7==false) setQ7(true);
                   else setQ7(false)
               }}
-              className="p-4 hover:bg-slate-400 hover:px-10 cursor-pointer" style={{transitionDuration:'0.4s'}}>
-                  <span>What is Aerial LiDAR</span>
+              className="p-2 hover:bg-slate-400 bg-slate-100 rounded-lg cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q7 ? '#F1FFE6':''}`}}>
+                  <span  className="text-xs flex justify-between items-center">What is Aerial LiDAR {!q7 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800 "/>}</span>
 
-                  <div style={{display:`${q7==true? "block":"none"}`}} className="mt-5 text-gray-700">
-                      <div>Aerial Lidar is an aerial mapping and Surveying technology that uses GPS-monitored aerial Drone/UAV equipped with on-board positional and sensors. After post-flight production processes, the acquired Lidar Map data is used to know the precise elevation and geospatial location of features on the earth’s surface.
+                  <div style={{display:`${q7==true? "block":"none"}`}} className="mt-5 text-slate-500">
+                      <div  className="text-xs">Aerial Lidar is an aerial mapping and Surveying technology that uses GPS-monitored aerial Drone/UAV equipped with on-board positional and sensors. After post-flight production processes, the acquired Lidar Map data is used to know the precise elevation and geospatial location of features on the earth’s surface.
                       </div>
                       <br />
-                      <div>
+                      <div  className="text-xs">
                       Lidar data is an accurate and efficient tool for producing three-dimensional topographic aerial maps and highly accurate aerial surveys of both land and man-made components. We have developed a custom aerial Lidar Mapping and surveying production workflow which adheres to the specifications outlined in Base Specification Guidelines.</div>
                   </div>
               </div>
        </div> 
-       <div className="w-full lg:w-[500px]">
+       <div className="w-full lg:w-[500px] h-full ">
     <img
       className="w-full h-auto lg:h-[500px] rounded-2xl"
       src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__"
