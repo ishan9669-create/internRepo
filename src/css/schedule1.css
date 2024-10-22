@@ -13,10 +13,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    position: relative;
     width: 100%;
-    min-height: auto;
-    transform: translateY(-10px);
+    min-height: 100vh;
+    
 
 }
 .navbar{
@@ -144,12 +144,12 @@
     margin-top: 6%;
     flex-wrap: wrap;
     padding: 10px;
-    gap: 20px;
+    gap: 70px;
 }
 
 #infoForm {
     background: #144944;
-    color: rgba(255, 255, 255, 0.411);
+    color: white;
     width: 100%;
     max-width: 500px; /* Ensures the form is responsive and doesn't exceed 500px */
     padding: 20px;
@@ -163,6 +163,7 @@
 
 #infoForm p {
     font-size: 12px;
+    color:#829392
 }
 
 #infoForm label {
@@ -172,7 +173,7 @@
 
 #infoForm input,
 #infoForm textarea {
-    width: 90%; /* Makes the inputs take up the full width of the parent */
+    width: 100%; /* Makes the inputs take up the full width of the parent */
     background: #144944;
     color: rgba(255, 255, 255, 0.411);
     border: 1px solid rgba(255, 255, 255, 0.411);
@@ -225,6 +226,23 @@ input::placeholder {
     }
 }
 
+@media (max-width: 768px) {
+   
+
+    #schedule {
+        width: 90%; /* Reduce width for tablet view */
+        
+    }
+    
+}
+@media (max-width: 480px) {
+    #schedule {
+        width: 95%; /* Full width for mobile view */
+        padding: 15px;
+    }
+
+   
+}
 @media (max-width: 480px) {
     #infoForm {
         width: 95%; /* Full width for mobile view */
@@ -245,7 +263,7 @@ input::placeholder {
 
 /* -------------------------------------------------------------- */
 #schedule{
-    width: 30vw;
+    width: 500px;
     height: auto;
     background-color:rgba(255, 255, 255, 0.3);
     margin-top: 10px;
@@ -375,7 +393,7 @@ input::placeholder {
     } */
 
     #schedule{
-        width: 70vw;
+        width: 76%;
     }
     #day{
         padding: 4px;
@@ -403,63 +421,69 @@ input::placeholder {
  .benefit{
     height: 300px;
     width: 400px;
-    box-shadow: 0 0 15px black;
-    border-radius: 10px;
+    background-color: #A6FF674D;
+    border-radius: 20px;
     transition: transform 2s;
  }
  #img1{
-    width: 250px;
+    width: 80%;
     height: 50px;
     float: right;
     margin-top: 20px;
-    box-shadow: 0 0 3px black;
+    border-radius: 20px;
    
  } 
 #img2{
-    width: 200px;
+    width: 60%;
     height: 50px;
     float: right;
     margin-top: 20px;
-    box-shadow: 0 0 3px black;
+    border-radius: 20px;
+  
   
  } 
  .benefit h1{
     font-size: 20px;
     font-weight: 800;
     margin: 100px 10px 10px 10px;
+    margin-left: 20px;
+    color:#144944
     
  }
  .benefit p{
     font-size: 12px;
     margin: 10px;
+    color:#829392
  }
  .benefit2{
     height: 300px;
     width: 400px;
-    box-shadow: 0 0 15px black;
+    background-color: #A6FF674D;
     border-radius: 10px;
     transition: transform 2s;
  }
  #img21{
     width: 100%;
     height: 150px;
-    box-shadow: 0 0 3px black;
+    border-radius: 20px;
     
  }
  .benefit2 h1{
     font-size: 20px;
     font-weight: 800;
     margin: 10px;
+    color:#144944
  }
  .benefit2 p{
     font-size: 12px;
     margin: 15px;
+    color:#829392
  }
 
  .benefit3 {
     width: 400px;
     height: 300px;
-    box-shadow: 0 0 15px black;
+    background-color: #A6FF674D;
     border-radius: 10px;
     transition: transform 2s;
  }
@@ -467,17 +491,20 @@ input::placeholder {
  #benefit31{
     width: 100%;
     height: 150px;
-    
+    border-radius: 20px;
  }
 
  .benefit3 h1{
     font-size: 20px;
     font-weight: 800;
     margin: 10px;
+    margin-left: 20px;
+    color:#144944
  }
  .benefit3 p{
     font-size: 12px;
     margin: 15px;
+    color:#829392
  }
 
  .benefit:hover{
