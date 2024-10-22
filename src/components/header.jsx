@@ -5,7 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-const Navbar = () => {
+const Navbar = ({bg}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white text-green-600  shadow-2xl flex fixed z-20 top-0 w-full justify-between items-center p-3">
+    <div style={{backgroundColor:bg || 'white'}} className="bg-white   shadow-2xl flex fixed z-20 top-0 w-full justify-between items-center p-3">
       {/* Logo Section */}
       <div>
         <img
