@@ -15,7 +15,7 @@ const Navbar = ({bg,bgI}) => {
   return (
     <div style={{backgroundColor:bg || 'white',zIndex:'1',position:'relative',
       background:`${isMenuOpen ? 'linear-gradient(rgba(100, 100, 100, 1),rgba(100, 100, 100, 1))':''}`
-    }} className={`   shadow-2xl flex fixed z-20 top-0 w-full justify-between  items-center p-3`}>
+    }} className={`   shadow-2xl flex fixed z-20 top-0 w-full justify-between  items-center p-1`}>
       {/* Logo Section */}
       <div>
         <img
@@ -42,7 +42,7 @@ const Navbar = ({bg,bgI}) => {
 
       {/* Schedule a Demo for large screens */}
       <div className="hidden md:flex justify-center items-center underline">
-        <a className='cursor-pointer px-2 flex items-center bg-white py-1 rounded-lg text-green-700' onClick={(e)=>{
+        <a className='cursor-pointer px-2 flex items-center bg-white py-1 text-xs rounded-lg text-green-700' onClick={(e)=>{
           e.preventDefault();
           window.location.href = '/schedule'
         }}>Schedule a Demo  <GoArrowUpRight className='text-green-700'/></a>
