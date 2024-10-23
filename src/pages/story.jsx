@@ -221,6 +221,7 @@ export default function Story(){
   </div>
 
 </div> */}
+
      <StoryCarousel/>
        {/* <StoryCarousel/>      */}
 
