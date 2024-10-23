@@ -245,7 +245,8 @@
 }
 
 #schedule-section{
-    margin: auto;
+    
+    
     width: 83%;
     /* padding-bottom: 100px; */
     
@@ -451,8 +452,8 @@ background-image: url('../../public//gradient1 1.png');
       padding: 10px;
     }
     #stories {
-      flex: 0 0 200px; /* Further reduce width on small devices */
-      margin: 0 5px; /* Decrease space between the cards */
+      flex: 0 0 200px; 
+      margin: 0 5px; 
     }
     #stories img {
       width: 100%;
