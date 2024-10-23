@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { GrAdd } from "react-icons/gr";
 import { FaMinus } from "react-icons/fa";
+import StoryCarousel from "../components/storycorousel";
 export default function Story(){
     const [q1,setQ1] = useState(false);
         const [q2,setQ2] = useState(false);
@@ -167,7 +168,7 @@ export default function Story(){
 
 
       {/* sliding window */}
-      <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
+      {/* <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
   <h1 className="flex flex-col md:flex-row items-center gap-5 md:gap-32 text-lg md:text-2xl lg:text-4xl">
     <span className="text-xl md:text-2xl"><i>Smart Finance</i>, Secure Data</span>
     
@@ -182,7 +183,7 @@ export default function Story(){
       />
     </div>
   </h1>
-</div>
+</div> */}
 
 
 {/* <div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
@@ -220,36 +221,8 @@ export default function Story(){
   </div>
 
 </div> */}
-<div id="story-container">
-                <div id="story-track" className="flex gap-10">
-                    <div id="stories">
-                        <img src="./s1.png" alt="Person 1"/>
-                        {/* <h3>Fathima Sheika</h3>
-                        <p>Founder, Lorem Ipsum</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
-                    </div>
-                    <div id="stories">
-                        <img src="./s2.png" alt="Person 2"/>
-                        {/* <h3>Harry Williams</h3>
-                        <p>Founder, Lorem Ipsum</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
-                    </div>
-                    <div id="stories">
-                        <img src="./s3.png" alt="Person3"/>
-                        {/* <h3>Lary</h3>
-                        <p>Founder, Lorem Ipsum</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
-                    </div>
-
-                    <div id="stories">
-                        <img src="./image4.png" alt="Person3"/>
-                        {/* <h3>Lary</h3>
-                        <p>Founder, Lorem Ipsum</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
-                    </div>
-                    
-                </div>
-            </div>
+     <StoryCarousel/>
+       {/* <StoryCarousel/>      */}
 
 
        <div className="flex justify-center  text-3xl mt-32">
@@ -257,7 +230,7 @@ export default function Story(){
        </div>
 
 
-      <div className="flex flex-col  lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
+      {/* <div className="flex flex-col  lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
        <div className="  w-full lg:max-w-[500px]  flex flex-col gap-7 h-full lg:full "
            
           >
@@ -374,7 +347,157 @@ export default function Story(){
       alt="Drone"
     />
   </div>
+      </div> */}
+      <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32">
+      <div className="w-full lg:max-w-[500px] flex flex-col gap-4 h-full" style={{ height: '100%' }}>
+        {/* Question 1 */}
+        <div
+          onClick={() => setQ1(!q1)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q1 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex w-[480px] justify-between items-center">
+            Why drone survey? {!q1 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-green-800 text-sm" />}
+          </span>
+          <div style={{ display: `${q1 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px] ">
+              Drone Surveys allow you to collect detailed and accurate information from areas that are inaccessible to you. High-resolution orthomosaics & detailed Three Dimensional (3D) representations are provided by drones. Drone Surveys add vital essential data to facilitate well-informed decision-making during the preliminary stages of construction site mapping, surveying, or inspection of infrastructure.
+            </div>
+            <br />
+            <div className="text-[10px] ">
+              It ensures that users sustain control and avoid failure to secure maximum goodwill of their assets. Wind Turbine Blades, highways, and transmission lines are frequently inspected through drone technology. When compared to traditional ‘at-height’ working, it decreases the major risk for the workers during an inspection.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 2 */}
+        <div
+          onClick={() => setQ2(!q2)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q2 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex w-[480px] justify-between items-center">
+            How accurate are Drone Survey results? {!q2 ? <GrAdd className="text-green-800 text-sm" /> : <FaMinus className="text-sm text-green-800" />}
+          </span>
+          <div style={{ display: `${q2 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px]">
+              Drone surveys are quicker, more accurate, and also less cost-expensive approach to the study. Drones include high-resolution cameras and sensors that provide interactive three-dimensional (3D) representations of the earth's surface.
+            </div>
+            <br />
+            <div className="text-[10px]">
+              Drone Surveys provide vital information that empowers competent arrangements from building site mapping, surveying, and inspection to infrastructure design and maintenance. Drone surveys offer a consistent approach to transmission tower surveying and powerline surveying. They dramatically reduce risk and maximize safety results by eliminating regular 'at-height' function.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 3 */}
+        <div
+          onClick={() => setQ3(!q3)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q3 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex w-[480px] justify-between items-center">
+            Which Drone technology do we use? {!q3 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          </span>
+          <div style={{ display: `${q3 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px]">
+              Since drones have distinct uses, they have become an integral part of numerous private and governmental organizations. We have made our position in a number of industries through fast, reliable, and secure deliveries. Catering to Government projects and mapping agricultural land surveys, our technology can do it all. Using advanced survey drones, artificial intelligence, and a variety of advanced sensors such as thermal, RGB, Lidar, etc., we have broadened our drone technology to several.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 4 */}
+        <div
+          onClick={() => setQ4(!q4)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q4 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex w-[480px] justify-between items-center">
+            What does "Drone photography" mean? {!q4 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          </span>
+          <div style={{ display: `${q4 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px]">
+              Drone photography is a technique that involves photographing/mapping the surface of the Earth. They are photographed by cameras mounted on the Drone. Aerial photography is a widespread technique used by advertising agencies. Aerial photography uses film variations, focal lengths, overlaps, and other features to create many types of images at different heights.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 5 */}
+        <div
+          onClick={() => setQ5(!q5)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q5 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex w-[480px] justify-between items-center">
+            What weather is suitable for flying Drones? {!q5 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          </span>
+          <div style={{ display: `${q5 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px]">
+              Drones can easily capture high-quality photographs and videos at varying heights and in different climates. Most flying drones can operate in winds of up to 22 MPH. Few drones can chart the drizzle, the fog, and even the snow. Weather may make or break the quality of the aerial photograph taken. The climate in India is rarely a hindrance to our ventures. Drones can fly even in the cold; however, flying time also decreases. The motors supplied to most drones will work in light rain as long as the flight controller does not come into contact with the rain.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 6 */}
+        <div
+          onClick={() => setQ6(!q6)}
+          className="p-2 hover:bg-slate-400 rounded-lg w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q6 ? '#F1FFE6' : ''}`,
+          }}
+        >
+          <span className="text-xs flex justify-between w-[480px] items-center">
+            What type of data do we capture? {!q6 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          </span>
+          <div style={{ display: `${q6 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
+            <div className="text-[10px]">
+              We provide quick, reliable, and accurate drone data for various kinds of industry. Our company specializes in the capture of data from drone surveying/mapping, aerial inspection and analysis, creative atmospheric data, and UAV data processing. Drone data collected through our materials can be reproduced in various forms such as orthomosaic maps, 3D Point Cloud, DEM, DTM, and LiDAR to assist you in the review of maps and measurements and also to support decision-making.
+            </div>
+          </div>
+        </div>
+
+        {/* Question 7 */}
+        <div
+          onClick={() => setQ7(!q7)}
+          className="p-2 hover:bg-slate-400 rounded-lg  w-[500px] bg-slate-100 cursor-pointer"
+          style={{
+            transitionDuration: '0.4s',
+            backgroundColor: `${q7 ? '#F1FFE6' : ''}`,
+            marginBottom:`${q7 ? '10px':''}`
+          }}
+        >
+          <span className="text-xs flex justify-between w-[480px] items-center">
+            What is the cost of the drone survey? {!q7 ? <GrAdd className="text-xs text-green-800" /> : <FaMinus className="text-xs text-green-800" />}
+          </span>
+          <div style={{ display: `${q7 ? 'block' : 'none'}` }} className="mt-1 mb-5 text-slate-500">
+            <div className="text-[10px] mb-5">
+              The cost of a drone survey varies depending on the extent of the survey and the complexity of the work involved. Depending on the location, topography, and accessibility of the land, the cost will vary. Other factors to consider include the amount of data captured, the level of detail required, and the specific outputs you need from the survey. To receive an accurate quote, it’s best to contact our team directly for your requirements.
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div className="  lg:block lg:w-[400px] w-[500px] lg:h-full">
+        <img className="rounded-lg h-full object-cover w-full" src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__ " alt="drone" />
+      </div>
+    </div>
+      {/* https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__ */}
 
 {/* above footer */}
 {/* <div className="mx-4 sm:mx-8 lg:mx-24 xl:mx-48 h-[200px] sm:h-[300px] lg:h-[400px] mt-16 sm:mt-20 lg:mt-32 relative">
@@ -392,7 +515,7 @@ export default function Story(){
     SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
   </button>
 </div> */}
- <div id="schedule-section">
+ <div id="schedule-section" >
             <h2>Transform Your Financial <br />Processes with Neo CFO</h2>
             <button id="schedule-btn" className="flex items-center">Schedule a Demo <GoArrowUpRight/></button>
   </div>
