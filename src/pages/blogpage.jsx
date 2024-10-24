@@ -133,7 +133,7 @@ export default function Blogpage(){
   <div className="flex flex-col items-center  w-full sm:grid   sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-32">
   {/* Card 1 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-screen sm:w-full"
+    className="relative   bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -155,7 +155,7 @@ export default function Blogpage(){
 
   {/* Card 2 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -177,7 +177,7 @@ export default function Blogpage(){
 
   {/* Card 3 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -199,7 +199,7 @@ export default function Blogpage(){
 
   {/* Card 4 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -221,7 +221,7 @@ export default function Blogpage(){
 
   {/* Card 5 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -243,7 +243,7 @@ export default function Blogpage(){
 
   {/* Card 6 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -264,7 +264,7 @@ export default function Blogpage(){
   </div>
 {/* card 7 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.png')",
       backgroundSize: 'cover',
@@ -286,7 +286,7 @@ export default function Blogpage(){
 
   {/* card 8 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -308,7 +308,7 @@ export default function Blogpage(){
 
   {/* card 9 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
