@@ -19,8 +19,8 @@ function App() {
   const location = useLocation();
 
   // Specify routes where you want the Header to appear
-  const routesWithHeader = ['/story', '/feature','/blogpage','/schedule','/privacy','/read'];
-  const [count, setCount] = useState(0)
+  const routesWithHeader = ['/story', '/feature','/blogpage','/privacy','/read','/terms'];
+  
 
   return (
     <div>
