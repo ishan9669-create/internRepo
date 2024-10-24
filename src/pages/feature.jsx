@@ -132,9 +132,8 @@ const StoryCarousel = () => {
   return (
     <div className="bottom-[580px] md:bottom-[500px] w-full h-[400px] flex justify-center items-center  relative   p-5 mt-8 rounded-lg">
         <div className="flex flex-col justify-center items-center mt-32 md:mt-5 text-center">
-  
-    
-    <div className="flex gap-5 md:gap-10 mt-2 md:mt-0">
+  <div className='flex md:ml-80'>
+  <div className="flex gap-5 w-full md:gap-10 mt-2 md:mt-0">
     <button
         onClick={scrollLeft}
         className="  bg-slate-400 text-green-700 px-7 rounded-full hover:bg-gray-600 "
@@ -149,6 +148,9 @@ const StoryCarousel = () => {
         &gt;
       </button>
     </div>
+  </div>
+    
+   
     <div
         className="flex gap-2 mt-5  h-[400px]"
         ref={carouselRef}
@@ -181,15 +183,14 @@ const StoryCarousel = () => {
 
 export default function Feature(){
     return (
-        <div className='flex flex-col overflow-hidden'>
+        <div className='w-full max-w- h-screen overflow-x-hidden'>
           <div id="first" className="flex flex-col mx-auto md:ml-20 gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[90%] md:w-[450px] lg:w-[500px] px-4 ">
   {/* Heading Section */}
   <span className="text-lg sm:text-sm text-center md:text-left">Features</span>
-  
-  <h1 className="text-2xl flex sm:text-3xl font-semibold text-slate-700 text-center md:text-left">
-   <span className='sm:text-3xl text-2xl'> Discover Our </span>
-    <i className="font-sans text-2xl sm:text-3xl">Key Features</i>
-  </h1>
+  <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-700">
+      Discover Our <i className="font-sans text-2xl sm:text-3xl md:text-4xl">Key Features</i>
+    </h1>
+
   
   <p className="max-w-full sm:max-w-[90%] text-xs md:max-w-[450px] lg:max-w-[490px] text-slate-500 text-center md:text-left">
     Enhance efficiency, accuracy, and gain complete control over your financial management with our comprehensive solutions.
@@ -212,9 +213,9 @@ export default function Feature(){
 </div>
 
     
-<div className="flex flex-col lg:flex-row gap-8 lg:gap-40 justify-center mt-10">
+<div className="flex flex-col items-center lg:flex-row gap-8 lg:gap-40 justify-center mt-10">
   {/* Text Section */}
-  <div>
+  <div className='flex flex-col '>
     {/* Title */}
     <div className="flex  text-xl sm:text-2xl md:text-3xl mt-16 sm:mt-24 md:mt-32 text-slate-600">
       <p>Expert support: <br />Your partner in success</p>
@@ -242,14 +243,14 @@ export default function Feature(){
     
     
    
+<div className='w-full  flex justify-center mt-20'>
+       <div id="demo"  >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
-<div id="schedule-sec" class="w-full md:w-5/6 p-6 md:p-16 rounded-lg mt-10 md:mt-96 bg-cover bg-no-repeat" style={{backgroundImage: "url('../../public/gradient1 1.png')"}}>
-    <h2 class="text-xl font-medium mb-4 text-[#154a44]">Transform Your Financial <br />Processes with Neo CFO</h2>
-    <button id="schedule-bt" class="bg-white py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 text-xs md:text-sm lg:text-base font-medium uppercase rounded transition-all duration-300 ease-in-out flex items-center hover:bg-gray-200">
-        Schedule a Demo <GoArrowUpRight />
-    </button>
-</div>
- 
+    </div>
+       </div>
         <Footer/>
         </div>
     )
