@@ -3,9 +3,10 @@ import Footer from '../components/footer'
 import '../css/blog.css'
 export default function Blogpage(){
     return (
-        <div>
+      
+        <div className='w-full max-w-screen-xl overflow-x-hidden'>
             <main class="blog-section mx-auto p-24">
-    <div class="container mx-auto px-6 py-10 ">
+    <div class="container  py-10 ">
 
     <div class="flex justify-between items-center w-full md:w-auto mx-auto"
     style={{fontFamily: 'Geist', font: '400', color: '#000000'}}>
@@ -129,10 +130,10 @@ export default function Blogpage(){
           </div>
         </div>
       </div> */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-32">
+  <div className="flex flex-col items-center  w-full sm:grid   sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-32">
   {/* Card 1 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-screen sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -154,7 +155,7 @@ export default function Blogpage(){
 
   {/* Card 2 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -176,7 +177,7 @@ export default function Blogpage(){
 
   {/* Card 3 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -198,7 +199,7 @@ export default function Blogpage(){
 
   {/* Card 4 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -220,7 +221,7 @@ export default function Blogpage(){
 
   {/* Card 5 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
@@ -242,7 +243,7 @@ export default function Blogpage(){
 
   {/* Card 6 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -263,7 +264,7 @@ export default function Blogpage(){
   </div>
 {/* card 7 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.png')",
       backgroundSize: 'cover',
@@ -285,7 +286,7 @@ export default function Blogpage(){
 
   {/* card 8 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -307,7 +308,7 @@ export default function Blogpage(){
 
   {/* card 9 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-screen sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
@@ -329,25 +330,27 @@ Maximizing Efficiency
   </div>
 </div>
 
-
-      <div id="pagination" className='flex gap-1'>
+    <div className='w-full sm:w-[70vw] '>
+    <div id="pagination" className='flex gap-1 justify-between'>
         <span id="pagination-info">Page 1 of 10</span>
         <button id="pagination-button"><i style={{backgroundColor:'#14494433' ,padding:'5px',color:'#144944'}} class="fa-solid fa-angles-left"></i></button>
         <button id="pagination-button"><i style={{backgroundColor:'#14494433',padding:'5px',color:'#144944'}} class="fa-solid fa-angle-left"></i></button>
         <button id="pagination-button"><i style={{backgroundColor:'#14494433',padding:'5px',color:'#144944'}} class="fa-solid fa-angle-right"></i></button>
         <button id="pagination-button"><i style={{backgroundColor:'#14494433',padding:'5px',color:'#144944'}} class="fa-solid fa-angles-right"></i></button>
       </div>
+    </div>
+    
 
     </div>
   </main> 
 
 
-  <div id="schedule-sec" class="w-full md:w-5/6 p-6 md:p-16 rounded-lg mt-10 md:mt-96 bg-cover bg-no-repeat" style={{backgroundImage: "url('../../public/gradient1 1.png')"}}>
-    <h2 class="text-xl font-medium mb-4 text-[#154a44]">Transform Your Financial <br />Processes with Neo CFO</h2>
-    <button id="schedule-bt" class="bg-white py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 text-xs md:text-sm lg:text-base font-medium uppercase rounded transition-all duration-300 ease-in-out flex items-center hover:bg-gray-200">
-        Schedule a Demo <GoArrowUpRight />
-    </button>
-</div>
+  <div id="demo">
+        <h1>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
+
+    </div>
  
 
   <Footer/>
