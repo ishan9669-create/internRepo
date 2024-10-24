@@ -325,7 +325,7 @@ export default function Schedule(){
    const [visible,setVisible] = useState(false)
    
     return (    
-        <div className='flex flex-col sm:items-center justify-center'>
+        <div className='flex flex-col sm:items-center justify-center overflow-x-hidden'>
             <div id="home"  >
                  
                  <Navbar bg={'#FFFFFF33'} />
