@@ -4,7 +4,7 @@ import '../css/blog.css'
 export default function Blogpage(){
     return (
       
-        <div className='w-full max-w-screen-xl overflow-x-hidden'>
+        <div className='w-full max-w-screen overflow-x-hidden'>
             <main class="blog-section mx-auto p-24">
     <div class="container  py-10 ">
 
