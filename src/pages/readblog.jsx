@@ -4,6 +4,7 @@ import { CiHeart } from "react-icons/ci";
 import { LuCopy } from "react-icons/lu";
 import { FiDownload } from "react-icons/fi";
 import { useRef, useState } from "react";
+import { GoArrowUpRight } from "react-icons/go";
 
 
 const storiesData = [
@@ -96,7 +97,7 @@ const storiesData = [
 export default function Read(){
     return (
         <div>
-             <div className="flex  w-full translate-y-20 items-center gap-64">
+             <div className="flex  w-full translate-y-20 items-center gap-64 overflow-x-hidden">
             
             
                 <i className="fas fa-arrow-left translate-x-16 border p-2 text-[#829392] rounded-lg"></i> 
@@ -191,12 +192,14 @@ export default function Read(){
 
     </section>
 
-    <div className="demo mt-52">
-        <h1>Transform Your Financial <br/>
+    <div className='w-full  flex justify-center mt-20'>
+       <div id="demo"  >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button id="demobtn">Schedule a Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
+       </div>
 
     <Footer/>
         </div>
