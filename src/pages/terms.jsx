@@ -1,8 +1,9 @@
+import { GoArrowUpRight } from 'react-icons/go'
 import Footer from '../components/footer'
 import '../css/terms.css'
 export default function Terms(){
     return (
-        <div className=" mt-20">
+        <div className=" mt-20 overflow-x-hidden">
             <main>
         <h1 className='font-semibold mb-5 text-2xl'>Terms & conditions</h1>
         <p>Review the guidelines for using Z Platform. Our Terms & Conditions outline your rights, responsibilities, and the legal framework of our services. By using our platform, you agree to these terms, ensuring a secure and transparent experience.</p>
@@ -101,14 +102,16 @@ export default function Terms(){
              <h5> <b>Email Address :</b> pratik@neocfo.io</h5>
         <br/>
         <br/>
-        <div className="demo">
-          <h1>Transform Your Financial <br/>
-              Processes with Neo CFO</h1>
-          <button id="demobtn">Schedule a Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-  
-      </div>
+       
       </main>
+      <div className='w-full  flex justify-center mt-20'>
+       <div id="demo"  >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
+    </div>
+       </div>
       <Footer/>
         </div>
     )
