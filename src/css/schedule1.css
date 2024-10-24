@@ -419,11 +419,12 @@ input::placeholder {
  }
  /* ------------------------------------------------------ */
  .benefits-section{
-    margin: 30px 40px 85px 100px;
+    margin:auto;
     background-color: white;
  }
  .benefits-section h1{
     font-size: 30px;
+    margin-top: 5rem;
  }
  .benefits-section i{
     font-size: 30px;
