@@ -96,8 +96,8 @@ const storiesData = [
   };
 export default function Read(){
     return (
-        <div>
-             <div className="flex  w-full translate-y-20 items-center gap-64 overflow-x-hidden">
+        <div className="overflow-x-hidden">
+             <div className="flex w-[10rem] flex-col sm:flex-row w-full translate-y-20 items-center gap-64 ">
             
             
                 <i className="fas fa-arrow-left translate-x-16 border p-2 text-[#829392] rounded-lg"></i> 
