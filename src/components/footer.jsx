@@ -5,7 +5,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 export default function Footer(){
     return (
         
-        <footer id="footer">
+        <footer id="footer" >
         <div id="footer-container">
             <div id="footer-up">
                 <div id="footer-up-left">
