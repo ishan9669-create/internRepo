@@ -18,7 +18,7 @@ export default function Story(){
    
   
     return (
-          <div className="relative flex flex-col items-center justify-center sm:justify-center overflow-hidden">
+          <div className="relative flex flex-col items-center justify-center sm:justify-center overflow-x-hidden">
              
              {/* <div id="first" className="flex flex-col gap-3  mt-44 w-[500px] ml-32">
                 <span>Our Story</span>
@@ -516,11 +516,12 @@ export default function Story(){
     SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
   </button>
 </div> */}
- <div id="schedule-section" >
-            <h2>Transform Your Financial <br />Processes with Neo CFO</h2>
-            <button id="schedule-btn" className="flex items-center">Schedule a Demo <GoArrowUpRight/></button>
-  </div>
+ <div id="demo" style={{marginTop:'100px'}}>
+        <h1>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
+    </div>
 
       <Footer/>
        
