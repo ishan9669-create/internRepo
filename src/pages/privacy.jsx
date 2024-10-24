@@ -1,9 +1,10 @@
+import { GoArrowUpRight } from 'react-icons/go'
 import Footer from '../components/footer'
 import '../css/privacy.css'
 export default function Privacy(){
     return (
         
-        <div className='mt-20'>
+        <div className='mt-20 overflow-x-hidden'>
             <main>
              <h1 className='mb-5 font-semibold text-2xl'>Privacy Policy</h1>
         <p>Discover how Z Platform safeguards your personal information. Our Privacy Policy explains the data we collect, how we use it, and our commitment to keeping your information secure and private.</p>
@@ -84,14 +85,17 @@ export default function Privacy(){
       <h5> <b>Email Address :</b> pratik@neocfo.io</h5>
       <br/>
       <br/>
-      <div className="demo">
-        <h1>Transform Your Financial <br/>
-            Processes with Neo CFO</h1>
-        <button id="demobtn">Schedule a Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-        </div>
+     
 
         </main>
+       <div className='w-full  flex justify-center'>
+       <div id="demo" style={{marginLeft:'60px',marginRight:'40px'}} >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
+    </div>
+       </div>
         <Footer/>
         </div>
     )
