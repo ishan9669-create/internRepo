@@ -15,7 +15,7 @@ const CalendarPro = ({setVisible,visible}) => {
     return (
       <div className="flex justify-between items-center my-2 " >
         <button onClick={prevMonth} className="sm:text-lg font-bold text-[#144944]">&lt;</button>
-        <h2 className=" text-sm  text-[#144944]">{format(currentMonth, 'MMMM yyyy')}</h2>
+        <h2 className="font-geist  text-[#144944]">{format(currentMonth, 'MMMM yyyy')}</h2>
         <button onClick={nextMonth} className="sm:text-lg font-bold text-[#144944]">&gt;</button>
       </div>
     );
@@ -88,15 +88,15 @@ const CalendarPro = ({setVisible,visible}) => {
   return (
     <div className="max-w-[90%] sm:w-[470px] transition-all duration-500 h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
       <div className="calendar  h-[500px]">
-      <h2 className='text-lg text-[#144944]'  >Schedule a Demo</h2>
-        <p className='mt-2 text-[#2C766F] ' style={{fontSize:'12px'}}>We know your time is valuable. Select a date and time that works best for you.</p>
-        <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🕒 30 min</p>
-        <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
+      <h2 className='text-lg text-[#144944] font-geist'  >Schedule a Demo</h2>
+        <p className='mt-2 font-geist text-[#2C766F] ' style={{fontSize:'12px'}}>We know your time is valuable. Select a date and time that works best for you.</p>
+        <p className='mt-2 text-[#2C766F] font-geist' style={{fontSize:'12px'}}>🕒 30 min</p>
+        <p className='mt-2 font-geist text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
          
          <div style={{border:'0.5px solid',marginTop:'10px',color:'#82939280'}}></div>
-        <h3 style={{fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='sm:mt-10 text-[#144944]'>Select Date & Time</h3>
+        <h3 style={{fontSize:'15px',fontWeight:'600' ,marginLeft:"55px"}} className='font-geist sm:mt-10 text-[#144944]'>Select Date & Time</h3>
         
-        <div className='sm:mx-14  sm:my-2 '>
+        <div className='sm:mx-14 font-geist  sm:my-2 '>
         {renderHeader()}
         {renderDays()}
         <div className=' sm:my-2'>
@@ -107,14 +107,14 @@ const CalendarPro = ({setVisible,visible}) => {
        
         
       </div>
-      <div className='flex justify-end
+      <div className='flex justify-end font-geist
         '>
       <button
         onClick={()=>{
           if(visible) setVisible(false)
             else setVisible(true)
         }}
-        className=' bg-[#FFFFFF] px-7 rounded-sm mt-12 sm:mt-9 mr-4 text-xs hover:bg-red-400 text-[#144944] py-1'>NEXT</button>
+        className=' bg-[#FFFFFF] px-7 font-geist rounded-sm mt-12 sm:mt-9 mr-4 text-xs hover:bg-red-400 text-[#144944] py-1'>NEXT</button>
       </div>
     </div>
   );
