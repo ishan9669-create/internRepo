@@ -267,7 +267,7 @@
 
     /* -------------------------------------------------------------- */
     #schedule{
-        width: 430px;
+        width: 450px;
         height: 600px;
         background-color:rgba(255, 255, 255, 0.3);
         margin-top: 10px;
@@ -708,7 +708,7 @@
             margin-top: 20px;
         }
         .regform{
-            width: 95%;
+            width: 100%;
             height: auto;
             border: none;
             padding: 10px;
@@ -721,14 +721,14 @@
         }
         .regform input{
             font-size: 12px;
-            width: 90%;
+            width: 100%;
             height: 15px;
             padding: 20px;
             border-radius: 5px;
         
         }
         .regform textarea{
-            width: 90%;
+            width: 100%;
             height: 40px;
             padding: 20px;
             border-radius: 5px;
