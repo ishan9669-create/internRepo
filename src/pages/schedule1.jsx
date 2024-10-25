@@ -30,7 +30,7 @@ const CalendarPro = ({setVisible,visible}) => {
     for (let i = 0; i < 7; i++) {
       days.push(
         <div key={i} className="text-xs text-center font-bold text-[#144944]">
-          {format(addDays(startDate, i), dateFormat)}
+          {format(addDays(startDate, i), dateFormat)[0]}
         </div>
       );
     }
@@ -56,7 +56,7 @@ const CalendarPro = ({setVisible,visible}) => {
 
         days.push(
           <div 
-            className={` w-[30px] h-[30px] p-4  flex justify-center items-center rounded-full text-green-950 bg-[#14494433]  cursor-pointer   ` }
+            className={` w-[30px] h-[30px] p-[17px]   flex justify-center items-center rounded-full text-green-950 bg-[#14494433]  cursor-pointer   ` }
             key={day}
             onClick={() => onDateClick(parse(cloneDay))}
           >
@@ -86,7 +86,7 @@ const CalendarPro = ({setVisible,visible}) => {
   };
 
   return (
-    <div className="max-w-[90%] sm:w-[430px] h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
+    <div className="max-w-[90%] sm:w-[470px] h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
       <div className="calendar  h-[500px]">
       <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
         <p className='mt-2 text-[#2C766F] ' style={{fontSize:'12px'}}>We know your time is valuable. Select a date and time that works best for you.</p>
@@ -94,12 +94,15 @@ const CalendarPro = ({setVisible,visible}) => {
         <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
          
          <div style={{border:'0.5px solid',marginTop:'10px',color:'#82939280'}}></div>
-        <h3 style={{color:'#2C766F',marginTop:'10px',fontSize:'15px'}}>Select Date & Time</h3>
+        <h3 style={{marginTop:'20px',fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='text-[#144944]'>Select Date & Time</h3>
         
-        <div className='mx-10 '>
+        <div className='mx-14  my-2 '>
         {renderHeader()}
         {renderDays()}
+        <div className=' my-2'>
         {renderCells()}
+        </div>
+        
         </div>
        
         
@@ -121,10 +124,17 @@ const CalendarPro = ({setVisible,visible}) => {
 
 
   // demo 2
+  import { FaCheck } from "react-icons/fa6";
 function Demo2({setVisible,visible}){
+
+  const[v1,set1] = useState(false);
+  const[v2,set2] = useState(false);
+  const[v3,set3] = useState(false);
+  const[v4,set4] = useState(false);
+  const[v5,set5] = useState(false);
   return (
     <div id="schedule"  >
-    <h3 style={{color:'#144944',marginBottom:'5px'}}>Schedule a Demo</h3>
+    <h3 style={{color:'#144944',marginBottom:'5px',fontSize:'20px'}} className='w-full flex justify-start'>Schedule a Demo</h3>
     <p  style={{color:'#2C766F'}}>We know your time is valuable. Select a date and time that works <br/>
          best for you, and our team will tailor the demo to your specific needs.</p>
     <p  style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
@@ -132,22 +142,92 @@ function Demo2({setVisible,visible}){
     <p style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
 
     <div className="registrationForm "  style={{color:'#2C766F'}}>
-        <h4>Enter Details</h4>
-        <form action="" className="regform">
-            <label htmlFor="name">Name *</label><br/>
-            <input type="text" className='mb-3' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
-            <label htmlFor="Email" >Email *</label><br/>
-            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='mb-3' placeholder="Enter Your Email"/><br/>
-            <label htmlFor="Guest">Add Guests</label><br/>
-            <textarea style={{height:'90%',backgroundColor:"inherit",border:'1px solid green'}}  name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" ></textarea><br/>
+        <h4 className='ml-2 text-green-950'>Enter Details</h4>
+        <form action="" className="regform overflow-y-scroll no-scrollbar  h-60">
+            <label htmlFor="name" className='text-green-950'>Name *</label><br/>
+            <input type="text" className='mb-3 sm:w-[400px]' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
+            <label htmlFor="Email" className='text-green-950'>Email *</label><br/>
+            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='mb-3 sm:w-[480px]' placeholder="Enter Your Email"/><br/>
+            <label htmlFor="Guest" className='text-green-950'>Add Guests</label><br/>
+            <textarea style={{height:'27%',backgroundColor:"inherit",border:'1px solid green'}}  name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" className='sm:w-[400px]' ></textarea><br/>
+
+            <div className='mt-5'>
+            <label htmlFor="Guest" className='text-green-950 '>What are you most interested  in learning about?</label><br/>
+            </div>
+            <div className='flex justify-start flex-col gap-2 mt-4'>
+
+            <div className={`flex gap-5   items-center h-6 `}>
+             <div onClick={()=>{
+              if(v1) set1(false)
+                else set1(true)
+             }} className={`w-5 h-5 rounded-md transition-all duration-250 flex justify-center items-center ${v1 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+               {v1 ? <FaCheck className= ' text-white'/>:''}
+             </div>
+             <label htmlFor="" className='text-green-900'>Accounting</label>
+             </div>
+
+
+             <div className={`flex gap-5   items-center h-6 `}>
+             <div  onClick={()=>{
+              if(v2) set2(false)
+                else set2(true)
+             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v2 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+{v2 ? <FaCheck className='text-white font-xs'/>:''}
+             </div>
+             <label htmlFor="" className='text-green-900'>Inventory Management</label>
+             </div>
+
+
+             <div className={`flex gap-5   items-center h-6 `}>
+             <div  onClick={()=>{
+              if(v3) set3(false)
+                else set3(true)
+             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v3 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+{v3 ? <FaCheck className='text-white font-xs'/>:''}
+             </div>
+             <label htmlFor="" className='text-green-900'>Financing</label>
+             </div>
+             <div className={`flex gap-5   items-center h-6 `}>
+             <div onClick={()=>{
+              if(v4) set4(false)
+                else set4(true)
+             }} className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v4 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+{v4 ? <FaCheck className='text-white font-xs'   />:''}
+             </div>
+             <label htmlFor="" className='text-green-900'>Invoicing</label>
+             </div>
+             <div className={`flex gap-5   items-center h-6 `}>
+             <div  onClick={()=>{
+              if(v5) set5(false)
+                else set5(true)
+             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v5 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+{v5 ? <FaCheck className='text-white font-xs'/>:''}
+             </div>
+             <label htmlFor="" className='text-green-900'>Dashboard/Analytics</label>
+             </div>
+            </div>
+
+
+            <div className='mt-5 flex flex-col'>
+            <label htmlFor="" className='text-green-950  '>How do you hear about Neo CFO</label>   
+            <select name="" id="" placeholder="Other" className='mt-3 bg-inherit p-2 rounded-md' style={{border:'1px solid green'}}>
+
+              <option value="">Other</option>
+            </select>
+              </div>  
+           
+           
         </form>
-        <div className="regBtns">
-            <button id="regbtn1" onClick={()=>{
+        <div className='flex justify-end mt-3 w-full '>
+        <div className="regBtns flex">
+            <button   onClick={()=>{
               if(visible) setVisible(false)
                 else setVisible(true)
-            }} className='px-3 py-1  '>Back</button>
-            <button className='px-3 py-1 bg-white hover:bg-yellow-400 '>Schedule</button>
+            }} className='px-6 py-1 hover:bg-slate-300 text-white bg-inherit ' style={{border:'1px solid white'}}>Back</button>
+            <button className='px-3 py-1 bg-white  hover:bg-yellow-400 '>Schedule</button>
         </div>
+        </div>
+       
        
     </div>
 </div>
