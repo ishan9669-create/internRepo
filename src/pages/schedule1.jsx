@@ -247,10 +247,10 @@ export default function Schedule(){
 
                 <div id="main-section" >
             <div id="main-text" >
-                <div style={{color:'#144944'}}>
-                <h1  >Discover How Neo CFO Can <br/>
+                <div style={{color:'#144944'}} className='flex flex-col '>
+                <h1  className='-translate-x-10 text-xl  sm:-translate-x-0' >Discover How Neo CFO Can <br/>
                     <i style={{fontFamily: 'Playfair Display, serif'}}>Revolutionize </i> Your Business</h1>
-                <p style={{color:"#2C766F",marginLeft:"100px"}}>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
+                <p style={{color:"#2C766F",marginLeft:"100px"}} className='-translate-x-10 sm:-translate-x-0'>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
                 </div>
 
                 <div id="infoScheduleForms" >
