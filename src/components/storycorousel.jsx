@@ -57,23 +57,17 @@ const StoryCarousel = () => {
   return (
     <div className="relative w-full overflow-hidden p-5 mt-8 rounded-lg">
         <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
-  <h1 className="flex flex-col md:flex-row items-center gap-5 md:gap-32 text-lg md:text-2xl lg:text-4xl">
-    <span className="text-xl md:text-2xl"><i className='text-xl md:text-2xl'>Smart Finance</i>, Secure Data</span>
+  <h1 className="flex  flex-col md:flex-row  md:justify-around w-full items-center  text-lg md:text-2xl lg:text-4xl">
+    <span className="text-xl md:text-2xl flex  "><i className='text-xl md:text-2xl'>Smart Finance</i>, Secure Data</span>
     
-    <div className="flex gap-5 md:gap-10 mt-4 md:mt-0">
-    <button
-        onClick={scrollLeft}
-        className="  bg-slate-400 text-green-700 px-7 rounded-full hover:bg-gray-600 "
-      >
-        &lt;
-      </button>
-
-      <button
-        onClick={scrollRight}
-        className="    bg-slate-400 text-green-700 px-7 py-1 rounded-full hover:bg-gray-600 "
-      >
-        &gt;
-      </button>
+    <div className="flex gap-5 md:gap-6 mt-4 md:mt-0">
+      <div className='bg-[#14494433] px-4 py-2 rounded-full cursor-pointer hover:bg-slate-500' onClick={scrollLeft}>
+      <FaArrowLeft className='text-xs text-green-950 '/>
+      </div>
+   
+      <div className='bg-[#14494433] px-4 py-2 rounded-full cursor-pointer hover:bg-slate-500' onClick={scrollRight}>
+      <FaArrowRight className='text-xs text-green-950 '/>
+      </div>
     </div>
   </h1>
 </div>
@@ -81,7 +75,7 @@ const StoryCarousel = () => {
       
       {/* Story Track Container */}
       <div
-        className="flex gap-5 mt-5"
+        className="flex gap-1 mt-10 justify-center"
         ref={carouselRef}
         style={{ transition: `transform ${transitionDuration}ms ease-in-out`, overflow: 'hidden' }}
       >
@@ -89,9 +83,9 @@ const StoryCarousel = () => {
         {stories.map((story) => (
           <div
             key={story.id}
-            className="flex-shrink-0 w-72 bg-white bg-opacity-80 rounded-lg shadow-lg p-4 text-center"
+            className="flex-shrink-0 w-72   rounded-lg  p-4 text-center"
           >
-            <img src={story.image} alt={story.alt} className="w-full h-full object-cover rounded-lg mb-4" />
+            <img src={story.image} alt={story.alt} className="w-full h-[70%] object-cover rounded-lg mb-4" />
           </div>
         ))}
       </div>
