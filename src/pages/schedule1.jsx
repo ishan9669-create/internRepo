@@ -94,7 +94,7 @@ const CalendarPro = ({setVisible,visible}) => {
         <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
          
          <div style={{border:'0.5px solid',marginTop:'10px',color:'#82939280'}}></div>
-        <h3 style={{marginTop:'20px',fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='text-[#144944]'>Select Date & Time</h3>
+        <h3 style={{marginTop:'40px',fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='text-[#144944]'>Select Date & Time</h3>
         
         <div className='mx-14  my-2 '>
         {renderHeader()}
