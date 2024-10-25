@@ -82,9 +82,9 @@ const StoryCarousel = () => {
           {stories.map((story) => (
             <div
               key={story.id}
-              className="w-[300px]   sm:w-[350px] sm:h-[210px] bg-white bg-opacity-80 rounded-lg shadow-lg  text-center"
+              className="w-[300px]   sm:w-[350px] sm:h-[280px] bg-white bg-opacity-80 rounded-lg shadow-lg  text-center"
             >
-              <img src={story.image} alt={story.alt} className="h-full w-[350px] sm:h-[200px]  rounded-lg " />
+              <img src={story.image} alt={story.alt} className="h-full w-[350px] sm:h-[280px]  rounded-lg " />
             </div>
           ))}
         </div>
@@ -94,6 +94,7 @@ const StoryCarousel = () => {
       </div>
     );
   };
+  import { CiSaveUp2 } from "react-icons/ci";
 export default function Read(){
     return (
         <div className="overflow-x-hidden">
@@ -108,12 +109,12 @@ export default function Read(){
         <article className="blog-content">
             
             
-            <h1 className="text-3xl font-semibold tracking-wider text-[#3B3B3B]">The Ultimate Guide to <br /> Maximizing Efficiency</h1>
+            <h1 className="text-3xl font-geist tracking-wider text-[#3B3B3B]">The Ultimate Guide to <br /> Maximizing Efficiency</h1>
             <p className="blog-intro mt-5 text-xs max-w-sm text-[#7A7A7A]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. fugit perspiciatis quas voluptas ipsum id voluptatem itaque</p>
             
             <hr/>
             <br />
-            <div className="author-info text-[#7A7A7A]">Pratik Shah • 10 min read</div>
+            <div className="author-info text-xs text-[#7A7A7A] ml-2">Pratik Shah • 10 min read</div>
             <div className="image-container">
                 <img alt="A hand holding a dollar bill with a blurred background of trees" className="rounded-2xl h-[24rem]" src="./ExploreMore3.jpeg" />
             </div>
@@ -171,9 +172,9 @@ export default function Read(){
           
            
             <div className="blog-footer text-[#829392] flex gap-8 ml-2 items-center mt-7">
-                <span className="flex  items-center">3<CiHeart/></span>
+                <span className="flex  items-center">3<img src="./heart_833472.png" className="w-3 h-4"/></span>
                 <LuCopy className="text-[#829392]"/>
-                <FiDownload className="text-[#829392]"/>
+                <CiSaveUp2 className="text-[#6d7575]"/>
             </div>
         </article>
     </main>
