@@ -50,14 +50,14 @@ export default function Home(){
 
 
         <div id="neocfo" className=''>
-            <div className='flex flex-col overflow-y-scroll h-72 no-scrollbar'>
-            <img src="./photo1.png" alt=""/>
+            <div className='flex flex-col overflow-y-scroll mt-7  h-64 no-scrollbar'>
+            <img src="./photo1.png" className='object-cover' alt=""/>
             <img src="https://plus.unsplash.com/premium_photo-1661768403712-bbf979d9af30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwdXNpbmclMjBjb21wdXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="" />
 
             </div>
            
-            <div className='flex  flex-col overflow-y-scroll  h-72 no-scrollbar'>
-            <p className='mt-40 text-slate-500'>
+            <div className='flex  flex-col overflow-y-scroll  h-60 mt-10  no-scrollbar'>
+            <p className='mt-28 text-slate-500'>
                 <h1 className='text-black font-semibold text-lg w-full'>What is NEO CFO ?</h1> <br/>
                 Neo CFO is an advanced financial automation platform designed to streamline and simplify finance
                 management for businesses of all sizes. From automating accounting entries, GST taxation, and
