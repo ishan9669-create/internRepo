@@ -345,14 +345,14 @@
     </main> 
 
 
-    <div className='w-full  flex justify-center'>
-        <div id="demo" style={{marginLeft:'60px',marginRight:'40px'}} >
-          <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
-              Processes with Neo CFO</h1>
-          <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
+   <div className='w-full  flex justify-center mt-20'>
+       <div id="demo"  >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+            Processes with Neo CFO</h1>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
 
-      </div>
-        </div>
+    </div>
+       </div>
   
 
     <Footer/>
