@@ -21,7 +21,7 @@ const Navbar = ({ bg, bgI }) => {
         position: 'relative',
         background: `${isMenuOpen ? 'linear-gradient(rgba(100, 100, 100, 1),rgba(100, 100, 100, 1))' : ''}`
       }}
-      className="shadow-2xl flex fixed z-20 top-0 w-full justify-between items-center p-1"
+      className="shadow-md flex fixed z-20 top-0 w-full justify-between items-center p-1"
     >
       {/* Logo Section */}
       <div>
