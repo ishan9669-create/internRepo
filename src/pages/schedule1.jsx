@@ -7,16 +7,20 @@ import Navbar from '../components/header';
 
 import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, parse } from 'date-fns';
 
-const CalendarPro = ({setVisible,visible}) => {
+const CalendarPro = ({ setVisible, visible }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const renderHeader = () => {
     return (
-      <div className="flex justify-between items-center my-2 " >
-        <button onClick={prevMonth} className="sm:text-lg font-bold text-[#144944]">&lt;</button>
-        <h2 className="font-geist  text-[#144944]">{format(currentMonth, 'MMMM yyyy')}</h2>
-        <button onClick={nextMonth} className="sm:text-lg font-bold text-[#144944]">&gt;</button>
+      <div className="flex justify-between items-center my-2 sm:my-4">
+        <button onClick={prevMonth} className="text-sm sm:text-lg font-bold text-[#144944]">
+          &lt;
+        </button>
+        <h2 className="font-geist text-[#144944] " style={{fontSize:'20px'}}>{format(currentMonth, 'MMMM yyyy')}</h2>
+        <button onClick={nextMonth} className="text-sm sm:text-lg font-bold text-[#144944]">
+          &gt;
+        </button>
       </div>
     );
   };
@@ -29,7 +33,7 @@ const CalendarPro = ({setVisible,visible}) => {
 
     for (let i = 0; i < 7; i++) {
       days.push(
-        <div key={i} className="text-xs text-center font-bold text-[#144944]">
+        <div key={i} className="text-xs sm:text-sm text-center font-bold text-[#144944]">
           {format(addDays(startDate, i), dateFormat)[0]}
         </div>
       );
@@ -55,22 +59,26 @@ const CalendarPro = ({setVisible,visible}) => {
         const cloneDay = day;
 
         days.push(
-          <div 
-            className={`w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] p-[8px] sm:p-[17px]   flex justify-center items-center rounded-full text-green-950 bg-[#14494433]  cursor-pointer   ` }
+          <div
+            className={`w-[24px] h-[24px] sm:w-[40px] sm:h-[40px] p-1 sm:p-[17px] flex justify-center items-center rounded-full cursor-pointer text-green-950 bg-[#14494433] hover:bg-green-500`}
             key={day}
             onClick={() => onDateClick(parse(cloneDay))}
           >
-            <span>{formattedDate}</span>
+            <span className="text-xs sm:text-base">{formattedDate}</span>
           </div>
         );
         day = addDays(day, 1);
       }
 
-      rows.push(<div className="grid grid-cols-7  p-1  gap-x-4" key={day}>{days}</div>);
+      rows.push(
+        <div className="grid grid-cols-7 gap-x-2 sm:gap-x-5 p-1" key={day}>
+          {days}
+        </div>
+      );
       days = [];
     }
 
-    return <div className="mt-4">{rows}</div>;
+    return <div className="">{rows}</div>;
   };
 
   const onDateClick = (day) => {
@@ -86,39 +94,42 @@ const CalendarPro = ({setVisible,visible}) => {
   };
 
   return (
-    <div className="max-w-[90%] sm:w-[470px] transition-all duration-500 h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
-      <div className="calendar  h-[500px]">
-      <h2 className='text-lg text-[#144944] font-geist'  >Schedule a Demo</h2>
-        <p className='mt-2 font-geist text-[#2C766F] ' style={{fontSize:'12px'}}>We know your time is valuable. Select a date and time that works best for you.</p>
-        <p className='mt-2 text-[#2C766F] font-geist' style={{fontSize:'12px'}}>🕒 30 min</p>
-        <p className='mt-2 font-geist text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
-         
-         <div style={{border:'0.5px solid',marginTop:'10px',color:'#82939280'}}></div>
-        <h3 style={{fontSize:'15px',fontWeight:'600' ,marginLeft:"55px"}} className='font-geist sm:mt-10 text-[#144944]'>Select Date & Time</h3>
-        
-        <div className='sm:mx-14 font-geist  sm:my-2 '>
-        {renderHeader()}
-        {renderDays()}
-        <div className=' sm:my-2'>
-        {renderCells()}
+    <div className="max-w-[95%] sm:max-w-[500px]  transition-all duration-500 h-auto sm:h-[650px] rounded-lg shadow-lg p-4 sm:p-3 bg-[#FFFFFF33]">
+      <div className="calendar h-auto sm:h-[500px]">
+        <h2 className="text-lg sm:text-xl text-[#144944] font-geist">Schedule a Demo</h2>
+        <p className=" text-sm sm:text-base font-geist text-[#2C766F]">
+          We know your time is valuable. Select a date and time that works best for you.
+        </p>
+        <p className=" text-sm sm:text-base text-[#2C766F] font-geist">🕒 30 min</p>
+        <p className=" text-sm sm:text-base font-geist text-[#2C766F]">
+          🖥️ Web conferencing details provided upon confirmation
+        </p>
+
+        <div className="border-t  mb-4 border-[#82939280]"></div>
+
+        <h3 className="text-xs  font-semibold text-[#144944] font-geist ">
+          Select Date & Time
+        </h3>
+
+        <div className="mx-auto sm:mx-14 font-geist flex flex-col">
+          {renderHeader()}
+          {renderDays()}
+          <div className="w-full">{renderCells()}</div>
         </div>
-        
-        </div>
-       
-        
       </div>
-      <div className='flex justify-end font-geist
-        '>
-      <button
-        onClick={()=>{
-          if(visible) setVisible(false)
-            else setVisible(true)
-        }}
-        className=' bg-[#FFFFFF] px-7 font-geist rounded-sm mt-12 sm:mt-9 mr-4 text-xs hover:bg-red-400 text-[#144944] py-1'>NEXT</button>
+
+      <div className="flex justify-center sm:justify-end mt-5 sm:mt-12">
+        <button
+          onClick={() => (visible ? setVisible(false) : setVisible(true))}
+          className="bg-[#FFFFFF] px-5 py-1 sm:px-7 font-geist rounded-sm text-xs sm:text-xs text-[#144944] hover:bg-red-400"
+        >
+          NEXT
+        </button>
       </div>
     </div>
   );
 };
+
 
 
 
@@ -278,7 +289,7 @@ export default function Schedule(){
                             <label htmlFor="Message">Message</label> <br/>
                             <textarea name="Message" id="Message"></textarea><br/>
                             <div className='flex justify-end mt-6'>
-                            <button className='bg-white text-green-700 px-5 py-1 rounded-sm text-xs'>SUBMIT</button>
+                            <button className='bg-white text-green-700 px-5 mt-4 py-1 rounded-sm text-xs'>SUBMIT</button>
                             </div>
                         </form>
                     </div>
