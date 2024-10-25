@@ -167,63 +167,8 @@ export default function Story(){
 
 
 
-      {/* sliding window */}
-      {/* <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
-  <h1 className="flex flex-col md:flex-row items-center gap-5 md:gap-32 text-lg md:text-2xl lg:text-4xl">
-    <span className="text-xl md:text-2xl"><i>Smart Finance</i>, Secure Data</span>
-    
-    <div className="flex gap-5 md:gap-10 mt-4 md:mt-0">
-      <FaArrowLeft 
-        style={{ backgroundColor: '#14494433' }} 
-        className="text-green-800 cursor-pointer w-[40px] h-[25px] md:w-[50px] md:h-[30px] rounded-full" 
-      />
-      <FaArrowRight 
-        style={{ backgroundColor: '#14494433' }} 
-        className="text-green-800 cursor-pointer w-[40px] h-[25px] md:w-[50px] md:h-[30px] rounded-full" 
-      />
-    </div>
-  </h1>
-</div> */}
-
-
-{/* <div className="flex gap-10 p-5 md:p-10 overflow-x-auto scroll-smooth mx-4 md:mx-24 flex-wrap justify-center">
-  
-  <div className="h-[350px] w-[250px] flex flex-col gap-5 bg-red-500">
-    <img className="h-[150px] w-full object-cover rounded-md" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg" alt="Data-Driven Insights" />
-    <div className="flex flex-col gap-2">
-      <h3 className="text-center">Data-Driven Insights</h3>
-      <p className="text-center text-slate-400 text-sm md:text-base">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
-    </div>
-  </div>
-  
-  <div className="h-[350px] w-[250px] flex flex-col gap-5">
-    <img className="h-[150px] w-full object-cover rounded-md" src="https://automationedge.com/es/wp-content/uploads/2020/08/AI-Powered-Automation-For-Managed-Service-Providers.jpg" alt="AI-Powered Automation" />
-    <div className="flex flex-col gap-2">
-      <h3 className="text-center">AI-Powered Automation</h3>
-      <p className="text-center text-slate-400 text-sm md:text-base">Intelligent algorithms automate repetitive tasks, improving efficiency and accuracy.</p>
-    </div>
-  </div>
-  
-  <div className="h-[350px] w-[250px] flex flex-col gap-5">
-    <img className="h-[150px] w-full object-cover rounded-md" src="https://codup.co/wp-content/uploads/2024/02/Benefits-of-Dynamic-Access-Control.png" alt="Rigid Access Control" />
-    <div className="flex flex-col gap-2">
-      <h3 className="text-center">Rigid Access Control</h3>
-      <p className="text-center text-slate-400 text-sm md:text-base">Our platform strictly adheres to permissions set in the source application. Our results are updated in real time when it is fetched.</p>
-    </div>
-  </div>
-  
-  <div className="h-[350px] w-[250px] flex flex-col gap-5">
-    <img className="h-[150px] w-full object-cover rounded-md" src="https://www.sinequa.com/wp-content/uploads/2023/08/6-Ways-a-Data-Driven-Approach-Helps-Your-Organization-Succeed-960.jpg" alt="Data-Driven Insights" />
-    <div className="flex flex-col gap-2">
-      <h3 className="text-center">Data-Driven Insights</h3>
-      <p className="text-center text-slate-400 text-sm md:text-base">Our platform seamlessly integrates with your financial systems, delivering comprehensive data insights.</p>
-    </div>
-  </div>
-
-</div> */}
-
      <StoryCarousel/>
-       {/* <StoryCarousel/>      */}
+       
 
 
        <div className="flex justify-center  text-3xl mt-32">
@@ -231,124 +176,7 @@ export default function Story(){
        </div>
 
 
-      {/* <div className="flex flex-col  lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32" >
-       <div className="  w-full lg:max-w-[500px]  flex flex-col gap-7 h-full lg:full "
-           
-          >
-              <div
-                onClick={()=>{
-                  if(q1==false) setQ1(true);
-                  else setQ1(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100  cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q1 ? '#F1FFE6':''}`}}>
-                  <span className="text-xs flex justify-between items-center">Why drone survey? {!q1 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-green-800 text-sm"/>}</span>
-                  
-                  <div style={{display:`${q1==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                  <div className="text-xs max-w-[500px]" >
-                  Drone Surveys allow you to collect detailed and accurate information from areas that are inaccessible to you. High-resolution orthomosaics & detailed Three Dimensional (3D) representations are provided by drones. Drone Surveys add vital essential data to facilitate well-informed decision-making during the preliminary stages of construction site mapping, surveying, or inspection of infrastructure.
-
-                  </div>
-                  <br />
-                 <div  className="text-xs max-w-[500px]" >
-                 It ensures that users sustain control and avoid failure to secure maximum goodwill of their assets. Wind Turbine Blades, highways, and transmission lines are frequently inspected through drone technology. When compared to traditional ‘at-height’ working, it decreases the major risk for the workers during an inspection.
-                 </div>
-                  </div>
-              </div>
-              <div 
-              onClick={()=>{
-                  if(q2==false) setQ2(true);
-                  else setQ2(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q2 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">How accurate Drone Survey results are? {!q2 ? <GrAdd className="text-green-800 text-sm"/>:<FaMinus className="text-sm text-green-800"/>}</span>
-
-                  <div style={{display:`${q2==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">Drone surveys are quicker, more accurate, and also less cost-expensive approach to the study. Drones include high-resolution cameras and sensors that provides interactive three Dimensional (3D) representations of the earth surface</div>
-                      <br />
-                      <div  className="text-xs">Drone Surveys provide vital information that empowers competent arrangements from building site mapping, surveying, and inspection to infrastructure design and maintenance. Drone surveys offer a consistent approach to transmission tower surveying and powerline surveying. They dramatically reduce risk and maximize safety results by eliminating regular 'at-height' function.</div>
-                  </div>
-              </div>
-              <div
-              onClick={()=>{
-                  if(q3==false) setQ3(true);
-                  else setQ3(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q3 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">Which Drone technology do we use? {!q3 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
-
-                  <div style={{display:`${q3==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">
-                      Since drones have distinct uses, they have become an integral part of numerous private and governmental organizations. We have made our position in a number of industries through fast, reliable and secure deliveries. Catering to Government projects and mapping agricultural land surveys, our technology can do it all. Using advanced survey drones, artificial intelligence, and a variety of advanced sensors such as thermal, RGB, Lidar, etc. we have broaden our drone technology to several.
-                      </div>
-                  </div>
-              </div>
-              <div 
-              onClick={()=>{
-                  if(q4==false) setQ4(true);
-                  else setQ4(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg  bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q4 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">What does "Drone photography" mean? {!q4 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
-
-                  <div style={{display:`${q4==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">
-                      Drone photography is a technique that involves photographing/mapping the surface of the Earth. They are photographed by cameras mounted on the Drone. Aerial photography is a widespread technique used by advertising agencies. Aerial photography use film variations, focal lengths, overlaps, and other features to create many types of images at different heights.
-                      </div>
-                  </div>
-              </div>
-              <div 
-              onClick={()=>{
-                  if(q5==false) setQ5(true);
-                  else setQ5(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q5 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">What weather is suitable for flying Drones? {!q5 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
-
-              <div style={{display:`${q5==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">
-                      Drones can easily capture high-quality photographs and videos at varying heights and in different climates. Most flying drones can operate in winds of up to 22 MPH. Few drones can chart the drizzle, the fog, and even the snow. Weather may make or break the quality of the aerial photograph taken. The climate in India is rarely a hindrance to our ventures. Drones can fly even in the cold; however, flying time also decreases. The motors supplied to most drones will work in light rain as long as the flight controller does not come into contact with the rain.
-                      </div>
-                  </div>
-              </div>
-              <div 
-              onClick={()=>{
-                  if(q6==false) setQ6(true);
-                  else setQ6(false)
-              }}
-              className="p-2 hover:bg-slate-400 rounded-lg bg-slate-100 cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q6 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">What type of data do we capture? {!q6 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800"/>}</span>
-
-                  <div style={{display:`${q6==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">
-                      We provide quick, reliable and accurate drone data for various kinds of industry. Our company specializes in the capture of data from drone surveying/mapping, aerial inspection and analysis, creative atmospheric data and UAV data processing. Drone data collected through our materials can be reproduced in various forms such as orthomosaic maps, 3D Point Cloud, DEM, DTM, DSM, Contour maps etc.
-                      </div>
-                  </div>
-              </div>
-              <div 
-              onClick={()=>{
-                  if(q7==false) setQ7(true);
-                  else setQ7(false)
-              }}
-              className="p-2 hover:bg-slate-400 bg-slate-100 rounded-lg cursor-pointer" style={{transitionDuration:'0.4s',backgroundColor:`${q7 ? '#F1FFE6':''}`}}>
-                  <span  className="text-xs flex justify-between items-center">What is Aerial LiDAR {!q7 ? <GrAdd className="text-sm text-green-800"/>:<FaMinus className="text-sm text-green-800 "/>}</span>
-
-                  <div style={{display:`${q7==true? "block":"none"}`}} className="mt-5 text-slate-500">
-                      <div  className="text-xs">Aerial Lidar is an aerial mapping and Surveying technology that uses GPS-monitored aerial Drone/UAV equipped with on-board positional and sensors. After post-flight production processes, the acquired Lidar Map data is used to know the precise elevation and geospatial location of features on the earth’s surface.
-                      </div>
-                      <br />
-                      <div  className="text-xs">
-                      Lidar data is an accurate and efficient tool for producing three-dimensional topographic aerial maps and highly accurate aerial surveys of both land and man-made components. We have developed a custom aerial Lidar Mapping and surveying production workflow which adheres to the specifications outlined in Base Specification Guidelines.</div>
-                  </div>
-              </div>
-       </div> 
-       <div className="w-full lg:w-[500px] h-full ">
-    <img
-      className="w-full h-auto lg:h-[500px] rounded-2xl"
-      src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__"
-      alt="Drone"
-    />
-  </div>
-      </div> */}
+     
       <div className="flex flex-col lg:flex-row gap-8 h-auto lg:h-[500px] mx-4 sm:mx-8 lg:mx-24 justify-center items-center mt-16 lg:mt-32">
       <div className="w-full lg:max-w-[500px] flex flex-col gap-4 h-full" style={{ height: '100%' }}>
         {/* Question 1 */}
@@ -483,28 +311,11 @@ Can multiple users access the same NEO CFO account?
         <img className="rounded-lg h-full object-cover w-full" src="https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__ " alt="drone" />
       </div>
     </div>
-      {/* https://s3-alpha-sig.figma.com/img/9060/f43f/92b9621b74e4254e67eb32c80a722c6e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXZxAX-bTb9hLkZFAV98HFhCwQdEscRw8J-HS4aALILCw-wlhoGXylOHxTIimBFY-bdnmda6VCVs4U2~LdTp5UlAa5lbn2c-p51ZC31v53cSQVVtdCpdzLDZDe8rF4TPfR70YuYljjpNVqWETh6rAfgSaPs9m1EtxPVJln0LONuAyKZhUWfk9Ao0TKPL-sE8nAslNwIqvdMOp5KulhwLErsYX6wnhzu8qiv1nJLhL5-CiVyfVsKiMBu~JL1XV7jnuEAKGjpqIy-cckZyjn8YfLAsjl6yYcckU~j~AiUvRhCot1cXMXtGm4afg4uLW0DhDeleEVz0XD9yMXiZxBNYw__ */}
-
-{/* above footer */}
-{/* <div className="mx-4 sm:mx-8 lg:mx-24 xl:mx-48 h-[200px] sm:h-[300px] lg:h-[400px] mt-16 sm:mt-20 lg:mt-32 relative">
-  <img 
-    className="h-full w-full rounded-lg object-cover"
-    src="https://s3-alpha-sig.figma.com/img/6368/a7c2/7c714d533a66059ce71ed7f63cde0d90?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q0Emo9bWoutyx8TfxrXbopDaaI~YibtTXGbnRCO62sSGtJMEHavikoFm80jO8igvrsWH5uKPNOX-4rtrdoFSPqHP0-bz7nWBv1jc7WnGGXDOpkNTpcO-YonwaW8dyTI501R49xv0z57PNuK9zbO3aozlSOs5B0bhDPyEIFz955Ha1p1eRuS6E8t3ihLDcCluaQpRN-lXDm~2T4xkcJM8QOqHKW0lnmtCyQWwC81GWDL~2MxUZ5IPSq4QHGngqcfPKJlgCR-12AvXTyPXY4fPSJulD4wvrX7z-o-oMDcWKkBNs5zXpKKqPAYn3wNz5fflODEKxIkcqDNNYjc1DC5-Tg__" 
-    alt="Financial Transformation"
-  />
-
-  <p className="absolute bottom-[50px] left-[20px] sm:left-[40px] sm:bottom-[60px] lg:bottom-[80px] lg:left-[60px] w-[200px] sm:w-[250px] lg:w-[300px] text-sm sm:text-lg lg:text-xl font-semibold text-white">
-    Transform Your Financial Processes with Neo CFO
-  </p>
-
-  <button className="flex justify-center items-center py-2 px-3 bg-white text-sm sm:text-md lg:text-lg font-semibold absolute bottom-[10px] left-[20px] sm:left-[40px] sm:bottom-[20px] lg:bottom-[40px] lg:left-[60px] rounded-full">
-    SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
-  </button>
-</div> */}
+      
  <div id="demo" style={{marginTop:'300px'}}>
         <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
 
