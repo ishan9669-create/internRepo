@@ -107,7 +107,7 @@
     /* ---------------------------------------------------------------------- */
 
     #main-text h1{
-        font-size: 30px;
+        
         padding-bottom: 30px;
         padding-top: 30px;
         margin: 90px 0px 0px 100px;
@@ -125,10 +125,7 @@
         #main-text{
             margin: 10px 0px 0px 40px;
         }
-        #main-text h1{
-            font-size: 20px;
-            
-        }
+        
         #main-text i{
             font-size: 20px;
         }
