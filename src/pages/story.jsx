@@ -59,7 +59,7 @@ export default function Story(){
                     src="https://s3-alpha-sig.figma.com/img/353c/9f5a/3ca4e89ffa9d24070ae591726c8b1650?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=otnXMeiLu04z8M2o4yb5xKLnHWiOelW6r0QSJENbcsW~Oh7T6HVaEZFAZmng9MjV2~CVfGlDUOwskjQxhWLBvqf6DNXmjahf3Oy~c8n7-w5Jj4FprGSag7JPRMpvrmtSudMj~yDaWuM2pPKNjE78ttvqjRZnLp-95bXs1V5VpBFSWZBeETdKDKNM0Jq5gCnosI2hgEjvWfk2nShevnRBY1cZNnj7h63UHC6fpqCnrYiCl3qeh26T2D9VryOydfuJJhQGzz7sY7G3ahTV5hIIUTA0DzaTroqYOzkxDWxCQo6W1LLcTNttNaie5wHCZhHDVINxNanR3ZjaLChgsXenOg__" alt="" />
                 </div>
              </div> */}
-             <div className="flex flex-col lg:flex-row lg:justify-center  items-center lg:items-center lg:ml-32 mt-20 lg:mt-52 gap-10 sm:gap-8 lg:gap-10">
+             <div className="flex flex-col lg:flex-row lg:justify-center  items-center lg:items-center  mt-20 lg:mt-52 gap-10 sm:gap-8 lg:gap-10">
   {/* <!-- Experience Box --> */}
   <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
     <span className="text-xl lg:text-2xl">+15</span>
@@ -516,7 +516,7 @@ export default function Story(){
     SCHEDULE A DEMO <GoArrowUpRight className="ml-2"/>
   </button>
 </div> */}
- <div id="demo" style={{marginTop:'100px'}}>
+ <div id="demo" style={{marginTop:'300px'}}>
         <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
         <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
