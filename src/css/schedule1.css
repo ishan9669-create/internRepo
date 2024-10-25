@@ -277,7 +277,16 @@
         flex-direction: column;
         justify-content: center;
     padding: 30px;
-        
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      /* Hide scrollbar for IE, Edge, and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+      } 
     }
     #schedule p{
         font-size: 0.5rem;
