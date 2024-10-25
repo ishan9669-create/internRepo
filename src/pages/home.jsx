@@ -56,8 +56,8 @@ export default function Home(){
 
             </div>
            
-            <div className='flex  flex-col overflow-y-scroll  h-60 mt-10  no-scrollbar'>
-            <p className='mt-28 text-slate-500'>
+            <div className='flex  flex-col overflow-y-scroll  h-52 mt-20  no-scrollbar'>
+            <p className='mt-24 text-slate-500'>
                 <h1 className='text-black font-semibold text-lg w-full'>What is NEO CFO ?</h1> <br/>
                 Neo CFO is an advanced financial automation platform designed to streamline and simplify finance
                 management for businesses of all sizes. From automating accounting entries, GST taxation, and
@@ -280,14 +280,17 @@ export default function Home(){
     <br/>
     <br/>
 {/* demo */}
- <div className='w-full  flex justify-center mt-20'>
-       <div id="demo"  >
-        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+  <div className='flex justify-center'>
+  <div id="demo" style={{marginTop:"150px"}}>
+        <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
+            <div className='w-full bg-red-500'>
+            <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
+
+            </div>
 
     </div>
-       </div>
+  </div>
     <br/>
 
     <br/>
