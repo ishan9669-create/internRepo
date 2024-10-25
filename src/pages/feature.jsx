@@ -186,9 +186,9 @@ export default function Feature(){
         <div className='w-full max-w- h-screen overflow-x-hidden'>
           <div id="first" className="flex flex-col mx-auto md:ml-20 gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[90%] md:w-[450px] lg:w-[500px] px-4 ">
   {/* Heading Section */}
-  <span className="text-lg sm:text-sm  md:text-left">Features</span>
+  <span className="text-lg sm:text-sm  md:text-left" >Features</span>
   <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-700">
-      Discover Our <i className="font-sans text-2xl sm:text-3xl md:text-4xl">Key Features</i>
+      Discover Our <span className=" text-2xl sm:text-3xl md:text-4xl" style={{fontFamily: "Kalam, cursive"}}>Key Features</span>
     </h1>
 
   
