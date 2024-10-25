@@ -193,11 +193,11 @@ export default function Read(){
 
     </section>
 
-    <div className='w-full  flex justify-center mt-36'>
-       <div id="demo">
+    <div className='w-full  flex justify-center mt-20'>
+       <div id="demo"  >
         <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
        </div>
