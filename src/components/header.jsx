@@ -49,7 +49,7 @@ const Navbar = ({ bg, bgI }) => {
       </div>
 
       {/* Schedule a Demo for large screens */}
-      <div className="hidden md:flex justify-center items-center underline">
+      <div className="hidden md:flex justify-center items-center">
         <a
           className='cursor-pointer px-2 flex items-center bg-white py-1 text-xs rounded-lg text-green-700'
           onClick={(e) => {
@@ -120,7 +120,7 @@ const Navbar = ({ bg, bgI }) => {
               onClick={() => {
                 window.location.href = '/schedule'
               }}
-              className="py-3 rounded-md text-white bg-green-900 px-2 text-xs w-[180px] text-center underline flex justify-center items-center"
+              className="py-3 rounded-md text-white bg-green-900 px-2 text-xs w-[180px] text-center  flex justify-center items-center"
             >
               Schedule a Demo
               <GoArrowUpRight />
