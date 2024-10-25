@@ -4,6 +4,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
+      fontFamily: {
+        geist: ['Geist', 'sans-serif'], // Define 'geist' as a new font family
+      },
       keyframes:{
         uparniche:{
           '0%':{
