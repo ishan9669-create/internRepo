@@ -14,9 +14,9 @@ const CalendarPro = ({setVisible,visible}) => {
   const renderHeader = () => {
     return (
       <div className="flex justify-between items-center my-2 " >
-        <button onClick={prevMonth} className="text-lg font-bold text-[#144944]">&lt;</button>
-        <h2 className="text-sm font-semibold text-[#144944]">{format(currentMonth, 'MMMM yyyy')}</h2>
-        <button onClick={nextMonth} className="text-lg font-bold text-[#144944]">&gt;</button>
+        <button onClick={prevMonth} className="sm:text-lg font-bold text-[#144944]">&lt;</button>
+        <h2 className=" text-sm  text-[#144944]">{format(currentMonth, 'MMMM yyyy')}</h2>
+        <button onClick={nextMonth} className="sm:text-lg font-bold text-[#144944]">&gt;</button>
       </div>
     );
   };
@@ -56,7 +56,7 @@ const CalendarPro = ({setVisible,visible}) => {
 
         days.push(
           <div 
-            className={` w-[30px] h-[30px] p-[17px]   flex justify-center items-center rounded-full text-green-950 bg-[#14494433]  cursor-pointer   ` }
+            className={`w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] p-[8px] sm:p-[17px]   flex justify-center items-center rounded-full text-green-950 bg-[#14494433]  cursor-pointer   ` }
             key={day}
             onClick={() => onDateClick(parse(cloneDay))}
           >
@@ -86,20 +86,20 @@ const CalendarPro = ({setVisible,visible}) => {
   };
 
   return (
-    <div className="max-w-[90%] sm:w-[470px] h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
+    <div className="max-w-[90%] sm:w-[470px] transition-all duration-500 h-[610px]  rounded-lg shadow-lg p-2" style={{backgroundColor:'#FFFFFF33'}}>
       <div className="calendar  h-[500px]">
-      <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
+      <h2 className='text-lg text-[#144944]'  >Schedule a Demo</h2>
         <p className='mt-2 text-[#2C766F] ' style={{fontSize:'12px'}}>We know your time is valuable. Select a date and time that works best for you.</p>
         <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🕒 30 min</p>
         <p className='mt-2 text-[#2C766F]' style={{fontSize:'12px'}}>🖥️ Web conferencing details provided upon confirmation</p>
          
          <div style={{border:'0.5px solid',marginTop:'10px',color:'#82939280'}}></div>
-        <h3 style={{marginTop:'40px',fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='text-[#144944]'>Select Date & Time</h3>
+        <h3 style={{fontSize:'15px',fontWeight:'800' ,marginLeft:"55px"}} className='sm:mt-10 text-[#144944]'>Select Date & Time</h3>
         
-        <div className='mx-14  my-2 '>
+        <div className='sm:mx-14  sm:my-2 '>
         {renderHeader()}
         {renderDays()}
-        <div className=' my-2'>
+        <div className=' sm:my-2'>
         {renderCells()}
         </div>
         
@@ -114,7 +114,7 @@ const CalendarPro = ({setVisible,visible}) => {
           if(visible) setVisible(false)
             else setVisible(true)
         }}
-        className=' bg-[#FFFFFF] px-7 rounded-sm mt-9 mr-4 text-xs hover:bg-red-400 text-[#144944] py-1'>NEXT</button>
+        className=' bg-[#FFFFFF] px-7 rounded-sm mt-12 sm:mt-9 mr-4 text-xs hover:bg-red-400 text-[#144944] py-1'>NEXT</button>
       </div>
     </div>
   );
@@ -133,8 +133,8 @@ function Demo2({setVisible,visible}){
   const[v4,set4] = useState(false);
   const[v5,set5] = useState(false);
   return (
-    <div id="schedule"  >
-    <h3 style={{color:'#144944',marginBottom:'5px',fontSize:'20px'}} className='w-full flex justify-start'>Schedule a Demo</h3>
+    <div id="schedule"  className='transition-all duration-300 '>
+    <h3  className=' text-[#144944] text-2xl w-full flex justify-start '>Schedule a Demo</h3>
     <p  style={{color:'#2C766F'}}>We know your time is valuable. Select a date and time that works <br/>
          best for you, and our team will tailor the demo to your specific needs.</p>
     <p  style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
@@ -145,9 +145,9 @@ function Demo2({setVisible,visible}){
         <h4 className='ml-2 text-green-950'>Enter Details</h4>
         <form action="" className="regform overflow-y-scroll no-scrollbar  h-60">
             <label htmlFor="name" className='text-green-950'>Name *</label><br/>
-            <input type="text" className='mb-3 sm:w-[400px]' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
+            <input type="text" className='sm:mb-3 sm:w-[400px]' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
             <label htmlFor="Email" className='text-green-950'>Email *</label><br/>
-            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='mb-3 sm:w-[480px]' placeholder="Enter Your Email"/><br/>
+            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='sm:mb-3 sm:w-[480px]' placeholder="Enter Your Email"/><br/>
             <label htmlFor="Guest" className='text-green-950'>Add Guests</label><br/>
             <textarea style={{height:'27%',backgroundColor:"inherit",border:'1px solid green'}}  name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" className='sm:w-[400px]' ></textarea><br/>
 
@@ -200,17 +200,17 @@ function Demo2({setVisible,visible}){
              <div  onClick={()=>{
               if(v5) set5(false)
                 else set5(true)
-             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v5 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
+             }}  className={`w-2 h-2 sm:w-5 sm:h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v5 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
 {v5 ? <FaCheck className='text-white font-xs'/>:''}
              </div>
-             <label htmlFor="" className='text-green-900'>Dashboard/Analytics</label>
+             <label htmlFor="" className='text-xs text-green-900'>Dashboard/Analytics</label>
              </div>
             </div>
 
 
             <div className='mt-5 flex flex-col'>
             <label htmlFor="" className='text-green-950  '>How do you hear about Neo CFO</label>   
-            <select name="" id="" placeholder="Other" className='mt-3 bg-inherit p-2 rounded-md' style={{border:'1px solid green'}}>
+            <select name="" id="" placeholder="Other" className='sm:mt-3 bg-inherit p-2 rounded-md' style={{border:'1px solid green'}}>
 
               <option value="">Other</option>
             </select>
@@ -218,13 +218,13 @@ function Demo2({setVisible,visible}){
            
            
         </form>
-        <div className='flex justify-end mt-3 w-full '>
-        <div className="regBtns flex">
+        <div className='flex justify-end -translate-y-4  mt-4 sm:-translate-y-0  w-full '>
+        <div className="gap-2 flex">
             <button   onClick={()=>{
               if(visible) setVisible(false)
                 else setVisible(true)
-            }} className='px-6 py-1 hover:bg-slate-300 text-white bg-inherit ' style={{border:'1px solid white'}}>Back</button>
-            <button className='px-3 py-1 bg-white  hover:bg-yellow-400 '>Schedule</button>
+            }} className='sm:px-6  hover:bg-slate-300 rounded-sm text-white bg-inherit ' style={{border:'1px solid white'}}>Back</button>
+            <button className='sm:px-3 bg-white rounded-sm  hover:bg-yellow-400 '>Schedule</button>
         </div>
         </div>
        
@@ -239,7 +239,7 @@ export default function Schedule(){
    const [visible,setVisible] = useState(false)
    
     return (    
-        <div className='flex flex-col sm:items-center justify-center overflow-x-hidden'>
+        <div className='flex flex-col font-geist  sm:items-center justify-center overflow-x-hidden'>
             <div id="home"  >
                  
                  <Navbar bg={'#FFFFFF33'} />
