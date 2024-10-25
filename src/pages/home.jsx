@@ -44,18 +44,45 @@ export default function Home(){
 }}>Neo CFO was founded with a mission to <br/>
             <i style={{fontFamily: 'Playfair Display, serif'}}>simplify financial management</i> for modern businesses.
         </h3>
-        <button href="" id="btn-know-now" className=' flex items-center text-xs' >Know More <GoArrowUpRight/> </button>
+        <button href="" id="btn-know-now" className=' flex items-center text-xs'  onClick={()=>{
+            window.location.href = '/story'
+        }}>Know More <GoArrowUpRight/> </button>
 
-        <div id="neocfo">
+
+        <div id="neocfo" className=''>
+            <div className='flex flex-col overflow-y-scroll h-72 no-scrollbar'>
             <img src="./photo1.png" alt=""/>
-            <p>
-                <strong>What is NEO CFO ?</strong> <br/>
+            <img src="https://plus.unsplash.com/premium_photo-1661768403712-bbf979d9af30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwdXNpbmclMjBjb21wdXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="" />
+
+            </div>
+           
+            <div className='flex  flex-col overflow-y-scroll  h-72 no-scrollbar'>
+            <p className='mt-40 text-slate-500'>
+                <h1 className='text-black font-semibold text-lg w-full'>What is NEO CFO ?</h1> <br/>
                 Neo CFO is an advanced financial automation platform designed to streamline and simplify finance
                 management for businesses of all sizes. From automating accounting entries, GST taxation, and
                 procure-to-pay processes, to integrating seamlessly with major accounting platforms and government
                 portals.
 
             </p>
+
+
+            <br />
+
+            <p className='mt-32 text-slate-500'>
+                <h1 className='w-full text-black font-semibold text-lg'>Our Mission</h1> <br/>
+                Our mission is to shift the ratio from spending 80% of time on data preparation to allocating 80% of time to meaningful data insights and financial analytics
+
+            </p>
+
+            <br /><br />
+            <p className='mt-32 text-slate-500 '>
+                <h1 className=' w-full text-black text-lg font-semibold'>The Visionary Behind NEO CFO</h1> <br/>
+                Founded by Pratik , who combines the technical acumen of a Chartered Accountant with the strategic Vision of an MBA from IIM Bangalore, NEO CFO is dedicated to transforming the way finance professionals work.
+
+            </p>
+            </div>
+           
         </div>
     </section>
 
@@ -73,7 +100,7 @@ export default function Home(){
     Here are the top features that make Neo CFO the go-to platform for businesses.
   </p>
 
-  <button className='flex items-center mt-3 px-4 sm:px-3 py-2 bg-slate-200 text-green-700 rounded-full text-[14px] sm:text-[16px]'>
+  <button onClick={()=> window.location.href = '/feature'} className='flex items-center mt-3 px-4 sm:px-3 py-2 bg-slate-200 text-green-700 rounded-full text-[14px] sm:text-[16px]'>
     Learn More <GoArrowUpRight/>
   </button>
 </div>
@@ -107,36 +134,94 @@ export default function Home(){
                         <div className='flex items-center '>
                         <img src="./ReviewImage3.jpeg" alt="Person 1"/>
 
-                        <div className='flex flex-col text-[14px] justify-center'>
-                        <h3 className='text-green-950'>Fathima Sheika</h3>
-                        <p className=' text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
+                        <div className='flex flex-col text-[14px] justify-center   w-full'>
+                        <h3 className='text-green-950'>Kevin S</h3>
+                        <p className=' text-[14px] text-green-800'>Founder of a Startup</p>
                         </div>
                         
                         </div>
-                        <p className='text-[14px]   text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px]   text-green-950'>
+ "Neo CFO has completely transformed how I manage finances, allowing me to focus more on growing my business!"
+</p>
                     </div>
                     <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
                         <div className='flex items-center'>
                         <img src=".//ReviewImage2.jpeg" alt="Person 2" />
 
-                        <div className='flex flex-col text-[14px] justify-center'>
-                        <h3 className='text-green-950'>Harry Williams</h3>
-                        <p className='text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
+                        <div className='flex flex-col text-[14px] justify-center w-full'>
+                        <h3 className='text-green-950'>Rebecca T</h3>
+                        <p className='text-[14px] text-green-800'>Head of Finance</p>
                         </div>
                         </div>
-                        <p className='text-[14px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px] text-green-950'>"Automating repetitive tasks with Neo CFO has freed up my time for more strategic work—game-changing!"</p>
                     </div>
                     <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
                         <div className='flex items-center'>
                         <img src="./ReviewImage.jpeg" alt="Person3"/>
-                        <div className='flex flex-col text-[14px] justify-center'>
-                        <h3 className='text-green-950'>Lary</h3>
-                        <p className='text-[14px] text-green-800'>Founder, Lorem Ipsum</p>
+                        <div className='flex flex-col text-[14px] justify-center   w-full'>
+                        <h3 className='text-green-950'>Rahul</h3>
+                        <p className='text-[14px] text-green-800'>Small Business Owner
+
+</p>
                         </div>
                         </div>
                         
-                        <p className='text-[14px] text-green-950'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut urna dapibus, pulvinar sapien eu, facilisis risus. Curabitur lacinia, est non elementum commodo, augue mauris viverra dui, id pulvinar nunc dolor id orci. Nullam commodo, augue nec euismod tincidunt, leo tortor lacinia arcu, at consectetur magna arcu et felis.</p>
+                        <p className='text-[14px] text-green-950'>"The GST integration is seamless. I no longer worry about tax filing errors—it’s all handled for me!"
+
+</p>
                     </div>
+
+                    <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
+                        <div className='flex items-center'>
+                        <img src="./ReviewImage.jpeg" alt="Person3"/>
+                        <div className='flex flex-col text-[14px] items-center   w-full'>
+                        <h3 className='text-green-950'>Priyanka</h3>
+                        <p className='text-[14px] text-green-800'>Founder
+
+</p>
+                        </div>
+                        </div>
+                        
+                        <p className='text-[14px] text-green-950'>"Neo CFO has made financial reporting incredibly simple, saving hours every month on closing the books!"
+
+</p>
+                    </div>
+
+                    <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
+                        <div className='flex items-center'>
+                        <img src="./ReviewImage.jpeg" alt="Person3"/>
+                        <div className='flex flex-col text-[14px] justify-center   w-full'>
+                        <h3 className='text-green-950'>Nithin</h3>
+                        <p className='text-[14px] text-green-800'>Finance Manager
+
+</p>
+                        </div>
+                        </div>
+                        
+                        <p className='text-[14px] text-green-950'>"The integration with our accounting software was flawless. Neo CFO truly makes multi-org management easy!"
+
+</p>
+                    </div>
+
+                    <div id="testimonial" style={{backgroundColor:'#FFFFFF80'}}>
+                        <div className='flex items-center'>
+                        <img src="./ReviewImage.jpeg" alt="Person3"/>
+                        <div className='flex flex-col text-[14px] justify-center w-full'>
+                        <h3 className='text-green-950'>Kishor S</h3>
+                        <p className='text-[14px] text-green-800'>SME Business Owner
+
+</p>
+                        </div>
+                        </div>
+                        
+                        <p className='text-[14px] text-green-950'>"Neo CFO’s AI-driven categorization of expenses has eliminated the guesswork—what a relief!"
+
+</p>
+                    </div>
+
+                   
+
+
                     
                 </div>
             </div>
