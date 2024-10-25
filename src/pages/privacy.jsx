@@ -6,7 +6,7 @@ export default function Privacy(){
         
         <div className='mt-20 overflow-x-hidden'>
             <main>
-             <h1 className='mb-5 font-semibold text-2xl'>Privacy Policy</h1>
+             <h1 className='mb-5 font-semibold font-geist text-2xl'>Privacy Policy</h1>
         <p>Discover how Z Platform safeguards your personal information. Our Privacy Policy explains the data we collect, how we use it, and our commitment to keeping your information secure and private.</p>
         <h4>1. ACCEPTANCE OF TERMS</h4>
         <p>1. This privacy policy governs the manner in which Nathdwara Advisors LLP including its affiliates and subsidiaries (“Company”) collects, uses, maintains and discloses information collected from users (each, a “User”) of the name neocfo.iowebsite and services offered by the Company (“Website”). This privacy policy applies to the Website and all services offered by the Company. You agree to and are bound by the terms and conditions set forth below and in any modified or additional terms that the Company may publish from time to time (collectively, the “Privacy Policy”).</p>
@@ -88,11 +88,11 @@ export default function Privacy(){
      
 
         </main>
-      <div className='w-full  flex justify-center mt-20'>
-       <div id="demo"  >
+       <div className='w-full  flex justify-center'>
+       <div id="demo" style={{marginLeft:'60px',marginRight:'40px'}} >
         <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
        </div>
