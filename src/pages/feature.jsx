@@ -186,9 +186,9 @@ export default function Feature(){
         <div className='w-full max-w- h-screen overflow-x-hidden'>
           <div id="first" className="flex flex-col mx-auto md:ml-20 gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[90%] md:w-[450px] lg:w-[500px] px-4 ">
   {/* Heading Section */}
-  <span className="text-lg sm:text-sm  md:text-left" >Features</span>
-  <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-700">
-      Discover Our <span className=" text-2xl sm:text-3xl md:text-4xl" style={{fontFamily: "Kalam, cursive"}}>Key Features</span>
+  <span className="text-lg sm:text-sm font-geist  md:text-left" >Features</span>
+  <h1 className="text-2xl sm:text-3xl font-geist md:text-4xl font-semibold text-slate-700">
+      Discover Our <span className="text-2xl font-geist sm:text-3xl md:text-4xl" style={{fontFamily: "Kalam, cursive"}}>Key Features</span>
     </h1>
 
   
@@ -245,11 +245,11 @@ export default function Feature(){
     
     
    
-<div className='w-full  flex justify-center mt-20'>
+<div className='w-full  flex justify-center mt-40'>
        <div id="demo"  >
         <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
        </div>
