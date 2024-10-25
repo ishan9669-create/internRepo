@@ -5,7 +5,7 @@ export default function Terms(){
     return (
         <div className=" mt-20 overflow-x-hidden">
             <main>
-        <h1 className='font-semibold mb-5 text-2xl'>Terms & conditions</h1>
+        <h1 className='font-semibold mb-5 text-2xl font-geist'>Terms & conditions</h1>
         <p>Review the guidelines for using Z Platform. Our Terms & Conditions outline your rights, responsibilities, and the legal framework of our services. By using our platform, you agree to these terms, ensuring a secure and transparent experience.</p>
 
         <h4>1. ACCEPTANCE OF TERMS</h4>
