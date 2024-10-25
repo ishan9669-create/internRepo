@@ -13,9 +13,9 @@ const CalendarPro = ({setVisible,visible}) => {
 
   const renderHeader = () => {
     return (
-      <div className="flex justify-between items-center my-4" style={{backgroundColor:'#FFFFFF33'}}>
+      <div className="flex justify-between items-center my-2 " style={{backgroundColor:'#FFFFFF33'}}>
         <button onClick={prevMonth} className="text-lg font-bold text-gray-700">&lt;</button>
-        <h2 className="text-lg font-semibold">{format(currentMonth, 'MMMM yyyy')}</h2>
+        <h2 className="text-sm font-semibold">{format(currentMonth, 'MMMM yyyy')}</h2>
         <button onClick={nextMonth} className="text-lg font-bold text-gray-700">&gt;</button>
       </div>
     );
@@ -56,10 +56,10 @@ const CalendarPro = ({setVisible,visible}) => {
 
         days.push(
           <div
-            className={`p-2 text-center cursor-pointer ${!isSameMonth(day, monthStart)
-              ? "text-gray-400"
+            className={`p-[8px] text-center bg-[#14494433] cursor-pointer  ${!isSameMonth(day, monthStart)
+              ? " rounded-full" 
               : isSameDay(day, selectedDate)
-              ? "bg-green-500 text-white rounded-full"
+              ? "bg-white  rounded-full"
               : "text-gray-700 hover:bg-gray-200 rounded-full"
             }`}
             key={day}
@@ -91,198 +91,32 @@ const CalendarPro = ({setVisible,visible}) => {
   };
 
   return (
-    <div className="max-w-sm sm:w-[500px] rounded-lg shadow-lg p-4" style={{backgroundColor:'#FFFFFF33'}}>
-      <div className="calendar">
+    <div className="max-w-[90%] sm:w-[430px] h-[610px]  rounded-lg shadow-lg p-4" style={{backgroundColor:'#FFFFFF33'}}>
+      <div className="calendar  h-[500px]">
       <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
-        <p className='mt-2'>We know your time is valuable. Select a date and time that works best for you.</p>
-        <p className='mt-5'>🕒 30 min</p>
-        <p className='mt-2'>🖥️ Web conferencing details provided upon confirmation</p>
+        <p className='mt-2 text-[#2C766F]'>We know your time is valuable. Select a date and time that works best for you.</p>
+        <p className='mt-2 text-[#2C766F]'>🕒 30 min</p>
+        <p className='mt-2 text-[#2C766F]'>🖥️ Web conferencing details provided upon confirmation</p>
         
         <h3 style={{color:'#2C766F'}}>Select Date & Time</h3>
         
         {renderHeader()}
         {renderDays()}
         {renderCells()}
-        <button
+        
+      </div>
+      <div className='flex justify-end'>
+      <button
         onClick={()=>{
           if(visible) setVisible(false)
             else setVisible(true)
         }}
-        className='mt-2 bg-white px-5 rounded-lg hover:bg-red-400 hover:text-white py-1'>Next</button>
-      </div>
-      <div className="mt-4 text-center">
-        <p className="text-gray-600 font-bold">Selected Date: {format(selectedDate, "MMMM d, yyyy")}</p>
+        className=' bg-[#FFFFFF] px-7 rounded-sm mt-9 hover:bg-red-400 text-[#144944] py-1'>Next</button>
       </div>
     </div>
   );
 };
-const ScheduleDemo = ({visible,setVisible}) => {
-    const [date, setDate] = useState(new Date());
-  
-    const onChange = (newDate) => {
-      setDate(newDate);
-    };
-  
-    return (
-      <div className="schedule-demo "  style={{color:'#2C766F'}}>
-        <h2 className='' style={{color:'#144944'}} >Schedule a Demo</h2>
-        <p className='mt-2'>We know your time is valuable. Select a date and time that works best for you.</p>
-        <p className='mt-5'>🕒 30 min</p>
-        <p className='mt-2'>🖥️ Web conferencing details provided upon confirmation</p>
-        
-        <h3 style={{color:'#2C766F'}}>Select Date & Time</h3>
-        
-        <div className="calendar-container ">
-          <button className="prev-btn">❮</button>
-  
-          <Calendar
-            onChange={onChange}
-            value={date}
-            nextLabel="❯"
-            prevLabel="❮"
-            className="custom-calendar" 
-            minDetail="month" // Shows only month view
-            showNeighboringMonth={false} // Don't show neighboring month days
-          />
-  
-          <button className="next-btn">❯</button>
-        </div>
-  
-        <style jsx>{`
-          /* General Styles */
-          .schedule-demo {
-            
-             background-color: #FFFFFF4D;
-            backdrop-filter:blur(35px);
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 500px;
-            
-            box-sizing: border-box;
-          }
-  
-          h2, h3 {
-            color: #333;
-          }
-  .custom-calendar{
-      background-color: inherit;
-  }
-          .calendar-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            width: 100%;
-            
-            
-          }
-  
-          .custom-calendar {
-             /* Background color for the calendar */
-            border-radius: 12px;
-            padding: 20px;
-            width: 100%;
-            max-width: 500px;
-            border: none;
-           
-            
-          }
-  
-          .custom-calendar .react-calendar__tile {
-            /* Default background for dates */
-            border-radius: 50%;
-            width:20px;
-            height:50px;
-            margin: 5px;
-            
-            
-            background-color:#14494433
-            
-          }
-  
-          .custom-calendar .react-calendar__tile:enabled:hover {
-            /* Highlight color on hover */
-            border-radius:50%;
-            
-          }
-  
-          .custom-calendar .react-calendar__tile--active {
-            background-color: white; /* Active date background */
-            color: #144944;
-          }
-  
-          .prev-btn, .next-btn {
-            font-size: 24px;
-            
-            border: none;
-            cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 50%;
-          }
-  
-          /* Media Queries for Responsiveness */
-          @media (max-width: 768px) {
-            .calendar-container {
-              flex-direction: column;
-              
-            }
-              .schedule-demo{
-              width:90%
-              }
-  
-            .prev-btn, .next-btn {
-              margin-bottom: 10px;
-              padding: 8px 16px;
-              font-size: 18px;
-            }
-  
-            .custom-calendar {
-              width: 100%;
-              max-width: 100%;
-            }
-          }
-  
-          @media (max-width: 480px) {
-            h2, h3 {
-              font-size: 1.5rem;
-            }
-            .schedule-demo{
-              width:95%
-              }
-            .prev-btn, .next-btn {
-              font-size: 16px;
-              padding: 6px 12px;
-            }
-  
-            .custom-calendar .react-calendar__tile {
-              padding: 8px;
-              margin: 3px;
-            }
-          }
-  
-          @media (min-width: 1200px) {
-            .schedule-demo {
-              max-width: 500px;
-            }
-  
-            .calendar-container {
-              max-width: 900px;
-            }
-  
-            .custom-calendar {
-              max-width: 500px;
-            }
-          }
-        `}</style>
-        <button
-        onClick={()=>{
-          if(visible) setVisible(false)
-            else setVisible(true)
-        }}
-        className='mt-2 bg-white px-5 rounded-lg hover:bg-red-400 hover:text-white py-1'>Next</button>
-      </div>
-    );
-  };
+
 
 
 
@@ -336,10 +170,10 @@ export default function Schedule(){
                 <div style={{color:'#144944'}}>
                 <h1  >Discover How Neo CFO Can <br/>
                     <i style={{fontFamily: 'Playfair Display, serif'}}>Revolutionize </i> Your Business</h1>
-                <p style={{color:"#2C766F"}}>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
+                <p style={{color:"#2C766F",marginLeft:"100px"}}>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
                 </div>
 
-                <div id="infoScheduleForms" className=''>
+                <div id="infoScheduleForms" >
                     <div id="infoForm">
                         <h3 className='text-white'>Get in Touch</h3>
                         <p>Simply fill out the form below for your demo. <br/>
@@ -363,7 +197,7 @@ export default function Schedule(){
                                 </datalist> <br/>
                             <label htmlFor="Message">Message</label> <br/>
                             <textarea name="Message" id="Message"></textarea><br/>
-                            <div className='flex justify-end mt-10'>
+                            <div className='flex justify-end mt-3'>
                             <button className='bg-white text-green-700 px-4 py-2 rounded-sm text-xs'>Submit</button>
                             </div>
                         </form>
