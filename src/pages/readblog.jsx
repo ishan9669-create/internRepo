@@ -12,9 +12,9 @@ const storiesData = [
     { id: 2, image: './image5.png', alt: 'Person 2' },
     { id: 3, image: './plant.png', alt: 'Person 3' },
     { id: 4, image: './image4.png', alt: 'Person 4' }
-  ];
+];
   
-  const StoryCarousel = () => {
+const StoryCarousel = () => {
     const [stories, setStories] = useState(storiesData);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const carouselRef = useRef(null);
@@ -74,7 +74,7 @@ const storiesData = [
         
         {/* Story Track Container */}
         <div
-          className="flex gap-5 mt-5"
+          className="flex gap-5 mt-10"
           ref={carouselRef}
           style={{ transition: `transform ${transitionDuration}ms ease-in-out`, overflow: 'hidden' }}
         >
@@ -82,9 +82,9 @@ const storiesData = [
           {stories.map((story) => (
             <div
               key={story.id}
-              className="flex-shrink-0 w-72 bg-white bg-opacity-80 rounded-lg shadow-lg p-4 text-center"
+              className="w-[300px]   sm:w-[350px] sm:h-[210px] bg-white bg-opacity-80 rounded-lg shadow-lg  text-center"
             >
-              <img src={story.image} alt={story.alt} className="w-full h-[350px] object-cover rounded-lg mb-4" />
+              <img src={story.image} alt={story.alt} className="h-full w-[350px] sm:h-[200px]  rounded-lg " />
             </div>
           ))}
         </div>
@@ -97,10 +97,10 @@ const storiesData = [
 export default function Read(){
     return (
         <div className="overflow-x-hidden">
-             <div className="flex w-[10rem] flex-col sm:flex-row w-full translate-y-20 items-center gap-64 ">
+             <div className="flex w-[10rem] gap-4 justify-center sm:justify-start  flex-col sm:flex-row sm:w-full translate-y-20 items-start sm:items-center ml-4 sm:ml-0  sm:gap-64  ">
             
             
-                <i className="fas fa-arrow-left translate-x-16 border p-2 text-[#829392] rounded-lg"></i> 
+                <i className="fas fa-arrow-left  sm:translate-x-16 border p-2 text-[#829392] rounded-lg"></i> 
                 <div className="blog-tag rounded-full text-[#144944] text-xs">Accounting</div>
             </div>
              <main className="blog-container mt-20">
@@ -192,8 +192,8 @@ export default function Read(){
 
     </section>
 
-    <div className='w-full  flex justify-center mt-20'>
-       <div id="demo"  >
+    <div className='w-full  flex justify-center mt-36'>
+       <div id="demo">
         <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
         <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
