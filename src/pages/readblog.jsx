@@ -62,7 +62,7 @@ const StoryCarousel = () => {
   
     return (
       <div className="relative w-full overflow-hidden p-5 mt-8 rounded-lg">
-       <div className="header-container">
+       <div className="flex justify-between">
             <h2 className="section-header text-[#144944]">Explore More</h2>
             <div className="view-more-btn">
                 <button 
