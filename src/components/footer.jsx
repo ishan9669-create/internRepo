@@ -13,26 +13,26 @@ export default function Footer(){
                     <p>Empowering India's Businesses,One Click at a Time.</p>
                     <img src="./Property 1=Default.png" alt="email"/>
                 </div>
-                <div id="footer-up-right" className='flex flex-col items-start ml-3 '>
-                    <ul>
-                        <li  style={{fontSize:'12px'}}>Products</li>
-                        <li  ><a href="#"  style={{fontSize:'12px'}} className='cursor-pointer' onClick={(e)=>{
+                <div id="footer-up-right" className='flex  text-white sm:flex-row flex-col w-[200px] justify-between items-start ml-3 '>
+                    <div >
+                        <li  style={{fontSize:'12px' ,color:'white'}}>Products</li>
+                        <li  ><a href="#"  style={{fontSize:'12px',color:'white',marginTop:'10px'}} className='cursor-pointer' onClick={(e)=>{
                             e.preventDefault();
                             window.location.href = '/feature'
                         }}>Features</a></li>
-                    </ul>
-                    <ul>
-                        <li  style={{fontSize:'12px'}}>Company</li>
-                        <li><a  style={{fontSize:'12px'}} className='cursor-pointer' onClick={(e)=>{
+                    </div>
+                    <div>
+                        <li  style={{fontSize:'12px',color:'white'}}>Company</li>
+                        <li><a  style={{fontSize:'12px',color:'white',marginTop:'10px'}} className='cursor-pointer' onClick={(e)=>{
                             e.preventDefault();
                             window.location.href = '/story'
                         }} href="#">Our Story</a></li>
-                        <li><a  style={{fontSize:'12px'}} className='cursor-pointer' onClick={(e)=>{
+                        <li><a  style={{fontSize:'12px',color:'white',marginTop:'10px'}} className='cursor-pointer' onClick={(e)=>{
                             e.preventDefault();
                             window.location.href = '/blogpage'
                         }} href="#">Blogs</a></li>
-                        <li><a style={{fontSize:'12px'}}  href="#">Contact</a></li>
-                    </ul>
+                        <li><a style={{fontSize:'12px',color:'white',marginTop:'10px'}}  href="#">Contact</a></li>
+                    </div>
                 </div>
             </div>
             <div id="footer-social-media" className='text-2xl  text-white' style={{marginLeft:'10px'}}>
