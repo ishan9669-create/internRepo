@@ -19,7 +19,7 @@ export default function Blogpage(){
     <br/>Let's Explore the <i className='text-3xl sm:text-4xl md:text-5xl lg:text-3xl '>Future of Finance</i>
 </h1>
 
-<div className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 space-y-4 sm:space-y-0 overflow-x-auto py-4">
+<div className="flex flex-col items-center sm:flex-row justify-center sm:justify-start space-x-2 sm:space-x-6 space-y-4 sm:space-y-0 overflow-x-auto py-4">
   <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200">All</button>
   <button className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300" style={{ color: '#829392' }}>Finance</button>
   <button className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300" style={{ color: '#829392' }}>Banking</button>
@@ -133,12 +133,12 @@ export default function Blogpage(){
   <div className="flex flex-col items-center  w-full sm:grid   sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-32">
   {/* Card 1 */}
   <div
-    className="relative   bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
+    className="relative   bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -155,12 +155,12 @@ export default function Blogpage(){
 
   {/* Card 2 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -177,12 +177,12 @@ export default function Blogpage(){
 
   {/* Card 3 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -199,12 +199,12 @@ export default function Blogpage(){
 
   {/* Card 4 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -221,12 +221,12 @@ export default function Blogpage(){
 
   {/* Card 5 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -243,12 +243,12 @@ export default function Blogpage(){
 
   {/* Card 6 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -264,12 +264,12 @@ export default function Blogpage(){
   </div>
 {/* card 7 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -286,12 +286,12 @@ export default function Blogpage(){
 
   {/* card 8 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -308,12 +308,12 @@ export default function Blogpage(){
 
   {/* card 9 */}
   <div
-    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[90vw] sm:w-full"
+    className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
     style={{
       backgroundImage: "url('./photo1.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '300px'
+      height: '250px'
     }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -330,7 +330,7 @@ Maximizing Efficiency
   </div>
 </div>
 
-    <div className='w-full sm:w-[70vw] '>
+    <div className='w-full sm:w-[83vw] '>
     <div id="pagination" className='flex gap-1 justify-between'>
         <span id="pagination-info">Page 1 of 10</span>
         <button id="pagination-button"><i style={{backgroundColor:'#14494433' ,padding:'5px',color:'#144944'}} class="fa-solid fa-angles-left"></i></button>
@@ -345,12 +345,14 @@ Maximizing Efficiency
   </main> 
 
 
-  <div id="demo">
-        <h1>Transform Your Financial <br/>
+  <div className='w-full  flex justify-center'>
+       <div id="demo" style={{marginLeft:'60px',marginRight:'40px'}} >
+        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
         <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
+       </div>
  
 
   <Footer/>
