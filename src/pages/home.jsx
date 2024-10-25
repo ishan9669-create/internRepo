@@ -14,7 +14,7 @@ export default function Home(){
         });
     }
     return (
-        <div className='w-screen overflow-x-hidden'>
+        <div className='overflow-x-hidden'>
             
             <div id="home"  className='w-[100%]' >
             <Navbar bg={'#FFFFFF33'}/>
@@ -195,12 +195,14 @@ export default function Home(){
     <br/>
     <br/>
 {/* demo */}
-    <div id="demo">
+  <div className='flex justify-center'>
+  <div id="demo" style={{marginTop:"150px"}}>
         <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
         <button  className="flex items-center bg-white px-2 py-1" id="demobtn">Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
+  </div>
     <br/>
 
     <br/>
