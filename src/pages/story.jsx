@@ -61,25 +61,25 @@ export default function Story(){
              </div> */}
              <div className="flex flex-col lg:flex-row lg:justify-center  items-center lg:items-center  mt-20 lg:mt-52 gap-10 sm:gap-8 lg:gap-10">
   {/* <!-- Experience Box --> */}
-  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-white flex flex-col items-center justify-center">
-    <span className="text-xl lg:text-2xl">+15</span>
-    <p className="text-center text-[10px] lg:text-xs">
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg bg-green-800 text-[#FFFFFF] flex flex-col items-center justify-center">
+    <span className="text-xl lg:text-2xl w-full ml-5">+15</span>
+    <p className="text-left text-[10px] lg:text-xs ml-2">
       years of combined experience in finance and technology
     </p>
   </div>
 
   {/* <!-- AI Processing Box --> */}
-  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#77C043' }}>
-    <span className="text-xl lg:text-2xl">15x</span>
-    <p className="text-center text-[10px] lg:text-xs">
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-[#FFFFFF] flex flex-col items-center justify-center" style={{ backgroundColor: '#77C043' }}>
+    <span className="text-xl lg:text-2xl  w-full ml-5">15x</span>
+    <p className="text-left text-[10px] lg:text-xs ml-2">
       faster transaction processing with our AI algorithms
     </p>
   </div>
 
   {/* <!-- Time Reduction Box --> */}
-  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-white flex flex-col items-center justify-center" style={{ backgroundColor: '#829392' }}>
-    <span className="text-xl lg:text-2xl">50%</span>
-    <p className="text-center text-[10px] lg:text-xs">
+  <div className="h-[150px] w-[300px] lg:h-[180px] lg:w-[180px] text-xs rounded-lg text-[#FFFFFF] flex flex-col items-center justify-center" style={{ backgroundColor: '#829392' }}>
+    <span className="text-xl lg:text-2xl  w-full ml-5">50%</span>
+    <p className=" text-[10px] lg:text-xs text-left ml-2">
       reduction in time spent on manual financial processes
     </p>
   </div>
@@ -147,16 +147,16 @@ export default function Story(){
                 </div>
                 
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
-                    <span className="text-sm mt-2">Stremline Processes</span>
-                    <p className="text-slate-300 text-center text-sm p-1">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
+                    <span className="text-xs mt-2">Stremline Processes</span>
+                    <p className="text-slate-300 text-center text-xs p-1">Automate routine tasks, such as report generation and data analysis, freeing up time for more strategic work.</p>
                 </div>
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
                     <span className="text-sm ">Provide Instant Access</span>
-                    <p className="text-slate-300 text-center text-sm p-1">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
+                    <p className=" text-slate-300 text-center text-xs p-1">Offer real-time access to up-to-date information, empowering teams to make informed decisions quickly.</p>
                 </div>
                 <div className="flex h-[200px] lg:h-[300px] rounded-md text-white justify-center items-center flex-col bg-green-900">
                     <span className="text-sm  mt-2">Ensure Compliance</span>
-                    <p className="text-slate-300 text-center text-sm p-1">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
+                    <p className="text-slate-300 text-center text-xs p-1">Automatically generate reports and responses that adhere to regulatory requirements, minimizing risk and ensuring compliance.</p>
                 </div>
              </div>
 
@@ -361,16 +361,14 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex w-[480px] justify-between items-center">
-            Why drone survey? {!q1 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-green-800 text-sm" />}
+          What is NEO CFO? {!q1 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-green-800 text-sm" />}
           </span>
           <div style={{ display: `${q1 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px] ">
-              Drone Surveys allow you to collect detailed and accurate information from areas that are inaccessible to you. High-resolution orthomosaics & detailed Three Dimensional (3D) representations are provided by drones. Drone Surveys add vital essential data to facilitate well-informed decision-making during the preliminary stages of construction site mapping, surveying, or inspection of infrastructure.
+            NEO CFO is a comprehensive finance automation platform designed to streamline and automate your financial processes. From managing automation of accounting entries and GST taxation to handling procure-to-pay processes, NEO CFO helps you optimize and simplify your day-to-day financial tasks helping you free up to 80% of your time. 
             </div>
-            <br />
-            <div className="text-[10px] ">
-              It ensures that users sustain control and avoid failure to secure maximum goodwill of their assets. Wind Turbine Blades, highways, and transmission lines are frequently inspected through drone technology. When compared to traditional ‘at-height’ working, it decreases the major risk for the workers during an inspection.
-            </div>
+            
+           
           </div>
         </div>
 
@@ -384,16 +382,14 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex w-[480px] justify-between items-center">
-            How accurate are Drone Survey results? {!q2 ? <GrAdd className="text-green-800 text-sm" /> : <FaMinus className="text-sm text-green-800" />}
+          Is my financial information secure? {!q2 ? <GrAdd className="text-green-800 text-sm" /> : <FaMinus className="text-sm text-green-800" />}
           </span>
           <div style={{ display: `${q2 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px]">
-              Drone surveys are quicker, more accurate, and also less cost-expensive approach to the study. Drones include high-resolution cameras and sensors that provide interactive three-dimensional (3D) representations of the earth's surface.
+            Yes, at NEO CFO, we prioritize your data security. We use advanced encryption methods and security protocols to ensure your financial data is protected and confidential and comply with industry-standard security practices to ensure your financial information is protected. Regular security audits and updates are conducted to maintain the highest level of security.rs that provide interactive three-dimensional (3D) representations of the earth's surface.
+
             </div>
-            <br />
-            <div className="text-[10px]">
-              Drone Surveys provide vital information that empowers competent arrangements from building site mapping, surveying, and inspection to infrastructure design and maintenance. Drone surveys offer a consistent approach to transmission tower surveying and powerline surveying. They dramatically reduce risk and maximize safety results by eliminating regular 'at-height' function.
-            </div>
+           
           </div>
         </div>
 
@@ -407,11 +403,12 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex w-[480px] justify-between items-center">
-            Which Drone technology do we use? {!q3 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          What services does NEO CFO offer?
+            {!q3 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
           </span>
           <div style={{ display: `${q3 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px]">
-              Since drones have distinct uses, they have become an integral part of numerous private and governmental organizations. We have made our position in a number of industries through fast, reliable, and secure deliveries. Catering to Government projects and mapping agricultural land surveys, our technology can do it all. Using advanced survey drones, artificial intelligence, and a variety of advanced sensors such as thermal, RGB, Lidar, etc., we have broadened our drone technology to several.
+            NEO CFO offers a wide range of services, including, but not limited to: Automated accounting entries GST taxation management Procure-to-pay process automation Financial data integration Predictive analytics for P&L and cash flow outcomes Expense categorization and management Reconciliation of GST input with accounting records.
             </div>
           </div>
         </div>
@@ -426,11 +423,11 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex w-[480px] justify-between items-center">
-            What does "Drone photography" mean? {!q4 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          Can I integrate other financial tools with the platform? {!q4 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
           </span>
           <div style={{ display: `${q4 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px]">
-              Drone photography is a technique that involves photographing/mapping the surface of the Earth. They are photographed by cameras mounted on the Drone. Aerial photography is a widespread technique used by advertising agencies. Aerial photography uses film variations, focal lengths, overlaps, and other features to create many types of images at different heights.
+            Yes, NEO CFO supports integration with various financial tools and platforms. You can easily connect your accounting software (i.e. Tally or Zoho Books), GST portal, and other financial services/ bank accounts to streamline your workflows and ensure all your data is centralized in one place.
             </div>
           </div>
         </div>
@@ -445,11 +442,13 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex w-[480px] justify-between items-center">
-            What weather is suitable for flying Drones? {!q5 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+          How does NEO CFO handle GST compliance? {!q5 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
           </span>
           <div style={{ display: `${q5 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px]">
-              Drones can easily capture high-quality photographs and videos at varying heights and in different climates. Most flying drones can operate in winds of up to 22 MPH. Few drones can chart the drizzle, the fog, and even the snow. Weather may make or break the quality of the aerial photograph taken. The climate in India is rarely a hindrance to our ventures. Drones can fly even in the cold; however, flying time also decreases. The motors supplied to most drones will work in light rain as long as the flight controller does not come into contact with the rain.
+            NEO CFO automates GST compliance by integrating with the GST portal and providing tools for managing GST returns, reconciling GST input with accounting records, and ensuring accurate GST calculations. This helps you stay compliant with the latest GST regulations effortlessly.
+
+
             </div>
           </div>
         </div>
@@ -464,34 +463,20 @@ export default function Story(){
           }}
         >
           <span className="text-xs flex justify-between w-[480px] items-center">
-            What type of data do we capture? {!q6 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
+            
+Can multiple users access the same NEO CFO account?
+ {!q6 ? <GrAdd className="text-sm text-green-800" /> : <FaMinus className="text-sm text-green-800" />}
           </span>
           <div style={{ display: `${q6 ? 'block' : 'none'}` }} className="mt-1 text-slate-500">
             <div className="text-[10px]">
-              We provide quick, reliable, and accurate drone data for various kinds of industry. Our company specializes in the capture of data from drone surveying/mapping, aerial inspection and analysis, creative atmospheric data, and UAV data processing. Drone data collected through our materials can be reproduced in various forms such as orthomosaic maps, 3D Point Cloud, DEM, DTM, and LiDAR to assist you in the review of maps and measurements and also to support decision-making.
+            Yes, NEO CFO allows multiple users to access the same account. You can add team members and assign different roles and permissions based on their responsibilities. This facilitates collaboration and ensures that everyone on your team can contribute effectively.
+
             </div>
           </div>
         </div>
 
         {/* Question 7 */}
-        <div
-          onClick={() => setQ7(!q7)}
-          className="p-2 hover:bg-slate-400 rounded-lg  w-[500px] bg-slate-100 cursor-pointer"
-          style={{
-            transitionDuration: '0.4s',
-            backgroundColor: `${q7 ? '#F1FFE6' : ''}`,
-            marginBottom:`${q7 ? '10px':''}`
-          }}
-        >
-          <span className="text-xs flex justify-between w-[480px] items-center">
-            What is the cost of the drone survey? {!q7 ? <GrAdd className="text-xs text-green-800" /> : <FaMinus className="text-xs text-green-800" />}
-          </span>
-          <div style={{ display: `${q7 ? 'block' : 'none'}` }} className="mt-1 mb-5 text-slate-500">
-            <div className="text-[10px] mb-5">
-              The cost of a drone survey varies depending on the extent of the survey and the complexity of the work involved. Depending on the location, topography, and accessibility of the land, the cost will vary. Other factors to consider include the amount of data captured, the level of detail required, and the specific outputs you need from the survey. To receive an accurate quote, it’s best to contact our team directly for your requirements.
-            </div>
-          </div>
-        </div>
+       
       </div>
 
       <div className="  lg:block lg:w-[400px] w-[500px] lg:h-full">
