@@ -150,7 +150,7 @@
         
         width: 430px; /* Ensures the form is responsive and doesn't exceed 500px */
         padding: 20px;
-        height: 600px;
+        height: 640px;
         margin-top: 10px;
         border-radius: 10px;
         display: flex;
@@ -246,7 +246,7 @@
     }
     @media (max-width: 480px) {
         #infoForm {
-            width: 95%; /* Full width for mobile view */
+            width: 99%; /* Full width for mobile view */
             padding: 15px;
         }
 
