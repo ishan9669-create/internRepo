@@ -131,8 +131,8 @@ const StoryCarousel = () => {
 
   return (
     <div className="bottom-[580px] md:bottom-[500px] w-full h-[400px] flex justify-center items-center  relative   p-5 mt-8 rounded-lg">
-        <div className="flex flex-col justify-center items-center mt-32 md:mt-5 text-center">
-  <div className='flex md:mr-20 justify-end w-screen '>
+        <div className="flex flex-col justify-center ml-[57vw] items-center mt-32 md:mt-5 text-center">
+  <div className='flex  justify-center ml-0 sm:ml-[400px] w-screen '>
   <div className="flex    gap-3 mt-2 md:mt-0">
     <button
         onClick={scrollLeft}
