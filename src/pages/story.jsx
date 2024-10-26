@@ -315,10 +315,10 @@ Can multiple users access the same NEO CFO account?
       </div>
     </div>
       
- <div id="demo" style={{marginTop:'300px'}}>
-        <h1>Transform Your Financial <br/>
+ <div id="demo" style={{marginTop:'300px',height:'270px'}}>
+        <h1 className="text-[#144944]">Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
+        <button style={{fontSize:'12px'}}  className="flex items-center -translate-y-4 font-semibold font-geist bg-white text-[#144944]   px-5 py-2  rounded-sm " >SCHEDULE DEMO<GoArrowUpRight className="text-[#144944] text-xs"/></button>
 
     </div>
 
