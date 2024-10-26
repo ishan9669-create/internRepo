@@ -108,8 +108,8 @@ const CalendarPro = ({ setVisible, visible }) => {
         <p className=" text-xs  font-geist text-[#2C766F] mt-5">
         We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.
         </p>
-        <p className="  text-[#2C766F] font-geist  flex items-center gap-2 mt-4" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
-        <p className=" text-[#2C766F] flex mt-3 font-geist items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
+        <p className="  text-[#2C766F] font-geist  flex items-center gap-2 mt-4" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'0.7rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] flex mt-3 font-geist items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'0.7rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
 
         <div className="border-t mb-4 sm:mb-0 mt-3 border-[#82939280]"></div>
 
@@ -155,24 +155,24 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
       <div  className="w-full max-w-lg sm:max-w-[450px]  h-auto sm:h-[630px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
         <h3 className="text-[#144944] sm:text-lg -translate-y-0 sm:-translate-y-3 ">Schedule a Demo</h3>
         <p className=" text-[#2C766F]  font-geist mb-3" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
-        <p className="  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
-        <p className=" text-[#2C766F] font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
-        <p className="text-sm  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+        <p className="  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'0.7rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-solid fa-video  ml" style={{fontSize:'0.7rem'}}></i> Web conferencing details provided upon confirmation</p>
+        <p className="text-sm  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'0.7rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
   
         <div className="mt-3 text-[#2C766F]">
           <h4 className="text-green-950  sm:text-sm mb-2">Enter Details</h4>
           <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar  ">
-            <label htmlFor="name" className="text-green-950 text-xs" >Name *</label>
+            <label htmlFor="name" className="text-green-950 text-[12px]" >Name *</label>
             <input type="text" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Name" />
   
-            <label htmlFor="email" className="text-green-950 text-xs">Email *</label>
+            <label htmlFor="email" className="text-green-950 text-[12px]">Email *</label>
             <input type="email" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Email" />
   
-            <label htmlFor="Guest" className="text-green-950 text-xs resize-none">Add Guests</label>
+            <label htmlFor="Guest" className="text-green-950 text-[12px] resize-none">Add Guests</label>
             <textarea className="border no-scrollbar text-xs overflow-y-hidden border-green-600 bg-inherit py-7 rounded-md" ></textarea> 
   
-            <label htmlFor="interest" className="text-green-950 mt-5 text-xs">What are you most interested in learning about?</label>
-            <div className="flex flex-col gap-2">
+            <label htmlFor="interest" className="text-green-950 mt-5 text-[12px]">What are you most interested in learning about?</label>
+            <div className="flex flex-col gap-2 ">
               {[
                 { label: "Accounting", state: v1, setState: set1 },
                 { label: "Inventory Management", state: v2, setState: set2 },
@@ -183,16 +183,16 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
                 <div key={index} className="flex items-center gap-2">
                   <div
                     onClick={() => setState(!state)}
-                    className={`w-5 h-5 rounded-md flex justify-center items-center transition-all ${state ? 'bg-green-900' : ''} border border-[#144944]`}
+                    className={`w-5 h-5 rounded-md flex justify-center  items-center transition-all ${state ? 'bg-green-900' : ''} border border-[#144944]`}
                   >
                     {state && <FaCheck className="text-white" />}
                   </div>
-                  <label className="text-green-900 text-xs">{label}</label>
+                  <label className="text-green-900 text-[12px]">{label}</label>
                 </div>
               ))}
             </div>
   
-            <label htmlFor="source" className="text-green-950 mt-4 text-xs">How did you hear about Neo CFO?</label>
+            <label htmlFor="source" className="text-green-950 mt-4 text-[12px]">How did you hear about Neo CFO?</label>
             <select className="border border-green-600 bg-inherit text-xs p-2 rounded-md mt-2">
               <option value="other" className='text-xs'>Other</option>
             </select>
@@ -237,7 +237,7 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
       setIsOpen(false); // Close dropdown
     };
   
-    return (
+    return (  
       <div className="w-full font-geist max-w-xs transition-all duration-500 mx-auto" ref={dropdownRef}>
         {/* Input Label */}
         
@@ -307,15 +307,15 @@ export default function Schedule(){
                         <p className=' font-geist ' style={{fontSize:'15px'}}>Simply fill out the form below for your demo. <br/>
                             Our team will be in touch shortly to confirm the details.</p>
                         <form action="">
-                            <label htmlFor="Name">Name *</label> <br/>
+                            <label htmlFor="Name" style={{fontSize:'12px'}}>Name *</label> <br/>
                             <input type="text" name="Name" id="Name" placeholder="Enter Your name"/> <br/>
-                            <label htmlFor="Email">Email *</label> <br/>
+                            <label htmlFor="Email" style={{fontSize:'12px'}}>Email *</label> <br/>
                             <input type="email" name="Email" id="Email" placeholder="Enter your Email"/><br/>
-                            <label htmlFor="Company">Company *</label> <br/>
+                            <label htmlFor="Company" style={{fontSize:'12px'}}>Company *</label> <br/>
                             <input type="text" name="Company" id="Company" placeholder="Enter your Company Name"/><br/>
                             
                             
-<label class="block text-white text-sm ">Accounting software you rely on</label>
+<label class="block text-white  " style={{fontSize:'12px',marginTop:'10px'}}>Accounting software you rely on</label>
 
 
 {/* <div class="relative">
@@ -343,7 +343,7 @@ export default function Schedule(){
 <Dropdown/>
 
                                
-                            <label htmlFor="Message">Message</label> <br/>
+                            <label htmlFor="Message" style={{fontSize:'12px'}}>Message</label> <br/>
                             <textarea name="Message" id="Message"></textarea><br/>
                             <div className='flex justify-end mt-6'>
                             <button className='bg-white text-green-700 px-5 mt-4 py-1 rounded-sm text-xs'>SUBMIT</button>
