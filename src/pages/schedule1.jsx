@@ -105,13 +105,11 @@ const CalendarPro = ({ setVisible, visible }) => {
     <div className="max-w-[95%] sm:max-w-[500px]  transition-all duration-500 h-auto sm:h-[650px] rounded-lg shadow-lg p-4 sm:p-3 bg-[#FFFFFF33]">
       <div className="calendar h-auto sm:h-[500px]">
         <h2 className="text-lg sm:text-xl text-[#144944] font-geist">Schedule a Demo</h2>
-        <p className=" text-sm  font-geist text-[#2C766F]">
+        <p className=" text-xs  font-geist text-[#2C766F] mt-5">
         We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.
         </p>
-        <p className=" text-sm sm:text-base text-[#2C766F] font-geist">🕒 30 min</p>
-        <p className=" text-sm sm:text-base font-geist text-[#2C766F]">
-          🖥️ Web conferencing details provided upon confirmation
-        </p>
+        <p className="  text-[#2C766F]  flex items-center gap-2 mt-4" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] flex mt-3 items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
 
         <div className="border-t mb-4 sm:mb-0 border-[#82939280]"></div>
 
@@ -154,12 +152,12 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
     const [v5, set5] = useState(false);
   
     return (
-      <div  className="w-full max-w-lg sm:max-w-[450px]  h-auto sm:h-[640px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
+      <div  className="w-full max-w-lg sm:max-w-[450px]  h-auto sm:h-[630px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
         <h3 className="text-[#144944] sm:text-lg -translate-y-0 sm:-translate-y-3 ">Schedule a Demo</h3>
-        <p className=" text-[#2C766F] mb-1" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
-        <p className="  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
-        <p className=" text-[#2C766F] flex items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
-        <p className="text-sm  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+        <p className=" text-[#2C766F]  font-geist mb-3" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
+        <p className="  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
+        <p className="text-sm  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
   
         <div className="mt-3 text-[#2C766F]">
           <h4 className="text-green-950 text-base sm:text-md mb-2">Enter Details</h4>
@@ -200,7 +198,7 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
             </select>
           </form>
   
-          <div className="flex justify-end gap-4 mt-4">
+          <div className="flex justify-end gap-4 mt-16">
             <button onClick={() => setVisible(!visible)} className="bg-transparent py-1 border text-xs border-white text-white px-4 rounded-sm hover:bg-gray-300">Back</button>
             <button className="bg-white text-green-950 px-4  rounded-sm hover:bg-yellow-400 py-1 text-xs">Schedule</button>
           </div>
@@ -240,7 +238,7 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
     };
   
     return (
-      <div className="w-full max-w-xs transition-all duration-500 mx-auto" ref={dropdownRef}>
+      <div className="w-full font-geist max-w-xs transition-all duration-500 mx-auto" ref={dropdownRef}>
         {/* Input Label */}
         
   
@@ -300,13 +298,13 @@ export default function Schedule(){
                 <div style={{color:'#144944'}} className='flex flex-col '>
                 <h1  className='-translate-x-10 text-xl  sm:-translate-x-0' >Discover How Neo CFO Can <br/>
                     <i style={{fontFamily: 'Playfair Display, serif'}}>Revolutionize </i> Your Business</h1>
-                <p style={{color:"#2C766F",marginLeft:"100px"}} className='-translate-x-10 sm:-translate-x-0'>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
+                <p style={{color:"#2C766F",marginLeft:"100px"}} className='-translate-x-10 sm:-translate-x-0 '>Schedule a personalized demo today, and see how we can tailor <br/>our solutions to meet your unique business needs.</p>
                 </div>
 
                 <div id="infoScheduleForms" >
-                    <div id="infoForm">
-                        <h3 className='text-white'>Get in Touch</h3>
-                        <p>Simply fill out the form below for your demo. <br/>
+                    <div id="infoForm" className=' font-geist'>
+                        <h3 className='text-white font-geis'>Get in Touch</h3>
+                        <p className=' font-geist ' style={{fontSize:'13px'}}>Simply fill out the form below for your demo. <br/>
                             Our team will be in touch shortly to confirm the details.</p>
                         <form action="">
                             <label htmlFor="Name">Name *</label> <br/>
