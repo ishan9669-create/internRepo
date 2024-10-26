@@ -28,7 +28,8 @@ export default function Story(){
              </div> */}
              <div id="first" className="flex flex-col gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full    ml-20">
         <span className="text-lg sm:text-sm">Our Story</span>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-700"><i className="font-normal sm:text-3xl">Reimagine</i> Financial Management</h1>
+        <h1 className="text-2xl sm:text-3xl  text-slate-700" style={{fontWeight:'500'}} ><i className="font-normal sm:text-3xl" style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}>Reimagine</i> Financial Management</h1>
         <p className="max-w-full text-sm sm:max-w-[400px] md:max-w-[450px] lg:max-w-[490px] text-slate-500">Discover how your finance teams can access up-to-date information and generate accurate reports and responses grounded in company knowledge.</p>
             </div>
 
@@ -96,7 +97,8 @@ export default function Story(){
 
         <div className="flex justify-center text-2xl text-center">
              <h1 className="max-w-[600px]">A 
-                <i className="text-2xl"> Catalyst</i> for transformation in the world of finance.</h1>
+                <i className="text-2xl" style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}> Catalyst</i> for transformation in the world of finance.</h1>
         </div>
 
 {/* problems div 1. */}
@@ -171,8 +173,9 @@ export default function Story(){
        
 
 
-       <div className="flex justify-center  text-3xl mt-32">
-        <h1>Your Questions , <i className="text-3xl">Answered</i></h1>
+       <div className="flex w-[60%] text-3xl mt-32">
+        <h1>Your Questions , <i className="text-3xl" style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}>Answered</i></h1>
        </div>
 
 
