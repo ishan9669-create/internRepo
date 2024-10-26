@@ -108,10 +108,10 @@ const CalendarPro = ({ setVisible, visible }) => {
         <p className=" text-xs  font-geist text-[#2C766F] mt-5">
         We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.
         </p>
-        <p className="  text-[#2C766F]  flex items-center gap-2 mt-4" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
-        <p className=" text-[#2C766F] flex mt-3 items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
+        <p className="  text-[#2C766F] font-geist  flex items-center gap-2 mt-4" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] flex mt-3 font-geist items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
 
-        <div className="border-t mb-4 sm:mb-0 border-[#82939280]"></div>
+        <div className="border-t mb-4 sm:mb-0 mt-3 border-[#82939280]"></div>
 
         <h3 className="text-xs  mt-4 ml-5 font-semibold text-[#144944] font-geist ">Select Date & Time</h3>
 
@@ -122,10 +122,10 @@ const CalendarPro = ({ setVisible, visible }) => {
         </div>
       </div>
 
-      <div className="flex justify-center sm:justify-end mt-5 sm:mt-12">
+      <div className="flex justify-center sm:justify-end mt-5 sm:mt-16">
         <button
           onClick={() => (visible ? setVisible(false) : setVisible(true))}
-          className="bg-[#FFFFFF] px-5 py-1 sm:px-7 font-geist rounded-sm text-xs sm:text-xs text-[#144944] hover:bg-red-400"
+          className="bg-[#FFFFFF] px-5 py-1 sm:px-7  font-geist rounded-sm text-xs sm:text-xs text-[#144944] hover:bg-red-400"
         >
           NEXT
         </button>
@@ -160,8 +160,8 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
         <p className="text-sm  text-[#2C766F]  font-geist flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
   
         <div className="mt-3 text-[#2C766F]">
-          <h4 className="text-green-950 text-base sm:text-md mb-2">Enter Details</h4>
-          <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+          <h4 className="text-green-950  sm:text-sm mb-2">Enter Details</h4>
+          <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar  ">
             <label htmlFor="name" className="text-green-950 text-xs" >Name *</label>
             <input type="text" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Name" />
   
@@ -169,7 +169,7 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
             <input type="email" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Email" />
   
             <label htmlFor="Guest" className="text-green-950 text-xs resize-none">Add Guests</label>
-            <textarea className="border no-scrollbar text-xs overflow-y-hidden border-green-600 bg-inherit py-7 rounded-md" placeholder='Enter email'></textarea> 
+            <textarea className="border no-scrollbar text-xs overflow-y-hidden border-green-600 bg-inherit py-7 rounded-md" ></textarea> 
   
             <label htmlFor="interest" className="text-green-950 mt-5 text-xs">What are you most interested in learning about?</label>
             <div className="flex flex-col gap-2">
@@ -304,7 +304,7 @@ export default function Schedule(){
                 <div id="infoScheduleForms" >
                     <div id="infoForm" className=' font-geist'>
                         <h3 className='text-white font-geis'>Get in Touch</h3>
-                        <p className=' font-geist ' style={{fontSize:'13px'}}>Simply fill out the form below for your demo. <br/>
+                        <p className=' font-geist ' style={{fontSize:'15px'}}>Simply fill out the form below for your demo. <br/>
                             Our team will be in touch shortly to confirm the details.</p>
                         <form action="">
                             <label htmlFor="Name">Name *</label> <br/>
