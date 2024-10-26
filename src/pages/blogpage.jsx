@@ -16,7 +16,8 @@
         <h1 class="text-3xl font-geist sm:text-4xl md:text-5xl lg:text-3xl font-bold mb-6 md:mb-10 w-full lg:w-[939px] lg:h-auto "
       style={{ fontWeight: '400', letterSpacing: '-0.04em', color: '#000000', transform: 'rotate(-0.08deg)', lineHeight: '1.2'}}>
       Insights & Innovations:
-      <br/>Let's Explore the <i className='text-3xl sm:text-4xl md:text-5xl lg:text-3xl '>Future of Finance</i>
+      <br/>Let's Explore the <i className='text-3xl sm:text-4xl md:text-5xl lg:text-3xl 'style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}} >Future of Finance</i>
   </h1>
 
   <div className="flex flex-col items-center sm:flex-row justify-center sm:justify-start space-x-2 sm:space-x-6 space-y-4 sm:space-y-0 overflow-x-auto py-4">
