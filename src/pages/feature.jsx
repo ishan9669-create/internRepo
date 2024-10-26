@@ -152,7 +152,7 @@ const StoryCarousel = () => {
     
    
     <div
-        className="flex gap-2 mb-72  h-[400px]"
+        className="flex gap-2 mb-72   h-[400px]"
         ref={carouselRef}
         style={{ transition: `transform ${transitionDuration}ms ease-in-out`, overflow: 'hidden' }}
       >
@@ -160,9 +160,9 @@ const StoryCarousel = () => {
         {stories.map((story) => (
           <div
             key={story.id} 
-            className="flex-shrink-0 w-72   rounded-lg  p-4 text-center"
+            className="flex-shrink-0 w-72    rounded-lg  p-4 text-center"
           >
-            <img src={story.image} alt={story.alt} className="w-full h-full  rounded-lg " />
+            <img src={story.image} alt={story.alt} className="w-full h-full bg-opacity-45  rounded-lg " />
           </div>
         ))}
       </div>
@@ -218,43 +218,45 @@ export default function Feature(){
 <div className="flex flex-col items-center lg:flex-row gap-8 lg:gap-40 justify-center mt-10">
   {/* Text Section */}
   
-
-  {/* Image Section */}
-  <div
-    style={{ backgroundColor: "#DAEEBD" }}
-    className="mt-10 sm:mt-16 lg:mt-20 flex justify-center lg:justify-end w-[80%]  md:w-[400px] max-w-lg rounded-lg"
-  >
-    <img src="./invoice.png" className="w-[90%] md:w-[350px]" alt="Invoice" />
-  </div>
   <div className='flex flex-col '>
     {/* Title */}
-    <div className=" text-xl sm:text-2xl mx-9 sm:ml-0 sm:mx-0 md:text-3xl mt-16 sm:mt-24 md:mt-32 text-[#3B3B3B]">
+    <div className=" text-xl  sm:text-2xl mx-9 sm:ml-0 sm:mx-0 md:text-3xl mt-16 sm:mt-24 md:mt-32 text-[#3B3B3B]">
       <div>Expert support:</div>
-      <div>Your partner in success</div>
+      <div className='-translate-y-3'>Your partner in success</div>
     </div>
 
     {/* Description */}
-    <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
-      <p className="w-full sm:w-[400px] ml-7 sm:ml-0 md:w-[500px] text-center sm:text-left  text-slate-600 text-xs ">
+    <div className="flex justify-center mt-6 sm:mt-1 ">
+      <p className="w-full  ml-7 sm:ml-0 md:w-[400px] text-center sm:text-left  text-slate-600  " style={{fontSize:'13px'}}>
         Join the growing number of businesses that trust Neo CFO to optimize their financial operations and drive success.
       </p>
     </div>
   </div>
+  {/* Image Section */}
+  <div
+    style={{ backgroundColor: "#DAEEBD" }}
+    className="mt-10 sm:mt-16 lg:mt-20 flex h-[400px] justify-center items-end lg:justify-end w-[80%]  md:w-[400px] max-w-lg rounded-lg"
+  >
+   <img src="./invoice.png" className="w-[90%] md:w-[350px] h-[87%]" alt="Invoice" />
+  </div>
+  
 </div>
 
 
     
     
     
-   
-<div className='w-full  flex justify-center mt-40'>
-       <div id="demo"  >
-        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+<div className='flex justify-center' >
+  <div id="demo" style={{marginTop:"150px",height:'270px'}} >
+        <h1 className='text-[#144944] font-geist'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
+            <div className='w-full bg-red-500 '>
+            <button  className="flex items-center -translate-y-4 font-semibold font-geist bg-white text-[#144944]   px-4 py-2  rounded-sm " style={{fontSize:'12px'}}>SCHEDULE DEMO <GoArrowUpRight className="text-[#144944] text-xs"/></button>
+
+            </div>
 
     </div>
-       </div>
+  </div>
         <Footer/>
         </div>
     )
