@@ -62,7 +62,7 @@ const StoryCarousel = () => {
   
     return (
       <div className="relative w-full overflow-hidden p-5 mt-8 rounded-lg">
-       <div className="flex justify-between">
+       <div className="flex justify-between ">
             <h2 className="section-header text-[#144944]">Explore More</h2>
             <div className="view-more-btn">
                 <button 
@@ -193,14 +193,14 @@ export default function Read(){
 
     </section>
 
-    <div className='w-full  flex justify-center mt-20'>
-       <div id="demo"  >
-        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+    <div className='flex justify-center'>
+  <div id="demo" style={{marginTop:"150px"}}>
+        <h1>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
+        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
 
     </div>
-       </div>
+  </div>
 
     <Footer/>
         </div>
