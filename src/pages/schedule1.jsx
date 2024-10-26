@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../css/schedule1.css'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Import basic calendar styling
@@ -17,7 +17,9 @@ const CalendarPro = ({ setVisible, visible }) => {
         <button onClick={prevMonth} className="text-sm sm:text-lg font-bold text-[#144944]">
           &lt;
         </button>
-        <h2 className="font-geist text-[#144944] " style={{fontSize:'20px'}}>{format(currentMonth, 'MMMM yyyy')}</h2>
+        <h2 className="font-geist text-[#144944]" style={{ fontSize: '20px' }}>
+          {format(currentMonth, 'MMMM yyyy')}
+        </h2>
         <button onClick={nextMonth} className="text-sm sm:text-lg font-bold text-[#144944]">
           &gt;
         </button>
@@ -27,7 +29,7 @@ const CalendarPro = ({ setVisible, visible }) => {
 
   const renderDays = () => {
     const days = [];
-    const dateFormat = "EEEEEE"; // Short day names (e.g., M, T, W)
+    const dateFormat = 'EEEEEE'; // Short day names (e.g., M, T, W)
 
     let startDate = startOfWeek(currentMonth);
 
@@ -52,26 +54,32 @@ const CalendarPro = ({ setVisible, visible }) => {
     let days = [];
     let day = startDate;
     let formattedDate = '';
+    let flag = true
 
     while (day <= endDate) {
       for (let i = 0; i < 7; i++) {
-        formattedDate = format(day, "d");
+        formattedDate = format(day, 'd');
         const cloneDay = day;
 
-        days.push(
-          <div
-            className={`w-[24px] h-[24px] sm:w-[40px] sm:h-[40px] p-1 sm:p-[17px] flex justify-center items-center rounded-full cursor-pointer text-green-950 bg-[#14494433] hover:bg-green-500`}
-            key={day}
-            onClick={() => onDateClick(parse(cloneDay))}
-          >
-            <span className="text-xs sm:text-base">{formattedDate}</span>
-          </div>
-        );
+        // Only render dates within the current month
+         isSameMonth(day, currentMonth);
+
+       days.push(
+        <div
+          className={`w-[24px]  h-[24px] sm:w-[35px] sm:h-[35px] p-1 sm:p-[10px] flex justify-center items-center rounded-full cursor-pointer ${
+            isSameMonth ? 'text-green-950 bg-[#14494433] hover:bg-green-500' : 'text-gray-400'
+          }`}
+          key={day}
+          onClick={() => isSameMonth && onDateClick(parse(cloneDay))}
+        >
+          <span className="text-xs sm:text-base">{formattedDate}</span>
+        </div>
+      )
         day = addDays(day, 1);
       }
 
       rows.push(
-        <div className="grid grid-cols-7 gap-x-2 sm:gap-x-5 p-1" key={day}>
+        <div className="grid grid-cols-7 gap-x-2 sm:gap-x-5 p-[3px]" key={day}>
           {days}
         </div>
       );
@@ -105,11 +113,9 @@ const CalendarPro = ({ setVisible, visible }) => {
           🖥️ Web conferencing details provided upon confirmation
         </p>
 
-        <div className="border-t  mb-4 border-[#82939280]"></div>
+        <div className="border-t mb-4 sm:mb-0 border-[#82939280]"></div>
 
-        <h3 className="text-xs  font-semibold text-[#144944] font-geist ">
-          Select Date & Time
-        </h3>
+        <h3 className="text-xs  mt-4 ml-5 font-semibold text-[#144944] font-geist ">Select Date & Time</h3>
 
         <div className="mx-auto sm:mx-14 font-geist flex flex-col">
           {renderHeader()}
@@ -134,117 +140,150 @@ const CalendarPro = ({ setVisible, visible }) => {
 
 
 
+
   // demo 2
   import { FaCheck } from "react-icons/fa6";
-function Demo2({setVisible,visible}){
-
-  const[v1,set1] = useState(false);
-  const[v2,set2] = useState(false);
-  const[v3,set3] = useState(false);
-  const[v4,set4] = useState(false);
-  const[v5,set5] = useState(false);
-  return (
-    <div id="schedule"  className='transition-all duration-300 '>
-    <h3  className=' text-[#144944] text-2xl w-full flex justify-start '>Schedule a Demo</h3>
-    <p  style={{color:'#2C766F'}}>We know your time is valuable. Select a date and time that works <br/>
-         best for you, and our team will tailor the demo to your specific needs.</p>
-    <p  style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-clock"></i>    30 min</p>
-    <p style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"> <i class="fa-solid fa-video"></i>Web Conferencing details provided upon confirmation</p>
-    <p style={{color:'#2C766F',marginTop:'10px'}} id="scheP2"><i class="fa-regular fa-calendar"></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
-
-    <div className="registrationForm "  style={{color:'#2C766F'}}>
-        <h4 className='ml-2 text-green-950'>Enter Details</h4>
-        <form action="" className="regform overflow-y-scroll no-scrollbar  h-60">
-            <label htmlFor="name" className='text-green-950'>Name *</label><br/>
-            <input type="text" className='sm:mb-3 sm:w-[400px]' style={{backgroundColor:"inherit",border:'1px solid green'}} name="name"  placeholder="Enter Your Name"/><br/>
-            <label htmlFor="Email" className='text-green-950'>Email *</label><br/>
-            <input type="email" name="email" style={{backgroundColor:"inherit",border:'1px solid green'}}  className='sm:mb-3 sm:w-[480px]' placeholder="Enter Your Email"/><br/>
-            <label htmlFor="Guest" className='text-green-950'>Add Guests</label><br/>
-            <textarea style={{height:'27%',backgroundColor:"inherit",border:'1px solid green'}}  name="Guest" id="Guest" placeholder="Enter the Guest's Email ID" className='sm:w-[400px]' ></textarea><br/>
-
-            <div className='mt-5'>
-            <label htmlFor="Guest" className='text-green-950 '>What are you most interested  in learning about?</label><br/>
+  import { IoIosArrowUp } from "react-icons/io";
+  import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+  function Demo2({ setVisible, visible }) {
+    const [v1, set1] = useState(false);
+    const [v2, set2] = useState(false);
+    const [v3, set3] = useState(false);
+    const [v4, set4] = useState(false);
+    const [v5, set5] = useState(false);
+  
+    return (
+      <div  className="w-full max-w-lg sm:max-w-[450px] h-auto sm:h-[640px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
+        <h3 className="text-[#144944] sm:text-lg  ">Schedule a Demo</h3>
+        <p className="text-xs text-[#2C766F]" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
+        <p className="text-xs  text-[#2C766F]  flex items-center" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'14px'}} ></i> 30 min</p>
+        <p className="text-xs text-[#2C766F] flex items-center" style={{fontSize:'13px'}}><i style={{fontSize:'14px'}} className="fa-solid fa-video text-xs"></i> Web conferencing details provided upon confirmation</p>
+        <p className="text-sm  text-[#2C766F]  flex items-center" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'14px',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+  
+        <div className="mt-3 text-[#2C766F]">
+          <h4 className="text-green-950 text-base sm:text-lg mb-2">Enter Details</h4>
+          <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+            <label htmlFor="name" className="text-green-950 text-xs" >Name *</label>
+            <input type="text" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Name" />
+  
+            <label htmlFor="email" className="text-green-950 text-xs">Email *</label>
+            <input type="email" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Email" />
+  
+            <label htmlFor="Guest" className="text-green-950 text-xs">Add Guests</label>
+            <textarea className="border overflow-hidden justify-center flex items-center border-green-600 bg-inherit p-7 rounded-md " placeholder="Enter the Guest's Email ID"></textarea> 
+  
+            <label htmlFor="interest" className="text-green-950 mt-5 text-xs">What are you most interested in learning about?</label>
+            <div className="flex flex-col gap-2">
+              {[
+                { label: "Accounting", state: v1, setState: set1 },
+                { label: "Inventory Management", state: v2, setState: set2 },
+                { label: "Financing", state: v3, setState: set3 },
+                { label: "Invoicing", state: v4, setState: set4 },
+                { label: "Dashboard/Analytics", state: v5, setState: set5 },
+              ].map(({ label, state, setState }, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div
+                    onClick={() => setState(!state)}
+                    className={`w-5 h-5 rounded-md flex justify-center items-center transition-all ${state ? 'bg-green-900' : ''} border border-[#144944]`}
+                  >
+                    {state && <FaCheck className="text-white" />}
+                  </div>
+                  <label className="text-green-900 text-sm">{label}</label>
+                </div>
+              ))}
             </div>
-            <div className='flex justify-start flex-col gap-2 mt-4'>
-
-            <div className={`flex gap-5   items-center h-6 `}>
-             <div onClick={()=>{
-              if(v1) set1(false)
-                else set1(true)
-             }} className={`w-5 h-5 rounded-md transition-all duration-250 flex justify-center items-center ${v1 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
-               {v1 ? <FaCheck className= ' text-white'/>:''}
-             </div>
-             <label htmlFor="" className='text-green-900'>Accounting</label>
-             </div>
-
-
-             <div className={`flex gap-5   items-center h-6 `}>
-             <div  onClick={()=>{
-              if(v2) set2(false)
-                else set2(true)
-             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v2 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
-{v2 ? <FaCheck className='text-white font-xs'/>:''}
-             </div>
-             <label htmlFor="" className='text-green-900'>Inventory Management</label>
-             </div>
-
-
-             <div className={`flex gap-5   items-center h-6 `}>
-             <div  onClick={()=>{
-              if(v3) set3(false)
-                else set3(true)
-             }}  className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v3 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
-{v3 ? <FaCheck className='text-white font-xs'/>:''}
-             </div>
-             <label htmlFor="" className='text-green-900'>Financing</label>
-             </div>
-             <div className={`flex gap-5   items-center h-6 `}>
-             <div onClick={()=>{
-              if(v4) set4(false)
-                else set4(true)
-             }} className={`w-5 h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v4 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
-{v4 ? <FaCheck className='text-white font-xs'   />:''}
-             </div>
-             <label htmlFor="" className='text-green-900'>Invoicing</label>
-             </div>
-             <div className={`flex gap-5   items-center h-6 `}>
-             <div  onClick={()=>{
-              if(v5) set5(false)
-                else set5(true)
-             }}  className={`w-2 h-2 sm:w-5 sm:h-5 rounded-md flex transition-all duration-250  justify-center items-center ${v5 ? 'bg-green-900':''}`} style={{border:'1px solid #144944'}}>
-{v5 ? <FaCheck className='text-white font-xs'/>:''}
-             </div>
-             <label htmlFor="" className='text-xs text-green-900'>Dashboard/Analytics</label>
-             </div>
-            </div>
-
-
-            <div className='mt-5 flex flex-col'>
-            <label htmlFor="" className='text-green-950  '>How do you hear about Neo CFO</label>   
-            <select name="" id="" placeholder="Other" className='sm:mt-3 bg-inherit p-2 rounded-md' style={{border:'1px solid green'}}>
-
-              <option value="">Other</option>
+  
+            <label htmlFor="source" className="text-green-950 mt-4 text-xs">How did you hear about Neo CFO?</label>
+            <select className="border border-green-600 bg-inherit p-2 rounded-md mt-2">
+              <option value="other">Other</option>
             </select>
-              </div>  
-           
-           
-        </form>
-        <div className='flex justify-end -translate-y-4  mt-4 sm:-translate-y-0  w-full '>
-        <div className="gap-2 flex">
-            <button   onClick={()=>{
-              if(visible) setVisible(false)
-                else setVisible(true)
-            }} className='sm:px-6  hover:bg-slate-300 rounded-sm text-white bg-inherit ' style={{border:'1px solid white'}}>Back</button>
-            <button className='sm:px-3 bg-white rounded-sm  hover:bg-yellow-400 '>Schedule</button>
+          </form>
+  
+          <div className="flex justify-end gap-4 mt-4">
+            <button onClick={() => setVisible(!visible)} className="bg-transparent border border-white text-white px-4 rounded-sm hover:bg-gray-300">Back</button>
+            <button className="bg-white text-green-950 px-4  rounded-sm hover:bg-yellow-400">Schedule</button>
+          </div>
         </div>
+      </div>
+    );
+  }
+  const Dropdown = () => {
+    // State to keep track of the selected option
+    const [selectedOption, setSelectedOption] = useState('Zoho Books');
+    // State to toggle the dropdown
+    const [isOpen, setIsOpen] = useState(false);
+    // Reference for dropdown menu for handling outside clicks
+    const dropdownRef = useRef(null);
+  
+    // Function to handle clicking outside of dropdown to close it
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      };
+  
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, []);
+  
+    // Options array
+    const options = ['Zoho Books', 'Tally', 'Vyapaar', 'Busy', 'Others'];
+  
+    // Function to handle selecting an option
+    const handleSelect = (option) => {
+      setSelectedOption(option); // Update selected option
+      setIsOpen(false); // Close dropdown
+    };
+  
+    return (
+      <div className="w-full max-w-xs transition-all duration-500 mx-auto" ref={dropdownRef}>
+        {/* Input Label */}
+        
+  
+        {/* Input Box with Dropdown Icon */}
+        <div className="relative">
+          {/* Input field showing the selected option */}
+          <input
+            type="text"
+            value={selectedOption}
+            className="w-full bg-transparent border border-gray-500 text-white p-3 rounded-md focus:outline-none focus:ring-2"
+            readOnly
+            onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
+          />
+  
+          {/* Dropdown Icon */}
+          <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center px-2 pointer-events-none ">
+             <IoIosArrowUp className='text-[14px] cursor-pointer'/> 
+             <MdKeyboardArrowDown className='text-sm cursor-pointer' /> 
+              {/* Chevron Icon */}
+          </div>
+  
+          {/* Dropdown Menu */}
+          {isOpen && (
+            <div className="absolute mt-1 w-full transition-all duration-500 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+              <ul className="text-gray-900 text-xs">
+                {options.map((option, index) => (
+                  <li 
+                    key={index}
+                    className="px-4 py-2 mt-2 cursor-pointer transition-all  duration-500 hover:bg-gray-100 flex justify-between"
+                    onClick={() => handleSelect(option)} // Set selected option on click
+                  >
+                    <span>{option}</span>
+                    {selectedOption === option && <i className="fas fa-check text-green-600 " style={{fontSize:"19px"}}></i>} {/* Check Icon */}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-       
-       
-    </div>
-</div>
-  )
-}
-
+      </div>
+    );
+  };
+  
 export default function Schedule(){
 
    const [visible,setVisible] = useState(false)
@@ -276,16 +315,36 @@ export default function Schedule(){
                             <input type="email" name="Email" id="Email" placeholder="Enter your Email"/><br/>
                             <label htmlFor="Company">Company *</label> <br/>
                             <input type="text" name="Company" id="Company" placeholder="Enter your Company Name"/><br/>
-                            <label>Accounting Software rely on <br/>
-                                <input list="browsers" name="myBrowser"  /></label>
-                                <datalist id="browsers">
-                                  <option value="Chrome"/>
-                                  <option value="Firefox"/>
-                                  <option value="Internet Explorer"/>
-                                  <option value="Opera"/>
-                                  <option value="Safari"/>
-                                  <option value="Microsoft Edge"/>
-                                </datalist> <br/>
+                            
+                            
+<label class="block text-white text-sm ">Accounting software you rely on</label>
+
+
+{/* <div class="relative">
+  <input type="text" value="Zoho Books" class="w-full bg-transparent border border-gray-500 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" readonly />
+
+  
+  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+    <i class="fas fa-chevron-down text-gray-500"></i>
+  </div>
+
+  
+  <div class="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+    <ul class="text-gray-900 text-sm">
+      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex justify-between">
+        <span>Zoho Books</span>
+        <i class="fas fa-check text-green-500"></i> 
+      </li>
+      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Tally</li>
+      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Vyapaar</li>
+      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Busy</li>
+      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Others</li>
+    </ul>
+  </div>
+</div> */}
+<Dropdown/>
+
+                               
                             <label htmlFor="Message">Message</label> <br/>
                             <textarea name="Message" id="Message"></textarea><br/>
                             <div className='flex justify-end mt-6'>
