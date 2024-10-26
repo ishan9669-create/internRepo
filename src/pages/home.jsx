@@ -21,8 +21,8 @@ export default function Home(){
         <div id="hero"  >
             <div id="heroText"  >
                 <h1 style={{marginTop:'4.5rem'}}>Revolutionize Your <br/> Financial Processes </h1>
-                <h2>With NEO CFO</h2>
-                <p>Streamline Accounting, Finance and Taxation with our cutting edge automation platform with our best
+                <h2 className='font-geist'>With NEO CFO</h2>
+                <p className='font-geist'>Streamline Accounting, Finance and Taxation with our cutting edge automation platform with our best
                     in class Integrations</p>
             </div>
             <div id="heroImage" className='mt-10'>
