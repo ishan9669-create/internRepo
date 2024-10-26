@@ -70,13 +70,13 @@
   #heroText h1 {
     font-family: "Playfair Display", serif;
     font-style: italic;
-    margin-top: 100px;
+    
     margin-left: 150px;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 500;
   }
   #heroText h2 {
-    font-family: "Playfair Display", serif;
+   
     font-size: 50px;
     font-weight: 500;
     margin: 5px 150px;
@@ -88,9 +88,9 @@
   }
   #heroImage img {
     padding-top: 70px;
-    height: 450px;
-    width: 600px;
-    object-fit: cover;
+    height: 600px;
+    width: 900px;
+    
   }
   /* ------------------------------------------- */
   
@@ -136,10 +136,12 @@
     #heroImage {
       display: block;
       text-align: center;
+      width: 960px; 
+      background-color: red;
     }
   
     #heroImage img {
-      width: 90% !important;
+      width: 100% !important;
       height: auto !important;
     }
   }
