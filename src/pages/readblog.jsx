@@ -8,10 +8,10 @@ import { GoArrowUpRight } from "react-icons/go";
 
 
 const storiesData = [
-    { id: 1, image: './photo1.png', alt: 'Person 1' },
-    { id: 2, image: './image5.png', alt: 'Person 2' },
-    { id: 3, image: './plant.png', alt: 'Person 3' },
-    { id: 4, image: './image4.png', alt: 'Person 4' }
+    { id: 1,button:'Finance', image: './dylan-calluy-JpflvzEl5cg-unsplash.jpg',text:'Top 5 Ways to Revolutionize Your Accounting Processes', alt: 'Person 1' },
+    { id: 2, image: './austin-distel-744oGeqpxPQ-unsplash.jpg',text:'The Ultimate Guide toMaximizing Efficiency', alt: 'Person 2' ,button:'banking'},
+    { id: 3,button:'Accounting', image: './exploreMore2.jpeg',text:'The Future of Financial Automation', alt: 'Person 3' },
+    { id: 4, button:'Finance',image: './ExploreMore3.jpeg',text:'The Future of Financial Automation', alt: 'Person 4' }
 ];
   
 const StoryCarousel = () => {
@@ -66,7 +66,7 @@ const StoryCarousel = () => {
             <h2 className="section-header text-[#144944]">Explore More</h2>
             <div className="view-more-btn">
                 <button 
-                onClick={scrollRight}
+               onClick={scrollRight}
                 className="bg-[#1449441A] py-1 px-2 text-[#144944] rounded-full text-xs">View More <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
@@ -74,7 +74,7 @@ const StoryCarousel = () => {
         
         {/* Story Track Container */}
         <div
-          className="flex gap-5 mt-10"
+          className="flex gap-10 rounded-lg sm:gap-5 w-full  flex-col md:flex-row mt-10"
           ref={carouselRef}
           style={{ transition: `transform ${transitionDuration}ms ease-in-out`, overflow: 'hidden' }}
         >
@@ -82,9 +82,26 @@ const StoryCarousel = () => {
           {stories.map((story) => (
             <div
               key={story.id}
-              className="w-[300px]   sm:w-[350px] sm:h-[280px] bg-white bg-opacity-80 rounded-lg shadow-lg  text-center"
+              className="  w-[90%] relative h-[280px] sm:h-[250px] sm:ml-0  ml-3 bg-white bg-opacity-80 rounded-xl   text-center"
             >
-              <img src={story.image} alt={story.alt} className="h-full w-[350px] sm:h-[280px]  rounded-lg " />
+
+              {/* the text */}
+              <div className="absolute inset-0 bg-black bg-opacity-0"></div>
+      <div className="absolute   w-[90%] md:flex  md:justify-between top-2 left-2 text-white  ">
+        <div className="px-2 py-1 rounded-full hidden md:block  text-xs sm:text-xs lg:text-xs bg-[#FFFFFF33] z-10">
+        {story.button}
+        </div>
+        {/* <div className="justify-center flex   sm:hidden rounded-full w-6 h-6  bg-[#FFFFFF33] z-10 items-center">
+            <GoArrowUpRight/>
+        </div> */}
+      </div>
+      <div className="absolute bottom-2 left-4 right-4 z-10">
+        <h2 style={{color:'#FFFFFF'}} className="text-md  text-left sm:text-lg font-semibold mb-2 ">
+         {story.text}
+        </h2>
+        <p className=" text-xs sm:text-sm lg:text-md text-left mb-1" style={{color:'#FFFFFF99'}}>5 min read</p>
+      </div>
+              <img src={story.image} alt={story.alt} className="h-full w-full sm:h-[250px] rounded-xl   " />
             </div>
           ))}
         </div>
