@@ -187,8 +187,9 @@ export default function Feature(){
           <div id="first" className="flex flex-col mx-auto md:ml-20 gap-3 mt-32 sm:mt-20 md:mt-32 lg:mt-44 w-full sm:w-[90%] md:w-[450px] lg:w-[500px] px-4 ">
   {/* Heading Section */}
   <span className="text-lg sm:text-sm font-geist  md:text-left" >Features</span>
-  <h1 className="text-2xl sm:text-3xl font-geist md:text-4xl font-semibold text-slate-700">
-      Discover Our <span className="text-2xl font-geist sm:text-3xl md:text-4xl" style={{fontFamily: "Kalam, cursive"}}>Key Features</span>
+  <h1 className="text-2xl sm:text-3xl font-geist md:text-4xl  text-slate-700">
+      Discover Our <span className="text-2xl font-geist sm:text-3xl md:text-4xl" style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}>Key Features</span>
     </h1>
 
   
@@ -208,7 +209,8 @@ export default function Feature(){
 
     <div className="mt-20 sm:mt-30 md:mt-40 tracking-wider font-serif text-slate-700 flex justify-center text-center px-4 sm:px-8 lg:px-0">
   <h1 className=" font-semibold text-xl sm:text-2xl  ">
-    <i className=" text-xl sm:text-2xl ">Experience</i> the Difference <br /> with Neo CFO
+    <i className=" text-xl sm:text-2xl " style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}>Experience</i> the Difference <br /> with Neo CFO
   </h1>
 </div>
 
