@@ -104,14 +104,17 @@ export default function Terms(){
         <br/>
        
       </main>
-      <div className='w-full  flex justify-center mt-20'>
-       <div id="demo"  >
-        <h1 className='text-xs md:text-2xl'>Transform Your Financial <br/>
+      <div className='flex justify-center' >
+  <div id="demo" style={{marginTop:"150px",height:'270px'}} >
+        <h1 className='text-[#144944] font-geist'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md">Schedule a Demo <GoArrowUpRight/></button>
+            <div className='w-full bg-red-500 '>
+            <button  className="flex items-center font-semibold -translate-y-4 font-geist bg-white text-[#144944]   px-4 py-2  rounded-sm " style={{fontSize:'12px'}}>SCHEDULE DEMO <GoArrowUpRight className="text-[#144944] text-xs"/></button>
+
+            </div>
 
     </div>
-       </div>
+  </div>
       <Footer/>
         </div>
     )
