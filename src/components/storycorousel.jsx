@@ -58,7 +58,8 @@ const StoryCarousel = () => {
     <div className="relative w-full overflow-hidden p-5 mt-8 rounded-lg">
         <div className="flex flex-col justify-center items-center mt-32 md:mt-52 text-center">
   <h1 className="flex  flex-col md:flex-row  md:justify-around w-full items-center  text-lg md:text-2xl lg:text-4xl">
-    <span className="text-xl md:text-2xl flex  "><i className='text-xl md:text-2xl'>Smart Finance</i>, Secure Data</span>
+    <span className="text-xl md:text-2xl flex  "><i className='text-xl md:text-2xl' style={{  fontFamily: "Playfair Display, serif",
+    fontStyle: 'italic'}}>Smart Finance</i>, Secure Data</span>
     
     <div className="flex gap-5 md:gap-6 mt-4 md:mt-0">
       <div className='bg-[#14494433] px-4 py-2 rounded-full cursor-pointer hover:bg-slate-500' onClick={scrollLeft}>
