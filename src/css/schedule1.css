@@ -226,24 +226,24 @@
         }
     }
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
     
 
         #schedule {
             width: 80%; /* Reduce width for tablet view */
             
-        }
+        /* } */
         
-    }
-    @media (max-width: 480px) {
+    /* } */
+    /* @media (max-width: 480px) {
         #schedule {
             width: 95%; /* Full width for mobile view */
             
-        }
+        /* } */
     
 
     
-    }
+    /* }  */
     @media (max-width: 480px) {
         #infoForm {
             width: 99%; /* Full width for mobile view */
@@ -263,9 +263,9 @@
     }
 
     /* -------------------------------------------------------------- */
-    #schedule{
+    /* #schedule{
         width: 450px;
-        height: 600px;
+        height: 640px;
         background-color:rgba(255, 255, 255, 0.3);
         margin-top: 10px;
         
@@ -275,6 +275,8 @@
         justify-content: center;
     padding: 30px;
     
+    
+    } */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -284,8 +286,7 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;     /* Firefox */
       } 
-    }
-    #schedule p{
+    /* #schedule p{
         font-size: 0.5rem;
         
     }
@@ -301,7 +302,7 @@
         font-size: 0.5rem;
         text-align: center; 
     }
-    
+     */
 
     /* ----------------- */
     #calendar{
