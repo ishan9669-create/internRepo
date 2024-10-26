@@ -154,12 +154,12 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
     const [v5, set5] = useState(false);
   
     return (
-      <div  className="w-full max-w-lg sm:max-w-[450px] h-auto sm:h-[640px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
-        <h3 className="text-[#144944] sm:text-lg  ">Schedule a Demo</h3>
-        <p className="text-xs text-[#2C766F]" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
-        <p className="text-xs  text-[#2C766F]  flex items-center" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'14px'}} ></i> 30 min</p>
-        <p className="text-xs text-[#2C766F] flex items-center" style={{fontSize:'13px'}}><i style={{fontSize:'14px'}} className="fa-solid fa-video text-xs"></i> Web conferencing details provided upon confirmation</p>
-        <p className="text-sm  text-[#2C766F]  flex items-center" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'14px',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
+      <div  className="w-full max-w-lg sm:max-w-[450px]  h-auto sm:h-[640px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
+        <h3 className="text-[#144944] sm:text-lg -translate-y-0 sm:-translate-y-3 ">Schedule a Demo</h3>
+        <p className=" text-[#2C766F] mb-2" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
+        <p className="  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
+        <p className=" text-[#2C766F] flex items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
+        <p className="text-sm  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
   
         <div className="mt-3 text-[#2C766F]">
           <h4 className="text-green-950 text-base sm:text-lg mb-2">Enter Details</h4>
@@ -170,8 +170,8 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
             <label htmlFor="email" className="text-green-950 text-xs">Email *</label>
             <input type="email" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Email" />
   
-            <label htmlFor="Guest" className="text-green-950 text-xs">Add Guests</label>
-            <textarea className="border overflow-hidden justify-center flex items-center border-green-600 bg-inherit p-7 rounded-md " placeholder="Enter the Guest's Email ID"></textarea> 
+            <label htmlFor="Guest" className="text-green-950 text-xs resize-none">Add Guests</label>
+            <textarea className="border no-scrollbar text-xs overflow-y-hidden border-green-600 bg-inherit py-7 rounded-md" placeholder='Enter email'></textarea> 
   
             <label htmlFor="interest" className="text-green-950 mt-5 text-xs">What are you most interested in learning about?</label>
             <div className="flex flex-col gap-2">
@@ -201,8 +201,8 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
           </form>
   
           <div className="flex justify-end gap-4 mt-4">
-            <button onClick={() => setVisible(!visible)} className="bg-transparent border border-white text-white px-4 rounded-sm hover:bg-gray-300">Back</button>
-            <button className="bg-white text-green-950 px-4  rounded-sm hover:bg-yellow-400">Schedule</button>
+            <button onClick={() => setVisible(!visible)} className="bg-transparent py-1 border text-xs border-white text-white px-4 rounded-sm hover:bg-gray-300">Back</button>
+            <button className="bg-white text-green-950 px-4  rounded-sm hover:bg-yellow-400 py-1 text-xs">Schedule</button>
           </div>
         </div>
       </div>
