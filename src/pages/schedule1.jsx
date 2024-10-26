@@ -105,8 +105,8 @@ const CalendarPro = ({ setVisible, visible }) => {
     <div className="max-w-[95%] sm:max-w-[500px]  transition-all duration-500 h-auto sm:h-[650px] rounded-lg shadow-lg p-4 sm:p-3 bg-[#FFFFFF33]">
       <div className="calendar h-auto sm:h-[500px]">
         <h2 className="text-lg sm:text-xl text-[#144944] font-geist">Schedule a Demo</h2>
-        <p className=" text-sm sm:text-base font-geist text-[#2C766F]">
-          We know your time is valuable. Select a date and time that works best for you.
+        <p className=" text-sm  font-geist text-[#2C766F]">
+        We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.
         </p>
         <p className=" text-sm sm:text-base text-[#2C766F] font-geist">🕒 30 min</p>
         <p className=" text-sm sm:text-base font-geist text-[#2C766F]">
@@ -156,13 +156,13 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
     return (
       <div  className="w-full max-w-lg sm:max-w-[450px]  h-auto sm:h-[640px] bg-white/30 mt-4 rounded-lg p-2 flex flex-col justify-center  transition-all duration-300">
         <h3 className="text-[#144944] sm:text-lg -translate-y-0 sm:-translate-y-3 ">Schedule a Demo</h3>
-        <p className=" text-[#2C766F] mb-2" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
+        <p className=" text-[#2C766F] mb-1" style={{fontSize:'13px'}}>We know your time is valuable. Select a date and time that works best for you, and our team will tailor the demo to your specific needs.</p>
         <p className="  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-clock" style={{fontSize:'1rem'}} ></i> 30 min</p>
         <p className=" text-[#2C766F] flex items-center gap-2" style={{fontSize:'13px'}}><i style={{fontSize:'1rem'}} className="fa-solid fa-video  ml"></i> Web conferencing details provided upon confirmation</p>
         <p className="text-sm  text-[#2C766F]  flex items-center gap-2" style={{fontSize:'13px'}}><i className="fa-regular fa-calendar" style={{fontSize:'1rem',marginLeft:'1px'}}></i> 9:00 AM - 9:30 AM, Thursday, August 30, 2024</p>
   
         <div className="mt-3 text-[#2C766F]">
-          <h4 className="text-green-950 text-base sm:text-lg mb-2">Enter Details</h4>
+          <h4 className="text-green-950 text-base sm:text-md mb-2">Enter Details</h4>
           <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-200">
             <label htmlFor="name" className="text-green-950 text-xs" >Name *</label>
             <input type="text" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Name" />
@@ -189,14 +189,14 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
                   >
                     {state && <FaCheck className="text-white" />}
                   </div>
-                  <label className="text-green-900 text-sm">{label}</label>
+                  <label className="text-green-900 text-xs">{label}</label>
                 </div>
               ))}
             </div>
   
             <label htmlFor="source" className="text-green-950 mt-4 text-xs">How did you hear about Neo CFO?</label>
-            <select className="border border-green-600 bg-inherit p-2 rounded-md mt-2">
-              <option value="other">Other</option>
+            <select className="border border-green-600 bg-inherit text-xs p-2 rounded-md mt-2">
+              <option value="other" className='text-xs'>Other</option>
             </select>
           </form>
   
@@ -250,7 +250,7 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
           <input
             type="text"
             value={selectedOption}
-            className="w-full bg-transparent border border-gray-500 text-white p-3 rounded-md focus:outline-none focus:ring-2"
+            className="w-full bg-transparent text-[13px] border border-gray-500 text-white h-10 rounded-md focus:outline-none focus:ring-2"
             readOnly
             onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
           />
@@ -269,10 +269,10 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
                 {options.map((option, index) => (
                   <li 
                     key={index}
-                    className="px-4 py-2 mt-2 cursor-pointer transition-all  duration-500 hover:bg-gray-100 flex justify-between"
+                    className="px-4 py-2 mt-2 text-xs cursor-pointer transition-all  duration-500 hover:bg-gray-100 flex justify-between"
                     onClick={() => handleSelect(option)} // Set selected option on click
                   >
-                    <span>{option}</span>
+                    <span className='text-xs'>{option}</span>
                     {selectedOption === option && <i className="fas fa-check text-green-600 " style={{fontSize:"19px"}}></i>} {/* Check Icon */}
                   </li>
                 ))}
