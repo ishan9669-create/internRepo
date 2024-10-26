@@ -127,7 +127,7 @@ export default function Read(){
             
             
             <h1 className="text-3xl font-geist tracking-wider text-[#3B3B3B]">The Ultimate Guide to <br /> Maximizing Efficiency</h1>
-            <p className="blog-intro mt-5 text-xs max-w-sm text-[#7A7A7A]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. fugit perspiciatis quas voluptas ipsum id voluptatem itaque</p>
+            <p className="blog-intro mt-5 text-xs max-w-sm text-[#7A7A7A]">Every finance leader knows the challenges of dealing with economic uncertainty, making accurate forecasts, and cutting costs wisely. And that’s where automation steps in to lend a hand.</p>
             
             <hr/>
             <br />
@@ -136,54 +136,66 @@ export default function Read(){
                 <img alt="A hand holding a dollar bill with a blurred background of trees" className="rounded-2xl h-[24rem]" src="./ExploreMore3.jpeg" />
             </div>
             <div className="text-content">
-                <h2 className="text-md font-semibold text-[#3B3B3B] ml-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                Nullam id cursus ante. Phasellus aliquet </h2>
+                <h2 className="text-md font-semibold text-[#3B3B3B] ml-2">This process involves registering new vendors and getting them approved for business engagement. </h2>
                 <p className="mt-5 text-[#7A7A7A]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id cursus ante. Phasellus aliquet
-                    massa ut dui rutrum placerat. Duis nunc neque, porta quis feugiat in, interdum vel urna. Cras
-                    faucibus interdum condimentum. Sed quis posuere dui. Cras at ornare tellus. Cras dignissim sed
-                    lectus nec fringilla. Sed nec molestie eros. Integer sed euismod velit. Pellentesque consectetur
-                    scelerisque lectus, eget tincidunt odio suscipit ut.
+                Sticking to manual financial processes is like steering a sinking ship in a tech-driven world. Finance automation isn’t just a fleeting trend.
+
+It’s the next big thing in finance. It promises to improve efficiency, reduce risk, increase accuracy, and support strategic decision-making.
+
+Every finance leader knows the challenges of dealing with economic uncertainty, making accurate forecasts, and cutting costs wisely. And that’s where automation steps in to lend a hand.
+
+For finance leaders, like CFOs, automation is a secret weapon. It helps ramp up performance efficiencies. It gives a big boost to cost efficiency. And helps get the maximum value from assets.
+
+But don’t just take our word for it!
+
+In a 2022 Gartner survey on Finance Technologies, 88% reported benefits from Robotic Process Automation (RPA). To name a few, improved efficiency, increased speed and agility, and a big boost to employee productivity.
+
+Now, that’s worth considering, right?
                 </p>
                 <p className="text-[#7A7A7A]">
-                    Nunc quis ultricies sem, ac efficitur libero. Ut ac massa ex. Morbi elementum sapien id purus
-                    rhoncus, id dictum ex viverra. Curabitur nisi magna, malesuada lacinia nunc sed, semper sodales
-                    neque. Nulla sem arcu, vulputate eget tristique nec, euismod vitae sem. Etiam nisi risus, accumsan
-                    id lacus quis, congue sollicitudin erat. Ut malesuada lorem id erat semper, ac fringilla magna
-                    sodales. Suspendisse potenti. Phasellus vulputate justo eget fringilla consectetur. Pellentesque nec
-                    sem vitae mi sodales aliquet in eu nisi. Vestibulum vehicula metus ac finibus viverra. Proin
-                    suscipit dolor sed odio fermentum, congue tincidunt sapien semper. Sed ornare dapibus ultricies.
+                The finance department has many workflows and processes. These involve different departments, people, systems, and data.
+
+Performing these tasks manually not only reduces the efficiency of the entire system but also significantly impacts performance.
+
+Finance automation is leveraging modern technologies like Artificial Intelligence (AI), Machine Learning (ML), and Robotic Process Automation (RPA) to streamline the process.
+
+Automating finance processes makes the operation smoother. Reduces potential human errors. And saves valuable time for strategic planning.
+
+Finance process automation is a key component in finance transformation. It provides real-time data intelligence and supports decision-making.
                 </p>
                
             </div>
             <div className="text-content">
-                <h3 className="text-md mt-5 font-semibold ml-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br/>
+                <h3 className="text-md mt-5 font-semibold ml-2">Tapping AI to maintain the competitive edge A few working examples will help put this emphasis on automation into perspective. <br/>
                     Lorem ipsum dolor sit amet </h3>
                 <p className="text-[#7A7A7A] mt-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id cursus ante. Phasellus aliquet
-                    massa ut dui rutrum placerat. Duis nunc neque, porta quis feugiat in, interdum vel urna. Cras
-                    faucibus interdum condimentum. Sed quis posuere dui. Cras at ornare tellus. Cras dignissim sed
-                    lectus nec fringilla. Sed nec molestie eros. Integer sed euismod velit. Pellentesque consectetur
-                    scelerisque lectus, eget tincidunt odio suscipit ut.
+                Automation provides clear benefits for finance leaders. It strengthens their capacity to drive strategic initiatives, cut costs, and produce precise financial reports.
+
+Automating finance processes allows finance leaders to move their attention from regular, lengthy tasks to strategic tasks that add value.
+
+This results in better productivity, cost-effectiveness, accuracy, and compliance. It also offers immediate financial insights, efficient risk management, and scalable solutions.
+
+Here are some of the main benefits that finance automation can provide to leaders:
                 </p>
                 <div className="quote-content ">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id cursus ante. Phasellus aliquet
-                    massa at dui rutrum placerat."
+                    "Automating finance processes allows finance leaders to move their attention from regular, lengthy tasks to strategic tasks that add value."
                 </div>
-                <p className="text-[#7A7A7A]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id cursus ante. Phasellus aliquet
-                    massa at dui rutrum placerat.</p>
+                <p className="text-[#7A7A7A]">Check out our end of season subscription discounts with a Moneycontrol pro subscription absolutely free. Use code EOSO2021. Click here for details.</p>
                 
             </div>
             <div className="text-content">
-                <h3 className="mt-5 text-md font-semibold ml-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br/>
-                    Lorem ipsum dolor sit amet </h3>
+                <h3 className="mt-5 text-md font-semibold ml-2">Tapping AI to maintain the competitive edge A few working examples will help put this emphasis on automation into perspective. </h3>
                 <p className="text-[#7A7A7A] mt-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id cursus ante. Phasellus aliquet
-                    massa ut dui rutrum placerat. Duis nunc neque, porta quis feugiat in, interdum vel urna. Cras
-                    faucibus interdum condimentum. Sed quis posuere dui. Cras at ornare tellus. Cras dignissim sed
-                    lectus nec fringilla. Sed nec molestie eros. Integer sed euismod velit. Pellentesque consectetur
-                    scelerisque lectus, eget tincidunt odio suscipit ut.
-                    Pellentesque consectetur scelerisque lectus, eget tincidunt odio suscipit ut.
+                Take advantage of our AI-powered financial automation bundle. It saves you time in deployment and is cost-effective.
+
+Find out more about our bundle here: Finance Automation Solutions- Buy Bundle; Save More (rpatech.ai)
+
+If you’re unsure about how AI and RPA can benefit your business, schedule a free half-day discovery call with our experts. During this workshop, they’ll help you:
+
+Identify the most suitable processes in your business for automation
+Assess the feasibility and complexity of automation
+Understand how to embark on your automation journey with confidence and ease
+
                 </p>
             </div>
           
@@ -210,11 +222,14 @@ export default function Read(){
 
     </section>
 
-    <div className='flex justify-center'>
-  <div id="demo" style={{marginTop:"150px"}}>
-        <h1>Transform Your Financial <br/>
+    <div className='flex justify-center' >
+  <div id="demo" style={{marginTop:"150px",height:'270px'}} >
+        <h1 className='text-[#144944] font-geist'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-        <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
+            <div className='w-full bg-red-500 '>
+            <button  className="flex items-center -translate-y-4 font-semibold font-geist bg-white text-[#144944]   px-4 py-2  rounded-sm " style={{fontSize:'12px'}}>SCHEDULE DEMO <GoArrowUpRight className="text-[#144944] text-xs"/></button>
+
+            </div>
 
     </div>
   </div>
