@@ -18,15 +18,15 @@ export default function Home(){
             
             <div id="home"  className='w-[100%]' >
             <Navbar bg={'#FFFFFF33'}/>
-        <div id="hero"  >
+        <div id="hero"  style={{height:'800px'}}>
             <div id="heroText"  >
-                <h1 style={{marginTop:'4.5rem'}}>Revolutionize Your <br/> Financial Processes </h1>
+                <h1 style={{marginTop:'7.5rem'}}>Revolutionize Your <br/> Financial Processes </h1>
                 <h2 className='font-geist'>With NEO CFO</h2>
                 <p className='font-geist'>Streamline Accounting, Finance and Taxation with our cutting edge automation platform with our best
                     in class Integrations</p>
             </div>
-            <div id="heroImage" className='mt-10'>
-                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png" alt="image"/>
+            <div id="heroImage" className='mt-14' style={{height:'600px'}}>
+                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png " className='ml-20' style={{height:'660px'}} alt="image"/>
             </div>
         </div>
             </div>
@@ -280,12 +280,12 @@ export default function Home(){
     <br/>
     <br/>
 {/* demo */}
-  <div className='flex justify-center'>
-  <div id="demo" style={{marginTop:"150px"}}>
-        <h1>Transform Your Financial <br/>
+<div className='flex justify-center' >
+  <div id="demo" style={{marginTop:"150px",height:'270px'}} >
+        <h1 className='text-[#144944] font-geist'>Transform Your Financial <br/>
             Processes with Neo CFO</h1>
-            <div className='w-full bg-red-500'>
-            <button  className="flex items-center bg-white px-2 py-1 rounded-md" >Schedule a Demo <GoArrowUpRight/></button>
+            <div className='w-full bg-red-500 '>
+            <button  className="flex items-center -translate-y-4 font-semibold font-geist bg-white text-[#144944]   px-4 py-2  rounded-sm " style={{fontSize:'12px'}}>SCHEDULE DEMO <GoArrowUpRight className="text-[#144944] text-xs"/></button>
 
             </div>
 
