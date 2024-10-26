@@ -42,7 +42,7 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
         Finance
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
@@ -64,7 +64,7 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
         Banking
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
@@ -86,8 +86,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Lorem
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Banking
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2  style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
@@ -108,7 +108,7 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
         Finance
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
@@ -130,8 +130,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Finance
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Accounting
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2   style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
@@ -152,8 +152,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Lorem
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Banking
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2   style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
@@ -173,8 +173,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Lorem
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Finance
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2   style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
@@ -195,8 +195,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Lorem
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Banking 
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2   style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
@@ -217,8 +217,8 @@
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute top-2 left-2 text-white text-xs sm:text-sm lg:text-md z-10">
-        Lorem
+      <div className="absolute top-2 left-2 text-white text-xs hidden md:block bg-[#FFFFFF33] rounded-full  py-1 px-2  z-10">
+        Accounting
       </div>
       <div className="absolute bottom-2 left-4 right-4 z-10">
         <h2   style={{color:'#FFFFFF'}} className="text-lg sm:text-xl lg:text-xl font-semibold mb-2 text-white">
